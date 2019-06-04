@@ -19,3 +19,13 @@ function fakeEvery(array, callback) {
   //si se cumple la condición en todos los elementos del array, devuelve true
   return true;
 }
+
+function fakeMap(array, callback) {
+  const newArray = [];
+  //a cada elemento del array se le aplica la función de callback y se lo guarda en un nuevo array
+  for (let i = 0; i < array.length; i++) {
+    newArray.push(callback(array[i], i, array));
+  }
+  //se devuelve el nuevo array
+  return newArray;
+}

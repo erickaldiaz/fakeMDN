@@ -19,3 +19,16 @@ function fakeEvery(array, callback) {
   //si se cumple la condición en todos los elementos del array, devuelve true
   return true;
 }
+
+function fakeFilter(array, callback) {
+  const newArray = [];
+  //se evalua si para cada elemento la condición definida en la función callback se cumple
+  for (element of array) {
+    if (callback(element)) {
+      //si se cumple se agrega a un nuevo array
+      newArray.push(element);
+    }
+  }
+  //se devuelve el nuevo array
+  return newArray;
+}

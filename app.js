@@ -25,6 +25,15 @@ function fakeMap(array, callback) {
   //a cada elemento del array se le aplica la función de callback y se lo guarda en un nuevo array
   for (let i = 0; i < array.length; i++) {
     newArray.push(callback(array[i], i, array));
+
+function fakeFilter(array, callback) {
+  const newArray = [];
+  //se evalua si para cada elemento la condición definida en la función callback se cumple
+  for (element of array) {
+    if (callback(element)) {
+      //si se cumple se agrega a un nuevo array
+      newArray.push(element);
+    }
   }
   //se devuelve el nuevo array
   return newArray;

@@ -21,20 +21,15 @@ function fakeEvery(array, callback) {
 }
 
 function fakeReduce(array, callback) {
-  //variable para ir guardando el resulado de la función callback
-  let result;
-  
-  //la condición para que deje de iterar va implícita dentro del for
-  for (let i = 0; ; i++) {
-    if (array.length == 1) {
-      return array[0];
-    } else if (array.length == 2) {
-          return callback(array[0], array[1]);
-    } else {
-        result = callback(array[0], array[1]);
-        array.splice(0, 2, result);
+  if (array.lenght != 0) {
+    let accumulator = array[0];
+    for (let i = 0; i < array.length - 1; i++) {
+      accumulator = callback(accumulator, array[i + 1]);
     }
+    return accumulator;
   }
+  return undefined;
+}
 
 function fakeFilter(array, callback) {
   const newArray = [];

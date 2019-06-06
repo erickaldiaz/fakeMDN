@@ -35,4 +35,16 @@ function fakeReduce(array, callback) {
         array.splice(0, 2, result);
     }
   }
+
+function fakeFilter(array, callback) {
+  const newArray = [];
+  //se evalua si para cada elemento la condición definida en la función callback se cumple
+  for (element of array) {
+    if (callback(element)) {
+      //si se cumple se agrega a un nuevo array
+      newArray.push(element);
+    }
+  }
+  //se devuelve el nuevo array
+  return newArray;
 }

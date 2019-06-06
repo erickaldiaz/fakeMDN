@@ -32,3 +32,12 @@ function fakeFilter(array, callback) {
   //se devuelve el nuevo array
   return newArray;
 }
+
+function fakeFind(array, callback) {
+  for (let element of array) {
+    if (callback(element)) {
+      return element;
+    }
+  }
+  return undefined;
+}

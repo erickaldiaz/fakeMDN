@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>fakeIncludes</title>
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+
+  <body>
+    <h1>fakeIncludes</h1>
+    <div class="container-aside-article">
+      <aside class="column-aside">
+        <p class="aside-title">Otros métodos</p>
+        <ul class="aside-list">
+          <li><a href="fakeForEach.html" target="_blank" rel="noopener noreferrer">fakeForEach</a></li>
+          <li><a href="fakeReduce.html" target="_blank" rel="noopener noreferrer">fakeReduce</a></li>
+          <li><a href="fakeEvery.html" target="_blank" rel="noopener noreferrer">fakeEvery</a></li>
+          <li><a href="fakeFind.html" target="_blank" rel="noopener noreferrer">fakeFind</a></li>
+          <li><a href="fakeMap.html" target="_blank" rel="noopener noreferrer">fakeMap</a></li>
+          <li><a href="fakeFilter.html" target="_blank" rel="noopener noreferrer">fakeFilter</a></li>
+        </ul>
+      </aside>
+      <article>
+        <section class="description">
+          El método <code>fakeIncludes()</code> determina si un array tiene un determinado elemento, devuelve true o
+          false según corresponda.
+        </section>
+        <section>
+          <h2>Sintaxis</h2>
+          <p class="syntaxbox">fakeIncludes(<em>array</em>, <em>callback</em>)</p>
+          <h3>Parámetros</h3>
+          <dl>
+            <dt>
+              <code class="code-params">array</code>
+            </dt>
+            <dd class="param-description">
+              El array sobre cuyos elementos se comprueba si cumplen con la condición provista por la función.
+            </dd>
+            <dt>
+              <code class="code-params">callback</code>
+            </dt>
+            <dd class="param-description">
+              Función que se va a aplicar a los elementos hasta encontrar alguno que la cumpla.
+            </dd>
+          </dl>
+          <h3>Valor de retorno</h3>
+          <p class="param-description">
+            Devuelve <code>true</code> si encuentra el elemento que buscaba y <code>false</code> si no lo encuentra en
+            el array.
+          </p>
+        </section>
+        <div>
+          <h2>Ejemplo</h2>
+          <h3>Usando Includes</h3>
+          <div class="syntaxbox">
+            <p><code>let array = 'To be, or not to be, that is the question.';</code></p>
+            <p><code>const element= 'question'</code></p>
+            <p><code>fakeinclude(array, element);</code></p>
+            <p><code> >> True </code></p>
+          </div>
+        </div>
+      </article>
+    </div>
+  </body>
+</html>

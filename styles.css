@@ -12,7 +12,11 @@ body {
   font-size: 1rem;
 }
 
+/* header */
+
 .main-header {
+  width: auto;
+  height: 4em;
   display: flex;
   flex-direction: row;
   border: 5px solid #83d0f2;
@@ -22,14 +26,23 @@ body {
   padding-right: 0;
 }
 
+.main-header>* {
+  line-height: 4em;
+}
+
 a {
   text-decoration: none;
   color: #333;
+  display: block;
+}
+
+.list-nav>a:hover {
+  background-color: #eee;
 }
 
 .logo-box {
-  width: 217px;
-  height: 100px;
+  width: 15em;
+  height: auto;
 }
 
 img {
@@ -44,20 +57,35 @@ img {
 }
 
 .list-menu {
+  width: 80%;
   list-style-type: none;
   display: flex;
   justify-content: space-between;
 }
 
 .list-nav {
-  padding: 0 15px;
+  width: 100%;
+  text-align: center;
 }
 
-.list-login {
+.list-login,
+.search {
   list-style-type: none;
+  padding: 0 1em;
 }
 
-/*end header */
+.search {
+  background-color: black;
+}
+
+.search>img {
+  width: 2em;
+  height: auto;
+  margin-top: 0.6em;
+}
+
+/* end header */
+
 .document-info {
   background-color: #f5f9fa;
   padding: 30px 0 30px 0;
@@ -74,6 +102,7 @@ h1 {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  margin-left: 9%;
 }
 
 .center-buttons {
@@ -94,6 +123,11 @@ h1 {
   list-style-type: none;
   margin-left: 10px;
   /*width: 25%;*/
+}
+
+.container {
+  width: 80%;
+  margin: auto;
 }
 
 .container-aside-article {
@@ -178,7 +212,6 @@ h1 {
 
 h2 {
   font-size: 2em;
-  margin-left: 20px;
   margin-top: 20px;
 }
 
@@ -223,4 +256,3 @@ code {
   font-variant: small-caps;
   margin-top: 30px;
 }
-

@@ -1,63 +1,96 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <title>fakeReduce</title>
-    <link rel="stylesheet" href="../styles.css" />
-  </head>
 
-  <body>
-    <h1>fakeReduce</h1>
-    <div class="container-aside-article">
-      <aside class="column-aside">
-        <p class="aside-title">Otros métodos</p>
-        <ul class="aside-list">
-          <li><a href="../functions/fakeForEach.html" target="_blank" rel="noopener noreferrer">fakeForEach</a></li>
-          <li><a href="../functions/fakeReduce.html" target="_blank" rel="noopener noreferrer">fakeReduce</a></li>
-          <li><a href="../functions/fakeEvery.html" target="_blank" rel="noopener noreferrer">fakeEvery</a></li>
-          <li><a href="../functions/fakeFind.html" target="_blank" rel="noopener noreferrer">fakeFind</a></li>
-          <li><a href="../functions/fakeIncludes.html" target="_blank" rel="noopener noreferrer">fakeIncludes</a></li>
-          <li><a href="../functions/fakeMap.html" target="_blank" rel="noopener noreferrer">fakeMap</a></li>
-          <li><a href="../functions/fakeFilter.html" target="_blank" rel="noopener noreferrer">fakeFilter</a></li>
-        </ul>
-      </aside>
-      <article>
-        <section class="description">
-          El método <code>fakeReduce()</code> aplica una función a un acumulador y a cada valor de un array (de
-          izquierda a derecha) para reducirlo a un único valor.
-        </section>
-        <section>
-          <h2>Sintaxis</h2>
-          <p class="syntaxbox">fakeReduce(<em>array</em>, <em>callback</em>)</p>
-          <h3>Parámetros</h3>
-          <dl>
-            <dt>
-              <code class="code-params">array</code>
-            </dt>
-            <dd class="param-description">
-              El array sobre cuyos elementos se quiere reducir a uno aplicándoles una función.
-            </dd>
-            <dt>
-              <code class="code-params">callback</code>
-            </dt>
-            <dd class="param-description">Función que se va a aplicar a los elementos del array.</dd>
-          </dl>
-          <h3>Valor de retorno</h3>
-          <p class="param-description">
-            Depende del tipo de dato que contenga el array, puede ser un Number, un String o un array.
-          </p>
-        </section>
-        <div>
-          <h2>Ejemplo</h2>
-          <h3>Multiplicación de los números de un array</h3>
-          <div class="syntaxbox">
-            <p><code>let listOfNumbers = [5, 6, 2, 3];</code></p>
-            <p><code>const multiply = (x, y) => x * y;</code></p>
-            <p><code>fakeReduce(listOfNumbers, multiply);</code></p>
-            <p><code>>> 180</code></p>
-          </div>
-        </div>
-      </article>
+<head>
+  <meta charset="UTF-8" />
+  <title>fakeReduce</title>
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+
+<body>
+  <!-- header -->
+  <header id="header-main" class="main-header">
+    <div class="logo-box">
+      <a href="../index.html" class="logo" rel="noopener noreferrer">
+        <img src="../img/logo_v2.png" alt="logo de mdn fake" title="logo" />
+      </a>
     </div>
-  </body>
+    <nav class="nav-container">
+      <ul class="list-menu">
+        <li class="list-nav"><a href="" rel="noopener noreferrer">Tecnologías</a></li>
+        <li class="list-nav"><a href="" rel="noopener noreferrer">Referencias & Guias</a></li>
+        <li class="list-nav"><a href="" rel="noopener noreferrer">Feedback</a></li>
+      </ul>
+
+    </nav>
+    <div class="nav-login">
+      <ul class="list-login">
+        <li class="login-box">
+          <div class="login">
+            <a href="" rel="noopener noreferrer">Sign in</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="search">
+      <img src="../img/search.png">
+    </div>
+  </header>
+  <!-- header -->
+
+  <h1>fakeReduce</h1>
+  <div class="container-aside-article">
+    <aside class="column-aside">
+      <p class="aside-title">Otros métodos</p>
+      <ul class="aside-list">
+        <li><a href="fakeForEach.html" target="_blank" rel="noopener noreferrer">fakeForEach</a></li>
+        <li><a href="fakeSome.html" target="_blank" rel="noopener noreferrer">fakeSome</a></li>
+        <li><a href="fakeReduce.html" target="_blank" rel="noopener noreferrer">fakeReduce</a></li>
+        <li><a href="fakeEvery.html" target="_blank" rel="noopener noreferrer">fakeEvery</a></li>
+        <li><a href="fakeFind.html" target="_blank" rel="noopener noreferrer">fakeFind</a></li>
+        <li><a href="fakeIncludes.html" target="_blank" rel="noopener noreferrer">fakeIncludes</a></li>
+        <li><a href="fakeMap.html" target="_blank" rel="noopener noreferrer">fakeMap</a></li>
+        <li><a href="fakeFilter.html" target="_blank" rel="noopener noreferrer">fakeFilter</a></li>
+      </ul>
+    </aside>
+    <article>
+      <section class="description">
+        El método <code>fakeReduce()</code> aplica una función a un acumulador y a cada valor de un array (de
+        izquierda a derecha) para reducirlo a un único valor.
+      </section>
+      <section>
+        <h2>Sintaxis</h2>
+        <p class="syntaxbox">fakeReduce(<em>array</em>, <em>callback</em>)</p>
+        <h3>Parámetros</h3>
+        <dl>
+          <dt>
+            <code class="code-params">array</code>
+          </dt>
+          <dd class="param-description">
+            El array sobre cuyos elementos se quiere reducir a uno aplicándoles una función.
+          </dd>
+          <dt>
+            <code class="code-params">callback</code>
+          </dt>
+          <dd class="param-description">Función que se va a aplicar a los elementos del array.</dd>
+        </dl>
+        <h3>Valor de retorno</h3>
+        <p class="param-description">
+          Depende del tipo de dato que contenga el array, puede ser un Number, un String o un array.
+        </p>
+      </section>
+      <div>
+        <h2>Ejemplo</h2>
+        <h3>Multiplicación de los números de un array</h3>
+        <div class="syntaxbox">
+          <p><code>let listOfNumbers = [5, 6, 2, 3];</code></p>
+          <p><code>const multiply = (x, y) => x * y;</code></p>
+          <p><code>fakeReduce(listOfNumbers, multiply);</code></p>
+          <p><code>>> 180</code></p>
+        </div>
+      </div>
+    </article>
+  </div>
+</body>
+
 </html>

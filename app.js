@@ -54,6 +54,7 @@ function fakeFind(array, callback) {
 }
 ////forEach
 
+
 function fakeForEach(array, callback) {   
     for(i=0;i<array.length;i++){
       if (callback(array[i])) {

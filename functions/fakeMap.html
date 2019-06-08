@@ -1,79 +1,76 @@
 <!DOCTYPE html>
 <html lang="es">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <title>fakeMap</title>
     <link rel="stylesheet" href="../styles.css" />
-</head>
+  </head>
 
-<body>
+  <body>
     <h1>fakeMap</h1>
     <div class="container-aside-article">
-        <aside class="column-aside">
-            <p class="aside-title">Otros métodos</p>
-            <ul class="aside-list">
-                <li><a href="fakeForEach.html" target="_blank" rel="noopener noreferrer">fakeForEach</a></li>
-                <li><a href="fakeSome.html" target="_blank" rel="noopener noreferrer">fakeSome</a></li>
-                <li><a href="fakeReduce.html" target="_blank" rel="noopener noreferrer">fakeReduce</a></li>
-                <li><a href="fakeEvery.html" target="_blank" rel="noopener noreferrer">fakeEvery</a></li>
-                <li><a href="fakeFind.html" target="_blank" rel="noopener noreferrer">fakeFind</a></li>
-                <li><a href="fakeIncludes.html" target="_blank" rel="noopener noreferrer">fakeIncludes</a></li>
-                <li><a href="fakeMap.html" target="_blank" rel="noopener noreferrer">fakeMap</a></li>
-                <li><a href="fakeFilter.html" target="_blank" rel="noopener noreferrer">fakeFilter</a></li>
-            </ul>
-        </aside>
-        <article>
-            <section class="description">
-                El método <code>fakeMap()</code> crea un nuevo array con los resultados de la llamada a la función
-                indicada aplicados a cada uno de sus elementos.
-            </section>
-            <section>
-                <h2>Sintaxis</h2>
-                <p class="syntaxbox">fakeMap(<em>array</em>, <em>callback(currentValue)</em>)</p>
-                <h3>Parámetros</h3>
-                <dl>
-                    <dt>
-                        <code class="code-params">array</code>
-                    </dt>
-                    <dd class="param-description">
-                        El array sobre cuyos elementos se comprueba si cumplen con la condición provista por la función.
-                    </dd>
-                    <dt>
-                        <code class="code-params">callback</code>
-                    </dt>
-                    <dd class="param-description">
-                        Función que se va a aplicar a los elementos del array.
-                    </dd>
-                    <dt>
-                        <code class="code-params">currentValue</code>
-                    </dt>
-                    <dd class="param-description">
-                        El elemento actual del array que se está procesando.
-                    </dd>
-                </dl>
-                <h3>Valor de retorno</h3>
-                <p class="param-description">
-                    Devuelve un nuevo array donde cada elemento tiene aplicada la función callback.
-                </p>
-            </section>
-            <div>
-                <h2>Ejemplo</h2>
-                <h3>Procesar un array de números aplicándoles la raíz cuadrada</h3>
-                <div class="syntaxbox">
-                    <p><code>const numeros= [1, 4, 9];</code></p>
-                    <p><code>fakeMakp(numeros, Math.sqrt);</code></p>
-                    <p><code>>> [1, 2, 3]</code></p>
-                </div>
-                <h3>Mapear un array de números usando una función con un argumento</h3>
-                <div class="syntaxbox">
-                    <p><code>const numeros = [1, 4, 9];</code></p>
-                    <p><code>const dobles = fakeMap(numeros, (function(num) { return num * 2; });</code> </p>
-                    <p><code>>>> dobles = [2, 8, 18]</code></p>
-                </div>
-            </div>
-        </article>
+      <aside class="column-aside">
+        <p class="aside-title">Otros métodos</p>
+        <ul class="aside-list">
+          <li><a href="../functions/fakeForEach.html" target="_blank" rel="noopener noreferrer">fakeForEach</a></li>
+          <li><a href="../functions/fakeReduce.html" target="_blank" rel="noopener noreferrer">fakeReduce</a></li>
+          <li><a href="../functions/fakeEvery.html" target="_blank" rel="noopener noreferrer">fakeEvery</a></li>
+          <li><a href="../functions/fakeFind.html" target="_blank" rel="noopener noreferrer">fakeFind</a></li>
+          <li><a href="../functions/fakeIncludes.html" target="_blank" rel="noopener noreferrer">fakeIncludes</a></li>
+          <li><a href="../functions/fakeSome.html" target="_blank" rel="noopener noreferrer">fakeSome</a></li>
+          <li><a href="../functions/fakeFilter.html" target="_blank" rel="noopener noreferrer">fakeFilter</a></li>
+        </ul>
+      </aside>
+      <article>
+        <section class="description">
+          El método <code>fakeMap()</code> crea un nuevo array con los resultados de la llamada a la función indicada
+          aplicados a cada uno de sus elementos.
+        </section>
+        <section>
+          <h2>Sintaxis</h2>
+          <p class="syntaxbox">fakeMap(<em>array</em>, <em>callback(currentValue)</em>)</p>
+          <h3>Parámetros</h3>
+          <dl>
+            <dt>
+              <code class="code-params">array</code>
+            </dt>
+            <dd class="param-description">
+              El array sobre cuyos elementos se comprueba si cumplen con la condición provista por la función.
+            </dd>
+            <dt>
+              <code class="code-params">callback</code>
+            </dt>
+            <dd class="param-description">
+              Función que se va a aplicar a los elementos del array.
+            </dd>
+            <dt>
+              <code class="code-params">currentValue</code>
+            </dt>
+            <dd class="param-description">
+              El elemento actual del array que se está procesando.
+            </dd>
+          </dl>
+          <h3>Valor de retorno</h3>
+          <p class="param-description">
+            Devuelve un nuevo array donde cada elemento tiene aplicada la función callback.
+          </p>
+        </section>
+        <div>
+          <h2>Ejemplo</h2>
+          <h3>Procesar un array de números aplicándoles la raíz cuadrada</h3>
+          <div class="syntaxbox">
+            <p><code>const numeros= [1, 4, 9];</code></p>
+            <p><code>fakeMakp(numeros, Math.sqrt);</code></p>
+            <p><code>>> [1, 2, 3]</code></p>
+          </div>
+          <h3>Mapear un array de números usando una función con un argumento</h3>
+          <div class="syntaxbox">
+            <p><code>const numeros = [1, 4, 9];</code></p>
+            <p><code>const dobles = fakeMap(numeros, (function(num) { return num * 2; });</code></p>
+            <p><code>>>> dobles = [2, 8, 18]</code></p>
+          </div>
+        </div>
+      </article>
     </div>
-</body>
-
+  </body>
 </html>

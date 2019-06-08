@@ -70,4 +70,4 @@ function fakeIncludes(array, element){
         }
     }
     return exist
-   
+  }

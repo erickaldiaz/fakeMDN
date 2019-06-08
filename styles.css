@@ -128,7 +128,6 @@ h1 {
 }
 
 /*footer*/
-
 .nav-footer {
   display: flex;
   justify-content: space-between;
@@ -224,3 +223,4 @@ code {
   font-variant: small-caps;
   margin-top: 30px;
 }
+

@@ -52,3 +52,22 @@ function fakeFind(array, callback) {
   }
   return undefined;
 }
+////forEach
+
+function fakeForEach(array, callback) {   
+    for(i=0;i<array.length;i++){
+      if (callback(array[i])) {
+        return true;
+      }
+    }
+}
+//fakeIncludes
+function fakeIncludes(array, element){
+    exist = false
+    for(i=0; i<array.length;i++){
+        if (element == array[i]) {
+            exist = true;
+        }
+    }
+    return exist
+   

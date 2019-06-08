@@ -74,6 +74,16 @@ img {
   padding: 0 1em;
 }
 
+.search {
+  background-color: black;
+}
+
+.search>img {
+  width: 2em;
+  height: auto;
+  margin-top: 0.6em;
+}
+
 /* end header */
 
 .document-info {

@@ -17,16 +17,14 @@ border: 5px solid #83d0f2;
 border-width: 5px 0 0;
 background-color: #fff;
 padding-left: 15px; 
-padding-right: 0;
-}
 
+}
 .logo{ 
     
 }
 a{
     text-decoration: none;
     color:#333;
-    
 }
 
 .logo-box{
@@ -40,19 +38,20 @@ img {
 .nav-container{
     display: flex;
     justify-content: space-between;
-    flex-grow: 2;
+   
    
 }
 .list-menu{
     list-style-type: none;
     display: flex;
     justify-content: space-between;
-
-    
-  }
+}
 .list-nav{
     padding: 0 15px;
     
+}
+.list-nav a:hover {
+    background-color: red;
 }
 
 .list-login{
@@ -64,9 +63,6 @@ img {
     background-color: #f5f9fa;
     padding: 30px 0 30px 0;
     display: block;
-
-
-    
 }
 h1{
     font-size: 2.83333rem;
@@ -144,6 +140,7 @@ h1{
     padding-left: 24px;
     padding-right: 24px;
     color: #fff;
+    width: 700px;
     
 }
 .list-footer{

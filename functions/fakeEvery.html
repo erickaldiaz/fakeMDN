@@ -1,73 +1,98 @@
 <!DOCTYPE html>
 <html lang="es">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <title>fakeEvery</title>
     <link rel="stylesheet" href="../styles.css" />
-</head>
+  </head>
 
-<body>
+  <body>
+    <!-- header -->
+    <header id="header-main" class="main-header">
+      <div class="logo-box">
+        <a href="../index.html" class="logo" rel="noopener noreferrer">
+          <img src="../img/logo_v2.png" alt="logo de mdn fake" title="logo" />
+        </a>
+      </div>
+      <nav class="nav-container">
+        <ul class="list-menu">
+          <li class="list-nav"><a href="" rel="noopener noreferrer">Tecnologías</a></li>
+          <li class="list-nav"><a href="" rel="noopener noreferrer">Referencias & Guias</a></li>
+          <li class="list-nav"><a href="" rel="noopener noreferrer">Feedback</a></li>
+        </ul>
+      </nav>
+      <div class="nav-login">
+        <ul class="list-login">
+          <li class="login-box">
+            <div class="login">
+              <a href="" rel="noopener noreferrer">Sign in</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="search">
+        <img src="../img/search.png" />
+      </div>
+    </header>
+    <!-- header -->
+
     <h1>fakeEvery</h1>
     <div class="container-aside-article">
-        <aside class="column-aside">
-            <p class="aside-title">Otros métodos</p>
-            <ul class="aside-list">
-                <li><a href="fakeForEach.html" target="_blank" rel="noopener noreferrer">fakeForEach</a></li>
-                <li><a href="fakeSome.html" target="_blank" rel="noopener noreferrer">fakeSome</a></li>
-                <li><a href="fakeReduce.html" target="_blank" rel="noopener noreferrer">fakeReduce</a></li>
-                <li><a href="fakeEvery.html" target="_blank" rel="noopener noreferrer">fakeEvery</a></li>
-                <li><a href="fakeFind.html" target="_blank" rel="noopener noreferrer">fakeFind</a></li>
-                <li><a href="fakeIncludes.html" target="_blank" rel="noopener noreferrer">fakeIncludes</a></li>
-                <li><a href="fakeMap.html" target="_blank" rel="noopener noreferrer">fakeMap</a></li>
-                <li><a href="fakeFilter.html" target="_blank" rel="noopener noreferrer">fakeFilter</a></li>
-            </ul>
-        </aside>
-        <article>
-            <section class="description">
-                El método <code>fakeEvery()</code> devuelve un booleano, true si todos los elementos en el arreglo pasan
-                la condición implementada por la función dada y false si alguno no la cumple.
-            </section>
-            <section>
-                <h2>Sintaxis</h2>
-                <p class="syntaxbox">fakeFilter(<em>array</em>, <em>callback(currentValue)</em>)</p>
-                <h3>Parámetros</h3>
-                <dl>
-                    <dt>
-                        <code class="code-params">array</code>
-                    </dt>
-                    <dd class="param-description">
-                        El array sobre el que se ha llamado every.
-                    </dd>
-                    <dt>
-                        <code class="code-params">callback</code>
-                    </dt>
-                    <dd class="param-description">Función para probar cada elemento.
-                    </dd>
-                    <dt>
-                        <code class="code-params">currentValue</code>
-                    </dt>
-                    <dd class="param-description">El elemento actual del array que está siendo procesado.
-                    </dd>
-                </dl>
-                <h3>Valor de retorno</h3>
-                <p class="param-description">
-                    true si la función de devolución de llamada devuelve un valor de truthy para cada elemento de
-                    matriz; de lo contrario, false.
-                </p>
-            </section>
-            <div>
-                <h2>Ejemplo</h2>
-                <h3>Probando el tamaño de todos los elementos de un arreglo</h3>
-                <div class="syntaxbox">
-                    <p><code>function esSuficientementeGrande(elemento) { return elemento >= 10; }</code></p>
-                    <p><code> const filtrados1 = [];</code></p>
-                    <p><code>fakeEvery([12, 5, 8, 130, 44], esSuficientementeGrande); //false</code></p>
-                    <p><code>fakeEvery([12, 54, 18, 130, 44], esSuficientementeGrande); //true</code></p>
-                </div>
-            </div>
-        </article>
+      <aside class="column-aside">
+        <p class="aside-title">Otros métodos</p>
+        <ul class="aside-list">
+          <li><a href="fakeForEach.html" target="_blank" rel="noopener noreferrer">fakeForEach</a></li>
+          <li><a href="fakeSome.html" target="_blank" rel="noopener noreferrer">fakeSome</a></li>
+          <li><a href="fakeReduce.html" target="_blank" rel="noopener noreferrer">fakeReduce</a></li>
+          <li><a href="fakeEvery.html" target="_blank" rel="noopener noreferrer">fakeEvery</a></li>
+          <li><a href="fakeFind.html" target="_blank" rel="noopener noreferrer">fakeFind</a></li>
+          <li><a href="fakeIncludes.html" target="_blank" rel="noopener noreferrer">fakeIncludes</a></li>
+          <li><a href="fakeMap.html" target="_blank" rel="noopener noreferrer">fakeMap</a></li>
+          <li><a href="fakeFilter.html" target="_blank" rel="noopener noreferrer">fakeFilter</a></li>
+        </ul>
+      </aside>
+      <article>
+        <section class="description">
+          El método <code>fakeEvery()</code> devuelve un booleano, true si todos los elementos en el arreglo pasan la
+          condición implementada por la función dada y false si alguno no la cumple.
+        </section>
+        <section>
+          <h2>Sintaxis</h2>
+          <p class="syntaxbox">fakeFilter(<em>array</em>, <em>callback(currentValue)</em>)</p>
+          <h3>Parámetros</h3>
+          <dl>
+            <dt>
+              <code class="code-params">array</code>
+            </dt>
+            <dd class="param-description">
+              El array sobre el que se ha llamado every.
+            </dd>
+            <dt>
+              <code class="code-params">callback</code>
+            </dt>
+            <dd class="param-description">Función para probar cada elemento.</dd>
+            <dt>
+              <code class="code-params">currentValue</code>
+            </dt>
+            <dd class="param-description">El elemento actual del array que está siendo procesado.</dd>
+          </dl>
+          <h3>Valor de retorno</h3>
+          <p class="param-description">
+            true si la función de devolución de llamada devuelve un valor de truthy para cada elemento de matriz; de lo
+            contrario, false.
+          </p>
+        </section>
+        <div>
+          <h2>Ejemplo</h2>
+          <h3>Probando el tamaño de todos los elementos de un arreglo</h3>
+          <div class="syntaxbox">
+            <p><code>function esSuficientementeGrande(elemento) { return elemento >= 10; }</code></p>
+            <p><code> const filtrados1 = [];</code></p>
+            <p><code>fakeEvery([12, 5, 8, 130, 44], esSuficientementeGrande); //false</code></p>
+            <p><code>fakeEvery([12, 54, 18, 130, 44], esSuficientementeGrande); //true</code></p>
+          </div>
+        </div>
+      </article>
     </div>
-</body>
-
+  </body>
 </html>

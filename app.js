@@ -20,6 +20,17 @@ function fakeEvery(array, callback) {
   return true;
 }
 
+function fakeReduce(array, callback) {
+  if (array.lenght != 0) {
+    let accumulator = array[0];
+    for (let i = 0; i < array.length - 1; i++) {
+      accumulator = callback(accumulator, array[i + 1]);
+    }
+    return accumulator;
+  }
+  return undefined;
+}
+
 function fakeFilter(array, callback) {
   const newArray = [];
   //se evalua si para cada elemento la condición definida en la función callback se cumple

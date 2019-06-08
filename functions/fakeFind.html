@@ -1,65 +1,68 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <title>fakeFind</title>
-    <link rel="stylesheet" href="../styles.css" />
-  </head>
 
-  <body>
-    <h1>fakeFind</h1>
-    <div class="container-aside-article">
-      <aside class="column-aside">
-        <p class="aside-title">Otros métodos</p>
-        <ul class="aside-list">
-          <li><a href="../functions/fakeForEach.html" target="_blank" rel="noopener noreferrer">fakeForEach</a></li>
-          <li><a href="../functions/fakeReduce.html" target="_blank" rel="noopener noreferrer">fakeReduce</a></li>
-          <li><a href="../functions/fakeEvery.html" target="_blank" rel="noopener noreferrer">fakeEvery</a></li>
-          <li><a href="../functions/fakeFind.html" target="_blank" rel="noopener noreferrer">fakeFind</a></li>
-          <li><a href="../functions/fakeIncludes.html" target="_blank" rel="noopener noreferrer">fakeIncludes</a></li>
-          <li><a href="../functions/fakeMap.html" target="_blank" rel="noopener noreferrer">fakeMap</a></li>
-          <li><a href="../functions/fakeFilter.html" target="_blank" rel="noopener noreferrer">fakeFilter</a></li>
-        </ul>
-      </aside>
-      <article>
-        <section class="description">
-          El método <code>fakeFind()</code> devuelve el primer elemento del array que cumple con la condición
-          implementada por una función que se pasa como argumento.
-        </section>
-        <section>
-          <h2>Sintaxis</h2>
-          <p class="syntaxbox">fakeFind(<em>array</em>, <em>callback</em>)</p>
-          <h3>Parámetros</h3>
-          <dl>
-            <dt>
-              <code class="code-params">array</code>
-            </dt>
-            <dd class="param-description">
-              El array sobre cuyos elementos se comprueba si cumplen con la condición provista por la función.
-            </dd>
-            <dt>
-              <code class="code-params">callback</code>
-            </dt>
-            <dd class="param-description">
-              Función que se va a aplicar a los elementos hasta encontrar alguno que la cumpla.
-            </dd>
-          </dl>
-          <h3>Valor de retorno</h3>
-          <p class="param-description">
-            Devuelve un elemento del array o <code>undefined</code> en caso de que ninguno cumpla con la condición.
-          </p>
-        </section>
-        <div>
-          <h2>Ejemplo</h2>
-          <h3>Encontrar un elemento en el array mayor a 15</h3>
-          <div class="syntaxbox">
-            <p><code>let listOfNumbers = [5, 8, 30, 84];</code></p>
-            <p><code>const isOver15 = (x) => x > 15 ? true : false;</code></p>
-            <p><code>fakeFind(listOfNumbers, isOver15);</code></p>
-            <p><code>>> 30</code></p>
-          </div>
+<head>
+  <meta charset="UTF-8" />
+  <title>fakeFind</title>
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+
+<body>
+  <h1>fakeFind</h1>
+  <div class="container-aside-article">
+    <aside class="column-aside">
+      <p class="aside-title">Otros métodos</p>
+      <ul class="aside-list">
+        <li><a href="fakeForEach.html" target="_blank" rel="noopener noreferrer">fakeForEach</a></li>
+        <li><a href="fakeSome.html" target="_blank" rel="noopener noreferrer">fakeSome</a></li>
+        <li><a href="fakeReduce.html" target="_blank" rel="noopener noreferrer">fakeReduce</a></li>
+        <li><a href="fakeEvery.html" target="_blank" rel="noopener noreferrer">fakeEvery</a></li>
+        <li><a href="fakeFind.html" target="_blank" rel="noopener noreferrer">fakeFind</a></li>
+        <li><a href="fakeIncludes.html" target="_blank" rel="noopener noreferrer">fakeIncludes</a></li>
+        <li><a href="fakeMap.html" target="_blank" rel="noopener noreferrer">fakeMap</a></li>
+        <li><a href="fakeFilter.html" target="_blank" rel="noopener noreferrer">fakeFilter</a></li>
+      </ul>
+    </aside>
+    <article>
+      <section class="description">
+        El método <code>fakeFind()</code> devuelve el primer elemento del array que cumple con la condición
+        implementada por una función que se pasa como argumento.
+      </section>
+      <section>
+        <h2>Sintaxis</h2>
+        <p class="syntaxbox">fakeFind(<em>array</em>, <em>callback</em>)</p>
+        <h3>Parámetros</h3>
+        <dl>
+          <dt>
+            <code class="code-params">array</code>
+          </dt>
+          <dd class="param-description">
+            El array sobre cuyos elementos se comprueba si cumplen con la condición provista por la función.
+          </dd>
+          <dt>
+            <code class="code-params">callback</code>
+          </dt>
+          <dd class="param-description">
+            Función que se va a aplicar a los elementos hasta encontrar alguno que la cumpla.
+          </dd>
+        </dl>
+        <h3>Valor de retorno</h3>
+        <p class="param-description">
+          Devuelve un elemento del array o <code>undefined</code> en caso de que ninguno cumpla con la condición.
+        </p>
+      </section>
+      <div>
+        <h2>Ejemplo</h2>
+        <h3>Encontrar un elemento en el array mayor a 15</h3>
+        <div class="syntaxbox">
+          <p><code>let listOfNumbers = [5, 8, 30, 84];</code></p>
+          <p><code>const isOver15 = (x) => x > 15 ? true : false;</code></p>
+          <p><code>fakeFind(listOfNumbers, isOver15);</code></p>
+          <p><code>>> 30</code></p>
         </div>
-      </article>
-    </div>
-  </body>
+      </div>
+    </article>
+  </div>
+</body>
+
 </html>

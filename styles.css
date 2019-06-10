@@ -7,9 +7,9 @@
 body {
   line-height: 1.6;
   font-family: Arial, x-locale-body, sans-serif;
-  letter-spacing: -0.00278rem;
+  letter-spacing: -0.04448px;
   font-size: 18px;
-  font-size: 1rem;
+  font-size: 16px;
 }
 
 /* header */
@@ -93,7 +93,7 @@ img {
 }
 
 h1 {
-  font-size: 2.83333rem;
+  font-size: 45.33px;
   padding-left: 30px;
   padding-top: 30px;
 }
@@ -157,7 +157,7 @@ h1 {
 
 .info-text p {
   box-sizing: border-box;
-  max-width: 42rem;
+  max-width: 672px;
   margin-bottom: 24px;
 }
 

@@ -74,14 +74,12 @@ img {
   padding: 0 1em;
 }
 
-.search {
+.search{
   background-color: black;
 }
 
-.search>img {
-  width: 2em;
-  height: auto;
-  margin-top: 0.6em;
+.search-a {
+ color: #fff;
 }
 
 /* end header */

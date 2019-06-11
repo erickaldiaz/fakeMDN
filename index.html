@@ -9,20 +9,21 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel='stylesheet' type='text/css' media='screen' href='styles.css'>
     <script src='app.js'></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.7.2/js/all.js" integrity="sha384-0pzryjIRos8mFBWMzSSZApWtPl/5++eIfzYmTgBBmXYdhvxPc+XcFEk+zJwDgWbP" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <header id="header-main" class="main-header">
         <div class="logo-box">
             <a href="index.html" class="logo" rel="noopener noreferrer">
-                <img src="img/logo_v2.png" alt="logo de mdn fake" title="logo" />
+                <img src="img/logo_v2_negro.png" alt="logo de mdn fake" title="logo" />
             </a>
         </div>
         <nav class="nav-container">
             <ul class="list-menu">
-                <li class="list-nav"><a href="" rel="noopener noreferrer">Tecnologías</a></li>
-                <li class="list-nav"><a href="" rel="noopener noreferrer">Referencias & Guias</a></li>
-                <li class="list-nav"><a href="" rel="noopener noreferrer">Feedback</a></li>
+                <li class="list-nav"><a href="" rel="noopener noreferrer">Tecnologías <i class="fas fa-caret-down"></i></a></li>
+                <li class="list-nav"><a href="" rel="noopener noreferrer">Referencias & Guias <i class="fas fa-caret-down"></i></a></li>
+                <li class="list-nav"><a href="" rel="noopener noreferrer">Feedback <i class="fas fa-caret-down"></i></a></li>
             </ul>
 
         </nav>
@@ -30,29 +31,24 @@
             <ul class="list-login">
                 <li class="login-box">
                     <div class="login">
-                        <a href="" rel="noopener noreferrer">Sign in</a>
+                        <a href="" rel="noopener noreferrer" style="font-size: 18px">Sign in
+                        <i class="fab fa-github"></i></a>
                     </div>
                 </li>
             </ul>
         </div>
         <div class="search">
-            <img src="img/search.png">
+                <a href="" rel="noopener noreferrer" class="search-a"><i class="fas fa-search fa-2x"></i></a> 
+            <!-- <img src="img/search.png"> -->
         </div>
     </header>
     <main>
-        <div class="document-info">
-            <div class="center-info">
+        <section class="document-info">
+            <header class="center-info">
                 <h1>Javascript</h1>
-            </div>
-            <!-- <div class="center-buttons">
-             <ul class="buttons-page">
-                    <li><button><span>Languages</span></button></li>
-                    <li><a>Edit</a></li>
-                    <li><button><span>Advanced</span></button></li>
-             </ul>
-         </div> -->
-        </div>
-        <div class="container">
+            </header>
+        </section>
+        <section class="container">
             <div class="container-aside-article">
                 <aside class="column-aside">
                     <h2>Related topics</h2>
@@ -102,13 +98,13 @@
                         programming languages have very different syntax, semantics, and uses.</p>
                 </article>
             </div>
-        </div>
+        </section>
     </main>
     <footer class="nav-footer">
-        <div class="box-footer-center">
+        <article class="box-footer-center">
             <div class="logo-footer">
                 <a href="index.html" class="logo" rel="noopener noreferrer"></a>
-                <img src="img/logo_v2.png" alt="logo de mdn fake" title="logo" />
+                <img src="img/logo_v2_blanco.png" alt="logo de mdn fake" title="logo" />
             </div>
             <div class="info-content-footer">
                 <p>© 2005-2019 Mozilla and individual contributors</p>
@@ -116,35 +112,28 @@
                         licenses.</a>
                 </p>
             </div>
-        </div>
-        <div class="footer-mdn">
+        </article>
+        <section class="footer-mdn">
             <h2 class="footer-title">MDN</h2>
             <ul class="list-footer">
                 <li><a href="" target="_blank" rel="noopener noreferrer">Tecnologías Web</a></li>
                 <li><a href="" target="_blank" rel="noopener noreferrer">Aprender Desarrollo Web</a></li>
                 <li><a href="" target="_blank" rel="noopener noreferrer">Sobre MDN</a></li>
                 <li><a href="" target="_blank" rel="noopener noreferrer">Feedback</a></li>
-                <li class="footer-social"><a href="" target="_blank" rel="noopener noreferrer">Twitter</a></li>
-                <li class="footer-social"><a href="" target="_blank" rel="noopener noreferrer">Github</a></li>
+                <li class="footer-social"><a href="" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a></li>
+                <li class="footer-social"><a href="" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a></li>
             </ul>
-
-        </div>
-        <div class="footer-mozilla">
+        </section>
+        <section class="footer-mozilla">
             <h2 class="footer-title">Mozilla</h2>
             <ul class="list-footer">
                 <li><a href="" target="_blank" rel="noopener noreferrer">Sobre nosotros</a></li>
                 <li><a href="" target="_blank" rel="noopener noreferrer">Contactanos</a></li>
                 <li><a href="" target="_blank" rel="noopener noreferrer">Firefox</a></li>
-                <li class="footer-social"><a href="" rel="noopener noreferrer">Twitter</a></li>
-                <li class="footer-social"><a href="" rel="noopener noreferrer">Instagram</a></li>
+                <li class="footer-social"><a href="" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a></li>
+                <li class="footer-social"><a href="" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a></li>
             </ul>
-
-        </div>
-        <!-- <div class="info-content-footer">
-            <p>© 2005-2019 Mozilla and individual contributors</p>
-            <p> Content is available under <a href="" target="_blank" rel="noopener noreferrer">these licenses.</a></p>
-        </div> -->
-        </div>
+        </section>
     </footer>
 </body>
 

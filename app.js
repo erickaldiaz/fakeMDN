@@ -53,3 +53,17 @@ function fakeFind(array, callback) {
   }
   return undefined;
 }
+
+function fakeUnion(arrayOne, arrayTwo) {
+	let unionArray = [];
+	
+  function isInUnionArray(element) {
+		if (!fakeIncludes(unionArray, element)) {
+			unionArray.push(element)
+		}
+	}
+	
+  fakeForEach(arrayOne, isInUnionArray);
+	fakeForEach(arrayTwo, isInUnionArray);
+	return unionArray;
+}

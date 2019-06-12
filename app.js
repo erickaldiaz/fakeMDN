@@ -55,15 +55,19 @@ function fakeFind(array, callback) {
 }
 
 function fakeUnion(arrayOne, arrayTwo) {
-	let unionArray = [];
-	
+  let unionArray = [];
+
   function isInUnionArray(element) {
-		if (!fakeIncludes(unionArray, element)) {
-			unionArray.push(element)
-		}
-	}
-	
+    if (!fakeIncludes(unionArray, element)) {
+      unionArray.push(element);
+    }
+  }
+
   fakeForEach(arrayOne, isInUnionArray);
-	fakeForEach(arrayTwo, isInUnionArray);
-	return unionArray;
+  fakeForEach(arrayTwo, isInUnionArray);
+  return unionArray;
+}
+
+function fakeIntersection(arrayOne, arrayTwo) {
+  fakeFilter(arrayOne, element => arrayTwo.indexOf(element) >= 0);
 }

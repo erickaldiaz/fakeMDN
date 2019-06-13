@@ -55,8 +55,8 @@ function fakeFind(array, callback) {
 }
 
 function fakeUnion(arrayOne, arrayTwo) {
-  const unionArray = [...arrayOne];
-	const filteredArray = fakeFilter(arrayTwo, element => !arrayOne.includes(element)); 
+	const unionArray = [...arrayOne];
+	const filteredArray = fakeFilter(arrayTwo, element => !fakeIncludes(arrayOne, element)); 
 	fakeForEach(filteredArray, element => unionArray.push(element));
 	return unionArray;
 }

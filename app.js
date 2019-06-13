@@ -67,3 +67,16 @@ function fakeUnion(arrayOne, arrayTwo) {
 	fakeForEach(arrayTwo, isInUnionArray);
 	return unionArray;
 }
+
+function fakeIndexOfRecursive(array, element) {
+	function isEqual(array, index, element) {
+		if (array[index] === element) {
+			return index;
+		} else if (index === array.length) {
+			return -1;
+		} else {
+			return isEqual(array, index + 1, element);
+		}
+	}
+	return isEqual(array, 0, element);
+}

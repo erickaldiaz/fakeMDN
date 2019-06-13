@@ -5,6 +5,9 @@
     <title>fakeFilter</title>
     <link rel="stylesheet" href="../styles.css" />
     <script defer src="https://use.fontawesome.com/releases/v5.7.2/js/all.js" integrity="sha384-0pzryjIRos8mFBWMzSSZApWtPl/5++eIfzYmTgBBmXYdhvxPc+XcFEk+zJwDgWbP" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"> </script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/styles/atom-one-light.min.css">  
   </head>
 
   <body>
@@ -45,13 +48,17 @@
       <aside class="column-aside">
         <p class="aside-title">Otros métodos</p>
         <ul class="aside-list">
-          <li><a href="fakeForEach.html" target="_blank" rel="noopener noreferrer">fakeForEach</a></li>
-          <li><a href="fakeReduce.html" target="_blank" rel="noopener noreferrer">fakeReduce</a></li>
-          <li><a href="fakeEvery.html" target="_blank" rel="noopener noreferrer">fakeEvery</a></li>
-          <li><a href="fakeFind.html" target="_blank" rel="noopener noreferrer">fakeFind</a></li>
-          <li><a href="fakeIncludes.html" target="_blank" rel="noopener noreferrer">fakeIncludes</a></li>
-          <li><a href="fakeMap.html" target="_blank" rel="noopener noreferrer">fakeMap</a></li>
-          <li><a href="fakeSome.html" target="_blank" rel="noopener noreferrer">fakeSome</a></li>
+            <li><a href="fakeForEach.html" target="_blank" rel="noopener noreferrer">fakeForEach</a></li>
+            <li><a href="fakeSome.html" target="_blank" rel="noopener noreferrer">fakeSome</a></li>
+            <li><a href="fakeEvery.html" target="_blank" rel="noopener noreferrer">fakeEvery</a></li>
+            <li><a href="fakeFind.html" target="_blank" rel="noopener noreferrer">fakeFind</a></li>
+            <li><a href="fakeIncludes.html" target="_blank" rel="noopener noreferrer">fakeIncludes</a></li>
+            <li><a href="fakeMap.html" target="_blank" rel="noopener noreferrer">fakeMap</a></li>
+            <li><a href="fakeReduce.html" target="_blank" rel="noopener noreferrer">fakeReduce</a></li>
+            <li><a href="fakeIndexOf.html" target="_blank" rel="noopener noreferrer">fakeIndexOf</a></li>
+            <li><a href="fakeIndexOfRecursive.html" target="_blank" rel="noopener noreferrer">fakeIndexOfRecursive</a></li>
+            <li><a href="fakeIntersection.html" target="_blank" rel="noopener noreferrer">fakeIntersection</a></li>
+            <li><a href="fakeSum.html" target="_blank" rel="noopener noreferrer">fakeSum</a></li>
         </ul>
       </aside>
       <article>
@@ -91,12 +98,17 @@
         <div>
           <h2>Ejemplo</h2>
           <h3>Filtrando todos los valores pequeños</h3>
-          <div class="syntaxbox">
-            <p><code>function esSuficientementeGrande(elemento) { return elemento >= 10; }</code></p>
-            <p><code> const filtrados = [12, 5, 8, 130, 44];</code></p>
-            <p><code>fakeFilter(filtrados, esSuficientementeGrande);</code></p>
-            <p><code>>> filtrados es [12, 130, 44]</code></p>
-          </div>
+          <pre>
+              <code class="javascript">
+  function esSuficientementeGrande(elemento) { 
+    return elemento >= 10; }
+    const filtrados = [12, 5, 8, 130, 44];
+    
+    fakeFilter(filtrados, esSuficientementeGrande);
+                    
+    >> filtrados es [12, 130, 44] 
+          </code>
+        </pre>
         </div>
       </article>
     </div>

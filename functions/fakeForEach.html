@@ -5,6 +5,9 @@
     <title>fakeForEach</title>
     <link rel="stylesheet" href="../styles.css" />
     <script defer src="https://use.fontawesome.com/releases/v5.7.2/js/all.js" integrity="sha384-0pzryjIRos8mFBWMzSSZApWtPl/5++eIfzYmTgBBmXYdhvxPc+XcFEk+zJwDgWbP" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"> </script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/styles/atom-one-light.min.css"> 
   </head>
   <body>
     <header id="header-main" class="main-header">
@@ -42,13 +45,18 @@
       <aside class="column-aside">
         <p class="aside-title">Otros métodos</p>
         <ul class="aside-list">
-          <li><a href="fakeSome.html" target="_blank" rel="noopener noreferrer">fakeSome</a></li>
-          <li><a href="fakeEvery.html" target="_blank" rel="noopener noreferrer">fakeEvery</a></li>
-          <li><a href="fakeFind.html" target="_blank" rel="noopener noreferrer">fakeFind</a></li>
-          <li><a href="fakeIncludes.html" target="_blank" rel="noopener noreferrer">fakeIncludes</a></li>
-          <li><a href="fakeMap.html" target="_blank" rel="noopener noreferrer">fakeMap</a></li>
-          <li><a href="fakeFilter.html" target="_blank" rel="noopener noreferrer">fakeFilter</a></li>
-          <li><a href="fakeReduce.html" target="_blank" rel="noopener noreferrer">fakeReduce</a></li>
+            <li><a href="fakeSome.html" target="_blank" rel="noopener noreferrer">fakeSome</a></li>
+            <li><a href="fakeEvery.html" target="_blank" rel="noopener noreferrer">fakeEvery</a></li>
+            <li><a href="fakeFind.html" target="_blank" rel="noopener noreferrer">fakeFind</a></li>
+            <li><a href="fakeIncludes.html" target="_blank" rel="noopener noreferrer">fakeIncludes</a></li>
+            <li><a href="fakeMap.html" target="_blank" rel="noopener noreferrer">fakeMap</a></li>
+            <li><a href="fakeFilter.html" target="_blank" rel="noopener noreferrer">fakeFilter</a></li>
+            <li><a href="fakeReduce.html" target="_blank" rel="noopener noreferrer">fakeReduce</a></li>
+            <li><a href="fakeIndexOf.html" target="_blank" rel="noopener noreferrer">fakeIndexOf</a></li>
+            <li><a href="fakeIndexOfRecursive.html" target="_blank" rel="noopener noreferrer">fakeIndexOfRecursive</a></li>
+            <li><a href="fakeIntersection.html" target="_blank" rel="noopener noreferrer">fakeIntersection</a></li>
+            <li><a href="fakeUnion.html" target="_blank" rel="noopener noreferrer">fakeUnion</a></li>
+            <li><a href="fakeSum.html" target="_blank" rel="noopener noreferrer">fakeSum</a></li>
         </ul>
       </aside>
       <article>
@@ -81,15 +89,18 @@
         <div>
           <h2>Ejemplo</h2>
           <h3>Mostrar cada elemento del array</h3>
-          <div class="syntaxbox">
-            <p><code>let array = ['a', 'b', 'c']; </code></p>
-            <p><code>fakeForEach(array, function(element){</code></p>
-            <p><code> console.log(element);</code></p>
-            <p><code>})</code></p>
-            <p><code> // output: "a" </code></p>
-            <p><code> // output: "b" </code></p>
-            <p><code> // output: "c" </code></p>
-          </div>
+            <pre>
+              <code class="javascript">
+    let array = ['a', 'b', 'c']; 
+    fakeForEach(array, function(element){         
+    fakeForEach(array, function(element){          
+    console.log(element);       
+    })          
+    // output: "a"
+    // output: "b" 
+    // output: "c" 
+              </code>
+          </pre>
         </div>
       </article>
     </div>

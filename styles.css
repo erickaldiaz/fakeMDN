@@ -234,13 +234,17 @@ h3 {
   padding: 5px;
   width: 60%;
   font-family: consolas, monaco, 'Andale Mono', monospace;
-  text-align: left;
+  text-align: left; 
   border-left: 8px solid #597e92;
   border-top: 1px solid #597e92;
   border-bottom: 1px solid #597e92;
-  border-right: 1px solid #597e92;
+  border-right: 1px solid #597e92; 
   margin: 20px 0px 10px 30px;
   color: gray;
+}
+.javascript{
+  border-left: 8px solid #597e92;
+  width: 90%;
 }
 
 .code-params {

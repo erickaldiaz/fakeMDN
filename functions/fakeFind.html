@@ -5,6 +5,9 @@
     <title>fakeFind</title>
     <link rel="stylesheet" href="../styles.css" />
     <script defer src="https://use.fontawesome.com/releases/v5.7.2/js/all.js" integrity="sha384-0pzryjIRos8mFBWMzSSZApWtPl/5++eIfzYmTgBBmXYdhvxPc+XcFEk+zJwDgWbP" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"> </script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/styles/atom-one-light.min.css"> 
   </head>
 
   <body>
@@ -45,13 +48,17 @@
       <aside class="column-aside">
         <p class="aside-title">Otros métodos</p>
         <ul class="aside-list">
-          <li><a href="fakeForEach.html" target="_blank" rel="noopener noreferrer">fakeForEach</a></li>
-          <li><a href="fakeReduce.html" target="_blank" rel="noopener noreferrer">fakeReduce</a></li>
-          <li><a href="fakeEvery.html" target="_blank" rel="noopener noreferrer">fakeEvery</a></li>
-          <li><a href="fakeMap.html" target="_blank" rel="noopener noreferrer">fakeMap</a></li>
-          <li><a href="fakeIncludes.html" target="_blank" rel="noopener noreferrer">fakeIncludes</a></li>
-          <li><a href="fakeSome.html" target="_blank" rel="noopener noreferrer">fakeSome</a></li>
-          <li><a href="fakeFilter.html" target="_blank" rel="noopener noreferrer">fakeFilter</a></li>
+            <li><a href="fakeForEach.html" target="_blank" rel="noopener noreferrer">fakeForEach</a></li>
+            <li><a href="fakeSome.html" target="_blank" rel="noopener noreferrer">fakeSome</a></li>
+            <li><a href="fakeEvery.html" target="_blank" rel="noopener noreferrer">fakeEvery</a></li>
+            <li><a href="fakeIncludes.html" target="_blank" rel="noopener noreferrer">fakeIncludes</a></li>
+            <li><a href="fakeMap.html" target="_blank" rel="noopener noreferrer">fakeMap</a></li>
+            <li><a href="fakeFilter.html" target="_blank" rel="noopener noreferrer">fakeFilter</a></li>
+            <li><a href="fakeReduce.html" target="_blank" rel="noopener noreferrer">fakeReduce</a></li>
+            <li><a href="fakeIndexOf.html" target="_blank" rel="noopener noreferrer">fakeIndexOf</a></li>
+            <li><a href="fakeIndexOfRecursive.html" target="_blank" rel="noopener noreferrer">fakeIndexOfRecursive</a></li>
+            <li><a href="fakeIntersection.html" target="_blank" rel="noopener noreferrer">fakeIntersection</a></li>
+            <li><a href="fakeSum.html" target="_blank" rel="noopener noreferrer">fakeSum</a></li>
         </ul>
       </aside>
       <article>
@@ -85,12 +92,16 @@
         <div>
           <h2>Ejemplo</h2>
           <h3>Encontrar un elemento en el array mayor a 15</h3>
-          <div class="syntaxbox">
-            <p><code>let listOfNumbers = [5, 8, 30, 84];</code></p>
-            <p><code>const isOver15 = (x) => x > 15 ? true : false;</code></p>
-            <p><code>fakeFind(listOfNumbers, isOver15);</code></p>
-            <p><code>>> 30</code></p>
-          </div>
+          <pre>
+              <code class="javascript">
+  let listOfNumbers = [5, 8, 30, 84];
+  const isOver15 = (x) => x > 15 ? true : false;
+       
+  fakeFind(listOfNumbers, isOver15);  
+
+  >> 30                            
+          </code>
+        </pre>
         </div>
       </article>
     </div>

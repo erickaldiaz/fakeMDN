@@ -69,5 +69,5 @@ function fakeUnion(arrayOne, arrayTwo) {
 }
 
 function fakeIntersection(arrayOne, arrayTwo) {
-  fakeFilter(arrayOne, element => arrayTwo.indexOf(element) >= 0);
+  return fakeFilter(arrayOne, element => arrayTwo.indexOf(element) >= 0);
 }

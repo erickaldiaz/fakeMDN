@@ -55,16 +55,9 @@ function fakeFind(array, callback) {
 }
 
 function fakeUnion(arrayOne, arrayTwo) {
-  let unionArray = [];
-
-  function isInUnionArray(element) {
-    if (!fakeIncludes(unionArray, element)) {
-      unionArray.push(element);
-    }
-  }
-
-  fakeForEach(arrayOne, isInUnionArray);
-  fakeForEach(arrayTwo, isInUnionArray);
+	const unionArray = [...arrayOne];
+	const filteredArray = fakeFilter(arrayTwo, element => !fakeIncludes(arrayOne, element)); 
+	fakeForEach(filteredArray, element => unionArray.push(element));
   return unionArray;
 }
 

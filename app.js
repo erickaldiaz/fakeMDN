@@ -32,13 +32,12 @@ function fakeFind(array, callback) {
 }
 
 function fakeIncludes(array, include) {
-  find = false
   for (let element of array) {
       if(element == include){
-          find = true
+         return true;
       }
   }
-  return find
+  return false;
 }
 
 function fakeMap(array, callback) {

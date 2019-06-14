@@ -75,3 +75,8 @@ function fakeUnion(arrayOne, arrayTwo) {
 	fakeForEach(filteredArray, element => unionArray.push(element));
 	return unionArray;
 }
+
+function fakeSum(array) {
+	const sum = (x, y) => x + y;
+	return fakeReduce(array, sum);
+}

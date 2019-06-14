@@ -2,7 +2,7 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <title>fakeFind</title>
+    <title>fakeMap</title>
     <link rel="stylesheet" href="../styles.css" />
     <script defer src="https://use.fontawesome.com/releases/v5.7.2/js/all.js" integrity="sha384-0pzryjIRos8mFBWMzSSZApWtPl/5++eIfzYmTgBBmXYdhvxPc+XcFEk+zJwDgWbP" crossorigin="anonymous"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"> </script>
@@ -42,66 +42,63 @@
       </div>
   </header>
     <!-- header -->
-
-    <h1>fakeFind</h1>
+    <h1>fakeUnion</h1>
     <div class="container-aside-article">
       <aside class="column-aside">
         <p class="aside-title">Otros métodos</p>
         <ul class="aside-list">
-            <li><a href="fakeForEach.html" target="_blank" rel="noopener noreferrer">fakeForEach</a></li>
-            <li><a href="fakeSome.html" target="_blank" rel="noopener noreferrer">fakeSome</a></li>
-            <li><a href="fakeEvery.html" target="_blank" rel="noopener noreferrer">fakeEvery</a></li>
-            <li><a href="fakeIncludes.html" target="_blank" rel="noopener noreferrer">fakeIncludes</a></li>
-            <li><a href="fakeMap.html" target="_blank" rel="noopener noreferrer">fakeMap</a></li>
-            <li><a href="fakeFilter.html" target="_blank" rel="noopener noreferrer">fakeFilter</a></li>
-            <li><a href="fakeReduce.html" target="_blank" rel="noopener noreferrer">fakeReduce</a></li>
-            <li><a href="fakeIndexOf.html" target="_blank" rel="noopener noreferrer">fakeIndexOf</a></li>
-            <li><a href="fakeIndexOfRecursive.html" target="_blank" rel="noopener noreferrer">fakeIndexOfRecursive</a></li>
-            <li><a href="fakeIntersection.html" target="_blank" rel="noopener noreferrer">fakeIntersection</a></li>
-            <li><a href="fakeSum.html" target="_blank" rel="noopener noreferrer">fakeSum</a></li>
+          <li><a href="fakeForEach.html" target="_blank" rel="noopener noreferrer">fakeForEach</a></li>
+          <li><a href="fakeSome.html" target="_blank" rel="noopener noreferrer">fakeSome</a></li>
+          <li><a href="fakeEvery.html" target="_blank" rel="noopener noreferrer">fakeEvery</a></li>
+          <li><a href="fakeFind.html" target="_blank" rel="noopener noreferrer">fakeFind</a></li>
+          <li><a href="fakeIncludes.html" target="_blank" rel="noopener noreferrer">fakeIncludes</a></li>
+          <li><a href="fakeMap.html" target="_blank" rel="noopener noreferrer">fakeMap</a></li>
+          <li><a href="fakeFilter.html" target="_blank" rel="noopener noreferrer">fakeFilter</a></li>
+          <li><a href="fakeReduce.html" target="_blank" rel="noopener noreferrer">fakeReduce</a></li>
+          <li><a href="fakeIndexOf.html" target="_blank" rel="noopener noreferrer">fakeIndexOf</a></li>
+          <li><a href="fakeIndexOfRecursive.html" target="_blank" rel="noopener noreferrer">fakeIndexOfRecursive</a></li>
+          <li><a href="fakeIntersection.html" target="_blank" rel="noopener noreferrer">fakeIntersection</a></li>
+          <li><a href="fakeSum.html" target="_blank" rel="noopener noreferrer">fakeSum</a></li>
         </ul>
       </aside>
       <article>
         <section class="description">
-          El método <code>fakeFind()</code> devuelve el primer elemento del array que cumple con la condición
-          implementada por una función que se pasa como argumento.
+          A patir de dos arrays, el método <code>fakeUnion()</code> retorna un nuevo array con la unión de los valores de ambos, sin repeticiones y preservando el orden de los elementos, comenzando desde el primer elemento del primer array pasado por parámetro.
         </section>
         <section>
           <h2>Sintaxis</h2>
-          <p class="syntaxbox">fakeFind(<em>array</em>, <em>callback</em>)</p>
+          <p class="syntaxbox">fakeUnion(<em>arrayOne</em>, <em>arrayTwo</em>)</p>
           <h3>Parámetros</h3>
           <dl>
             <dt>
-              <code class="code-params">array</code>
+              <code class="code-params">arrays</code>
             </dt>
             <dd class="param-description">
-              El array sobre cuyos elementos se comprueba si cumplen con la condición provista por la función.
+              Los arrays que se unirán para conformar el nuevo array a devolver.
             </dd>
             <dt>
               <code class="code-params">callback</code>
             </dt>
-            <dd class="param-description">
-              Función que se va a aplicar a los elementos hasta encontrar alguno que la cumpla.
-            </dd>
           </dl>
           <h3>Valor de retorno</h3>
           <p class="param-description">
-            Devuelve un elemento del array o <code>undefined</code> en caso de que ninguno cumpla con la condición.
+            Devuelve un nuevo array.
           </p>
         </section>
         <div>
           <h2>Ejemplo</h2>
-          <h3>Encontrar un elemento en el array mayor a 15</h3>
+          <h3>Unir dos arrays de números sin repeticiones</h3>
           <pre>
               <code class="javascript">
-  let listOfNumbers = [5, 8, 30, 84];
-  const isOver15 = (x) => x > 15 ? true : false;
-       
-  fakeFind(listOfNumbers, isOver15);  
+  const firstArray = [1, 2, 3];
 
-  >> 30                            
-          </code>
-        </pre>
+  const secondArray = [3, 4, 5];
+              
+  fakeUnion(firstArray, secondArray);
+              
+  >> [1, 2, 3, 4, 5]
+            </code>
+          </pre>
         </div>
       </article>
     </div>

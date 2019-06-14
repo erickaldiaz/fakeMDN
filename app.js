@@ -68,3 +68,10 @@ function fakeReduce(array, callback) {
   }
   return undefined;
 }
+
+function fakeUnion(arrayOne, arrayTwo) {
+	const unionArray = [...arrayOne];
+	const filteredArray = fakeFilter(arrayTwo, element => !fakeIncludes(arrayOne, element)); 
+	fakeForEach(filteredArray, element => unionArray.push(element));
+	return unionArray;
+}

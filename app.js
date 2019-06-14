@@ -41,11 +41,10 @@ function fakeIncludes(array, include) {
 }
 
 function fakeMap(array, callback) {
-  const newArray = [];
-  for (element of array) {
-    newArray.push(callback(element));
-  }
-  return newArray;
+	const mappedArray = [];
+	const pushToMappedArray = (element) => mappedArray.push(callback(element));
+	fakeForEach(array, pushToMappedArray);
+	return mappedArray;
 }
 
 function fakeFilter(array, callback) {

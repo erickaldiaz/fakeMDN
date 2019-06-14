@@ -60,3 +60,19 @@ function fakeUnion(arrayOne, arrayTwo) {
 	fakeForEach(filteredArray, element => unionArray.push(element));
 	return unionArray;
 }
+
+function fakeIndexOf(str, word){
+  dif = str.length - word.length
+  for(i=0; i <= dif; i++){
+    ok=true;
+    for(j=0; j < word.length; j++){
+       if(str[j+i] != word[j]){
+        ok = false;        
+      }
+    }
+    if(ok == true){
+      return i;
+    }
+  }
+  return "-1"
+}

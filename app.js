@@ -1,3 +1,9 @@
+function fakeForEach(array, callback) {
+  for (let element of array) {
+    callback(element);
+  }
+}
+
 function fakeSome(array, callback) {
   for (let element of array) {
     if (callback(element)) {
@@ -16,15 +22,22 @@ function fakeEvery(array, callback) {
   return true;
 }
 
-function fakeReduce(array, callback) {
-  if (array.lenght != 0) {
-    let accumulator = array[0];
-    for (let i = 0; i < array.length - 1; i++) {
-      accumulator = callback(accumulator, array[i + 1]);
+function fakeFind(array, callback) {
+  for (let element of array) {
+    if (callback(element)) {
+      return element;
     }
-    return accumulator;
   }
   return undefined;
+}
+
+function fakeIncludes(array, include) {
+  for (let element of array) {
+      if(element == include){
+         return true;
+      }
+  }
+  return false;
 }
 
 function fakeMap(array, callback) {
@@ -45,11 +58,13 @@ function fakeFilter(array, callback) {
   return newArray;
 }
 
-function fakeFind(array, callback) {
-  for (let element of array) {
-    if (callback(element)) {
-      return element;
+function fakeReduce(array, callback) {
+  if (array.lenght != 0) {
+    let accumulator = array[0];
+    for (let i = 0; i < array.length - 1; i++) {
+      accumulator = callback(accumulator, array[i + 1]);
     }
+    return accumulator;
   }
   return undefined;
 }

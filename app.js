@@ -69,14 +69,16 @@ function fakeUnion(arrayOne, arrayTwo) {
 }
 
 function fakeIndexOfRecursive(array, element) {
-	function isEqual(array, index, element) {
-		if (array[index] === element) {
-			return index;
-		} else if (index === array.length) {
+  function isEqual(array, index, element) {
+		if (index === array.length) {
 			return -1;
 		} else {
+			if (array[index] === element) {
+				return index;
+			} else {
 			return isEqual(array, index + 1, element);
+			}
 		}
-	}
+	}	
 	return isEqual(array, 0, element);
 }

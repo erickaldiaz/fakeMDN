@@ -72,10 +72,21 @@ function fakeReduce(array, callback) {
 }
 
 function fakeUnion(arrayOne, arrayTwo) {
-	const unionArray = [...arrayOne];
-	const filteredArray = fakeFilter(arrayTwo, element => !fakeIncludes(arrayOne, element)); 
-	fakeForEach(filteredArray, element => unionArray.push(element));
-	return unionArray;
+  const unionArray = [...arrayOne];
+  const filteredArray = fakeFilter(
+    arrayTwo,
+    element => !fakeIncludes(arrayOne, element)
+  );
+  fakeForEach(filteredArray, element => unionArray.push(element));
+  return unionArray;
+}
+
+function fakeIntersection(arrayOne, arrayTwo) {
+  const filteredArrayOne = new Set(arrayOne);
+  return fakeFilter(
+    [...filteredArrayOne],
+    element => arrayTwo.indexOf(element) >= 0
+  );
 }
 
 function fakeIncludes(array, element) {

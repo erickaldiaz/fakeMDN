@@ -78,6 +78,13 @@ function fakeUnion(arrayOne, arrayTwo) {
 	return unionArray;
 }
 
+function fakeIncludes(array, element) {
+  if(fakeIndexOf(array, element)> -1){
+    return true;
+  }
+  return false;  
+}
+
 function fakeSum(array) {
 	const sum = (x, y) => x + y;
 	return fakeReduce(array, sum);

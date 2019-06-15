@@ -75,3 +75,12 @@ function fakeUnion(arrayOne, arrayTwo) {
 	fakeForEach(filteredArray, element => unionArray.push(element));
 	return unionArray;
 }
+
+function fakeIncludes(array, element) {
+  if(fakeIndexOf(array, element)> -1){
+ return true;
+  }else{
+   return false;  
+  }
+ 
+}

@@ -65,7 +65,6 @@ function fakeIndexOf(array, element){
   for(i=0; i < array.length; i++){
       if(array[i] == element){
         return i;
-        break;
       }
      }
   return "-1"

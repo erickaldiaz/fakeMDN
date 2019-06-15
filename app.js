@@ -41,11 +41,10 @@ function fakeIncludes(array, include) {
 }
 
 function fakeMap(array, callback) {
-  const newArray = [];
-  for (element of array) {
-    newArray.push(callback(element));
-  }
-  return newArray;
+	const mappedArray = [];
+	const pushToMappedArray = (element) => mappedArray.push(callback(element));
+	fakeForEach(array, pushToMappedArray);
+	return mappedArray;
 }
 
 function fakeFilter(array, callback) {
@@ -79,4 +78,19 @@ function fakeUnion(arrayOne, arrayTwo) {
 function fakeSum(array) {
 	const sum = (x, y) => x + y;
 	return fakeReduce(array, sum);
+}
+
+function fakeIndexOfRecursive(array, element) {
+  function isEqual(array, index, element) {
+		if (index === array.length) {
+			return -1;
+		} else {
+			if (array[index] === element) {
+				return index;
+			} else {
+			return isEqual(array, index + 1, element);
+			}
+		}
+	}	
+	return isEqual(array, 0, element);
 }

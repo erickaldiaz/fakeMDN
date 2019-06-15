@@ -55,12 +55,19 @@ function fakeFind(array, callback) {
 }
 
 function fakeUnion(arrayOne, arrayTwo) {
-	const unionArray = [...arrayOne];
-	const filteredArray = fakeFilter(arrayTwo, element => !fakeIncludes(arrayOne, element)); 
-	fakeForEach(filteredArray, element => unionArray.push(element));
+  const unionArray = [...arrayOne];
+  const filteredArray = fakeFilter(
+    arrayTwo,
+    element => !fakeIncludes(arrayOne, element)
+  );
+  fakeForEach(filteredArray, element => unionArray.push(element));
   return unionArray;
 }
 
 function fakeIntersection(arrayOne, arrayTwo) {
-  return fakeFilter(arrayOne, element => arrayTwo.indexOf(element) >= 0);
+  const filteredArrayOne = new Set(arrayOne);
+  return fakeFilter(
+    filteredArrayOne,
+    element => arrayTwo.indexOf(element) >= 0
+  );
 }

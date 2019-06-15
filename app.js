@@ -14,12 +14,15 @@ function fakeSome(array, callback) {
 }
 
 function fakeEvery(array, callback) {
-  for (let element of array) {
-    if (!callback(element)) {
-      return false;
-    }
-  }
-  return true;
+  let check = true;
+	function checkElement(element) {
+		if (!callback(element)) {
+			check = false;
+			return;
+		}
+	}	
+	fakeForEach(array, checkElement);
+	return check;
 }
 
 function fakeFind(array, callback) {

@@ -75,6 +75,11 @@ function fakeUnion(arrayOne, arrayTwo) {
 	return unionArray;
 }
 
+function fakeSum(array) {
+	const sum = (x, y) => x + y;
+	return fakeReduce(array, sum);
+}
+
 function fakeIndexOfRecursive(array, element) {
   function isEqual(array, index, element) {
 		if (index === array.length) {

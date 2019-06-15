@@ -67,7 +67,7 @@ function fakeUnion(arrayOne, arrayTwo) {
 function fakeIntersection(arrayOne, arrayTwo) {
   const filteredArrayOne = new Set(arrayOne);
   return fakeFilter(
-    filteredArrayOne,
+    [...filteredArrayOne],
     element => arrayTwo.indexOf(element) >= 0
   );
 }

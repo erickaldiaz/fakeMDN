@@ -60,15 +60,23 @@ function fakeFilter(array, callback) {
   return newArray;
 }
 
-function fakeReduce(array, callback) {
-  if (array.lenght != 0) {
-    let accumulator = array[0];
-    for (let i = 0; i < array.length - 1; i++) {
-      accumulator = callback(accumulator, array[i + 1]);
-    }
-    return accumulator;
-  }
-  return undefined;
+function fakeReduce(array, callback, initialValue = array[0]) {
+	if (array.length != 0) {
+		if (arguments.length == 2) {
+			let accumulator = array[0];
+			for (let i = 0; i < array.length - 1; i++) {
+				accumulator = callback(accumulator, array[i + 1]);
+			}
+			return accumulator;
+		} else if (arguments.length == 3) {
+			let accumulator = initialValue;
+			for (let i = 0; i < array.length; i++) {
+				accumulator = callback(accumulator, array[i]);
+			}
+			return accumulator;
+		}
+	}
+	return undefined;
 }
 
 function fakeUnion(arrayOne, arrayTwo) {

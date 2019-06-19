@@ -14,14 +14,8 @@ function fakeSome(array, callback) {
 }
 
 function fakeEvery(array, callback) {
-  let check = true;
-	function checkElement(element) {
-		if (!callback(element)) {
-			check = false;
-			return;
-		}
-	}	
-	fakeForEach(array, checkElement);
+	let check = true;
+	fakeForEach(array, element => !callback(element) ? check = false : element);
 	return check;
 }
 

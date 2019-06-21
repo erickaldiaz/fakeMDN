@@ -122,9 +122,9 @@ function fakeIndexOf(array, element){
 function fakeArrayMin(array) {
   //se copia el array para no mutarlo
 	const arrayCopy = [...array]
-	if (arrayCopy.length == 0) {
+	if (arrayCopy.length === 0) {
 		return undefined;
-	} else if (arrayCopy.length == 1) {
+	} else if (arrayCopy.length === 1) {
 		return arrayCopy[0];
 	} else {
 		if (arrayCopy[0] < arrayCopy[1]) {

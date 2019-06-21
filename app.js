@@ -28,15 +28,6 @@ function fakeFind(array, callback) {
   return undefined;
 }
 
-function fakeIncludes(array, include) {
-  for (let element of array) {
-    if (element == include) {
-      return true;
-    }
-  }
-  return false;
-}
-
 function fakeMap(array, callback) {
   const mappedArray = [];
   const pushToMappedArray = element => mappedArray.push(callback(element));
@@ -46,7 +37,7 @@ function fakeMap(array, callback) {
 
 function fakeFilter(array, callback) {
   const newArray = [];
-  for (element of array) {
+  for (let element of array) {
     if (callback(element)) {
       newArray.push(element);
     }

@@ -14,9 +14,11 @@ function fakeSome(array, callback) {
 }
 
 function fakeEvery(array, callback) {
-	let check = true;
-	fakeForEach(array, element => !callback(element) ? check = false : element);
-	return check;
+  let check = true;
+  fakeForEach(array, element =>
+    !callback(element) ? (check = false) : element
+  );
+  return check;
 }
 
 function fakeFind(array, callback) {
@@ -30,18 +32,18 @@ function fakeFind(array, callback) {
 
 function fakeIncludes(array, include) {
   for (let element of array) {
-      if(element == include){
-         return true;
-      }
+    if (element == include) {
+      return true;
+    }
   }
   return false;
 }
 
 function fakeMap(array, callback) {
-	const mappedArray = [];
-	const pushToMappedArray = (element) => mappedArray.push(callback(element));
-	fakeForEach(array, pushToMappedArray);
-	return mappedArray;
+  const mappedArray = [];
+  const pushToMappedArray = element => mappedArray.push(callback(element));
+  fakeForEach(array, pushToMappedArray);
+  return mappedArray;
 }
 
 function fakeFilter(array, callback) {
@@ -84,44 +86,44 @@ function fakeIntersection(arrayOne, arrayTwo) {
 }
 
 function fakeIncludes(array, element) {
-  if(fakeIndexOf(array, element)> -1){
+  if (fakeIndexOf(array, element) > -1) {
     return true;
   }
-  return false;  
+  return false;
 }
 
 function fakeSum(array) {
-	const sum = (x, y) => x + y;
-	return fakeReduce(array, sum);
+  const sum = (x, y) => x + y;
+  return fakeReduce(array, sum);
 }
 
 function fakeIndexOfRecursive(array, element) {
   function isEqual(array, index, element) {
-		if (index === array.length) {
-			return -1;
-		} else {
-			if (array[index] === element) {
-				return index;
-			} else {
-			return isEqual(array, index + 1, element);
-			}
-		}
-	}	
-	return isEqual(array, 0, element);
+    if (index === array.length) {
+      return -1;
+    } else {
+      if (array[index] === element) {
+        return index;
+      } else {
+        return isEqual(array, index + 1, element);
+      }
+    }
+  }
+  return isEqual(array, 0, element);
 }
 
-function fakeIndexOf(array, element){
-  for(i=0; i < array.length; i++){
-      if(array[i] == element){
-        return i;
-      }
-     }
-  return "-1"
+function fakeIndexOf(array, element) {
+  for (i = 0; i < array.length; i++) {
+    if (array[i] == element) {
+      return i;
+    }
+  }
+  return "-1";
 }
 
 function fakeFindIndex(array, callback) {
-  for (let index = 0; index < array.lenght; index ++ ) {
-    if (array[index] === callback(element)) {
+  for (let index = 0; index < array.length; index++) {
+    if (callback(array[index])) {
       return index;
     }
   }

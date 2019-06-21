@@ -118,3 +118,12 @@ function fakeIndexOf(array, element){
      }
   return "-1"
 }
+
+function fakeFindIndex(array, callback) {
+  for (let index = 0; index < array.lenght; index ++ ) {
+    if (array[index] === callback(element)) {
+      return index;
+    }
+  }
+  return -1;
+}

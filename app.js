@@ -101,7 +101,7 @@ function fakeIndexOf(array, element) {
       return i;
     }
   }
-  return '-1';
+  return -1;
 }
 
 function fakeFindIndex(array, callback) {

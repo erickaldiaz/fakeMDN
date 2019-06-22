@@ -15,9 +15,7 @@ function fakeSome(array, callback) {
 
 function fakeEvery(array, callback) {
   let check = true;
-  fakeForEach(array, element =>
-    !callback(element) ? (check = false) : element
-  );
+  fakeForEach(array, element => (!callback(element) ? (check = false) : element));
   return check;
 }
 
@@ -30,15 +28,6 @@ function fakeFind(array, callback) {
   return undefined;
 }
 
-function fakeIncludes(array, include) {
-  for (let element of array) {
-    if (element == include) {
-      return true;
-    }
-  }
-  return false;
-}
-
 function fakeMap(array, callback) {
   const mappedArray = [];
   const pushToMappedArray = element => mappedArray.push(callback(element));
@@ -48,7 +37,7 @@ function fakeMap(array, callback) {
 
 function fakeFilter(array, callback) {
   const newArray = [];
-  for (element of array) {
+  for (let element of array) {
     if (callback(element)) {
       newArray.push(element);
     }
@@ -69,20 +58,14 @@ function fakeReduce(array, callback) {
 
 function fakeUnion(arrayOne, arrayTwo) {
   const unionArray = [...arrayOne];
-  const filteredArray = fakeFilter(
-    arrayTwo,
-    element => !fakeIncludes(arrayOne, element)
-  );
+  const filteredArray = fakeFilter(arrayTwo, element => !fakeIncludes(arrayOne, element));
   fakeForEach(filteredArray, element => unionArray.push(element));
   return unionArray;
 }
 
 function fakeIntersection(arrayOne, arrayTwo) {
   const filteredArrayOne = new Set(arrayOne);
-  return fakeFilter(
-    [...filteredArrayOne],
-    element => arrayTwo.indexOf(element) >= 0
-  );
+  return fakeFilter([...filteredArrayOne], element => arrayTwo.indexOf(element) >= 0);
 }
 
 function fakeIncludes(array, element) {
@@ -118,7 +101,7 @@ function fakeIndexOf(array, element) {
       return i;
     }
   }
-  return "-1";
+  return '-1';
 }
 
 function fakeFindIndex(array, callback) {
@@ -128,4 +111,21 @@ function fakeFindIndex(array, callback) {
     }
   }
   return -1;
+}
+
+function fakeArrayMax(array) {
+  //se copia el array para no mutarlo
+  const arrayCopy = [...array];
+  if (array.length == 0) {
+    return undefined;
+  } else if (arrayCopy.length == 1) {
+    return arrayCopy[0];
+  } else {
+    if (arrayCopy[0] > arrayCopy[1]) {
+      arrayCopy.splice(1, 1);
+    } else {
+      arrayCopy.splice(0, 1);
+    }
+    return fakeArrayMax(arrayCopy);
+  }
 }

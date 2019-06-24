@@ -1,0 +1,185 @@
+:root {
+  --primary-color: #B75D69;
+  --secondary-color: #A04D58;
+  /*--background-color: #E6CCBE;*/
+  --black: #0F1A20;
+  --white: #EDEDED;
+}
+
+/*
+  colores:
+  light-blue #83d0f2;
+  background #fff;
+
+*/
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: var(--white);
+  width: 100%;
+  display: grid;
+  font-family: Arial, sans-serif;
+  background-color: var(--primary-color);
+  grid-template-areas: "header" "content" "footer";
+}
+
+/* predefinidos*/
+
+::selection {
+  background: var(--black);
+}
+
+ul {
+  list-style: none;
+  font-size: 0.9em;
+}
+
+a {
+  color: var(--white);
+  text-decoration: none;
+}
+
+p {
+    text-align: justify;
+    letter-spacing: 0.02em;
+    padding: 0.5em;
+    font-size: 0.9em;
+}
+
+header {
+  border-top: 5px solid var(--secondary-color);
+  grid-area: header;
+  height: 3em;
+  padding: 0 0.5em;
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo > * {
+  width: 10em;
+  height: auto;
+}
+
+.navbar {
+  width: 100%;
+  margin: auto;
+}
+
+.navbar > ul {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.navbar-item {
+  text-align: center;
+  width: 8em;
+  line-height: 3em;
+}
+
+.navbar-item > a {
+  display: block;
+  line-height: 3em;
+}
+
+main {
+  width: 100%;
+  grid-area: content;
+  display: grid;
+  grid-template-columns: 1fr 2fr 4fr 1fr;
+  grid-gap: 1em;
+  margin: 2em 0;
+}
+
+.head {
+  grid-column: 2 / 4;
+}
+
+.sidebar {
+  grid-column: 2;
+}
+
+.sidebar > h3 {
+    margin: 0.5em 0;
+}
+
+.sidebar-item {
+  width: 100%;
+}
+
+.sidebar-item > a {
+  display: block;
+  line-height: 2em;
+  padding-left: 1em;
+}
+
+.sidebar-item > a:hover {
+  background-color: var(--secondary-color);
+}
+
+.content {
+  grid-column: 3;
+}
+
+footer {
+  width: 100%;
+  background-color: var(--black);
+  color: var(--white);
+  grid-area: footer;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+footer > * {
+  padding: 1em;
+}
+
+@media (max-width: 750px) {
+    main {
+        width: 90%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 1em;
+        margin: auto;
+        padding: 1em 0;
+    }
+
+    .head {
+        grid-column: 1 / -1;
+    }
+
+    .content {
+        grid-column: 1 / -1;
+    }
+
+    .sidebar {
+        order: 3;
+        grid-column: 1 / -1;
+        margin-bottom: 1em;
+    }
+
+    .sidebar > ul {
+      display: flex;
+      flex-flow: row wrap;
+    }
+    
+    .sidebar-item {
+      width: 50%;
+    }
+
+  }
+
+  @media (max-width: 450px) {
+    .sidebar > ul {
+      display: block;
+    }
+  
+    .sidebar-item {
+      width: 100%;
+    }
+  }

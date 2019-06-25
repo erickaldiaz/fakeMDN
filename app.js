@@ -64,9 +64,14 @@ function fakeUnion(arrayOne, arrayTwo) {
 }
 
 function fakeIntersection(arrayOne, arrayTwo) {
-  const filteredArrayOne = new Set(arrayOne);
-  return fakeFilter([...filteredArrayOne], element => arrayTwo.indexOf(element) >= 0);
-}
+  return fakeReduce(arrayOne, (intersection, element) => {
+    if (fakeIndexOf(arrayTwo, element) >= 0 && fakeIndexOf(intersection, element) === -1) {
+      intersection.push(element);
+    }
+    
+    return intersection;
+  }, []);
+};
 
 function fakeIncludes(array, element) {
   if (fakeIndexOf(array, element) > -1) {
@@ -129,3 +134,4 @@ function fakeArrayMax(array) {
     return fakeArrayMax(arrayCopy);
   }
 }
+

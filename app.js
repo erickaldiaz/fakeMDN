@@ -114,18 +114,5 @@ function fakeFindIndex(array, callback) {
 }
 
 function fakeArrayMax(array) {
-  //se copia el array para no mutarlo
-  const arrayCopy = [...array];
-  if (array.length == 0) {
-    return undefined;
-  } else if (arrayCopy.length == 1) {
-    return arrayCopy[0];
-  } else {
-    if (arrayCopy[0] > arrayCopy[1]) {
-      arrayCopy.splice(1, 1);
-    } else {
-      arrayCopy.splice(0, 1);
-    }
-    return fakeArrayMax(arrayCopy);
-  }
+	return fakeReduce(array, (max, cur) => max > cur ? max : cur);
 }

@@ -116,3 +116,7 @@ function fakeFindIndex(array, callback) {
 function fakeArrayMax(array) {
 	return fakeReduce(array, (max, cur) => max > cur ? max : cur);
 }
+
+function fakeArrayMin(array) {
+	return fakeReduce(array, (min, cur) => min < cur ? min : cur);
+} 

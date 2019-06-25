@@ -131,18 +131,5 @@ function fakeArrayMax(array) {
 }
 
 function fakeArrayMin(array) {
-  //se copia el array para no mutarlo
-	const arrayCopy = [...array]
-	if (arrayCopy.length === 0) {
-		return undefined;
-	} else if (arrayCopy.length === 1) {
-		return arrayCopy[0];
-	} else {
-		if (arrayCopy[0] < arrayCopy[1]) {
-			arrayCopy.splice(1, 1);
-		} else {
-			arrayCopy.splice(0, 1)
-		}
-		return fakeArrayMin(arrayCopy);
-	}
-}
+	return fakeReduce(array, (min, cur) => min < cur ? min : cur);
+} 

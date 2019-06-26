@@ -83,18 +83,19 @@ function fakeSum(array) {
   return fakeReduce(array, sum);
 }
 
-function fakeIndexOfRecursive(array, element) {
-  function isEqual(array, index, element) {
-    if (index === array.length) {
-      return -1;
+function isEqual(array, index, element) {
+  if (index === array.length) {
+    return -1;
+  } else {
+    if (array[index] === element) {
+      return index;
     } else {
-      if (array[index] === element) {
-        return index;
-      } else {
-        return isEqual(array, index + 1, element);
-      }
+      return isEqual(array, index + 1, element);
     }
   }
+}
+
+function fakeIndexOfRecursive(array, element) {
   return isEqual(array, 0, element);
 }
 

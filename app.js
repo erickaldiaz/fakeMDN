@@ -146,3 +146,11 @@ function fakeIndexOf(array, element){
 function fakeArrayMin(array) {
 	return fakeReduce(array, (min, cur) => min < cur ? min : cur);
 } 
+
+function areEqual(arrayOne, arrayTwo) {
+	return arrayOne.length === arrayTwo.length ?
+		fakeReduce(arrayOne, (equal, cur, index) => {
+			return cur !== arrayTwo[index] ? !equal : equal;
+		}, true) :
+		false;
+}

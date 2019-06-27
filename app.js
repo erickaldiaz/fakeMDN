@@ -65,7 +65,7 @@ function fakeUnion(arrayOne, arrayTwo) {
 
 function fakeIntersection(arrayOne, arrayTwo) {
   return fakeReduce(arrayOne, (intersection, element) => {
-    if (fakeIndexOf(arrayTwo, element) >= 0 && fakeIndexOf(intersection, element) === -1) {
+    if (fakeIncludes(arrayTwo, element) && !(fakeIncludes(intersection, element))) {
       intersection.push(element);
     }
     

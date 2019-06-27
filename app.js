@@ -147,11 +147,6 @@ function fakeArrayMin(array) {
 	return fakeReduce(array, (min, cur) => min < cur ? min : cur);
 } 
 
-function fakeConcat(array, value) {
-  const concatenatedArray = [...array];
-  if (Array.isArray(value)) {
-    return [...concatenated, ...value];
-  }
-  concatenatedArray.push(value);
-  return concatenatedArray;
+function fakeConcat(arrayOne, arrayTwo) {
+  return [...arrayOne, ...arrayTwo];
 }

@@ -48,15 +48,23 @@ function fakeFilter(array, callback) {
   return newArray;
 }
 
-function fakeReduce(array, callback) {
-  if (array.lenght != 0) {
-    let accumulator = array[0];
-    for (let i = 0; i < array.length - 1; i++) {
-      accumulator = callback(accumulator, array[i + 1]);
-    }
-    return accumulator;
-  }
-  return undefined;
+function fakeReduce(array, callback, initialValue) {
+	if (array.length !== 0) {
+		let index;
+		let accumulator;
+		if (initialValue === undefined) {
+			index = 1;
+			accumulator = array[0];
+		} else {
+			index = 0;
+			accumulator = initialValue;
+		}
+		for (index; index < array.length; index++) {
+			accumulator = callback(accumulator, array[index], index);
+		}
+		return accumulator;
+	}
+	return undefined;
 }
 
 function fakeUnion(arrayOne, arrayTwo) {
@@ -124,6 +132,15 @@ function fakeFindIndex(array, callback) {
 
 function fakeArrayMax(array) {
 	return fakeReduce(array, (max, cur) => max > cur ? max : cur);
+}
+
+function fakeIndexOf(array, element){
+  for(i=0; i < array.length; i++){
+      if(array[i] == element){
+        return i;
+      }
+     }
+  return "-1"
 }
 
 function fakeArrayMin(array) {

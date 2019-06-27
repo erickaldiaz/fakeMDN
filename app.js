@@ -14,15 +14,12 @@ function fakeSome(array, callback) {
 }
 
 function fakeEvery(array, callback) {
-  let check = true;
-	function checkElement(element) {
-		if (!callback(element)) {
-			check = false;
-			return;
-		}
-	}	
-	fakeForEach(array, checkElement);
-	return check;
+  for (let element of array) {
+    if (!callback(element)) {
+      return false;
+    }
+  }
+  return true;
 }
 
 function fakeFind(array, callback) {
@@ -34,25 +31,16 @@ function fakeFind(array, callback) {
   return undefined;
 }
 
-function fakeIncludes(array, include) {
-  for (let element of array) {
-      if(element == include){
-         return true;
-      }
-  }
-  return false;
-}
-
 function fakeMap(array, callback) {
-	const mappedArray = [];
-	const pushToMappedArray = (element) => mappedArray.push(callback(element));
-	fakeForEach(array, pushToMappedArray);
-	return mappedArray;
+  const mappedArray = [];
+  const pushToMappedArray = element => mappedArray.push(callback(element));
+  fakeForEach(array, pushToMappedArray);
+  return mappedArray;
 }
 
 function fakeFilter(array, callback) {
   const newArray = [];
-  for (element of array) {
+  for (let element of array) {
     if (callback(element)) {
       newArray.push(element);
     }
@@ -81,47 +69,69 @@ function fakeReduce(array, callback, initialValue) {
 
 function fakeUnion(arrayOne, arrayTwo) {
   const unionArray = [...arrayOne];
-  const filteredArray = fakeFilter(
-    arrayTwo,
-    element => !fakeIncludes(arrayOne, element)
-  );
+  const filteredArray = fakeFilter(arrayTwo, element => !fakeIncludes(arrayOne, element));
   fakeForEach(filteredArray, element => unionArray.push(element));
   return unionArray;
 }
 
 function fakeIntersection(arrayOne, arrayTwo) {
-  const filteredArrayOne = new Set(arrayOne);
-  return fakeFilter(
-    [...filteredArrayOne],
-    element => arrayTwo.indexOf(element) >= 0
-  );
-}
+  return fakeReduce(arrayOne, (intersection, element) => {
+    if (fakeIncludes(arrayTwo, element) && !(fakeIncludes(intersection, element))) {
+      intersection.push(element);
+    }
+    
+    return intersection;
+  }, []);
+};
 
 function fakeIncludes(array, element) {
-  if(fakeIndexOf(array, element)> -1){
+  if (fakeIndexOf(array, element) > -1) {
     return true;
   }
-  return false;  
+  return false;
 }
 
 function fakeSum(array) {
-	const sum = (x, y) => x + y;
-	return fakeReduce(array, sum);
+  const sum = (x, y) => x + y;
+  return fakeReduce(array, sum);
+}
+
+function isEqual(array, index, element) {
+  if (index === array.length) {
+    return -1;
+  } else {
+    if (array[index] === element) {
+      return index;
+    } else {
+      return isEqual(array, index + 1, element);
+    }
+  }
 }
 
 function fakeIndexOfRecursive(array, element) {
-  function isEqual(array, index, element) {
-		if (index === array.length) {
-			return -1;
-		} else {
-			if (array[index] === element) {
-				return index;
-			} else {
-			return isEqual(array, index + 1, element);
-			}
-		}
-	}	
-	return isEqual(array, 0, element);
+  return isEqual(array, 0, element);
+}
+
+function fakeIndexOf(array, element) {
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] === element) {
+      return i;
+    }
+  }
+  return -1;
+}
+
+function fakeFindIndex(array, callback) {
+  for (let index = 0; index < array.length; index++) {
+    if (callback(array[index])) {
+      return index;
+    }
+  }
+  return -1;
+}
+
+function fakeArrayMax(array) {
+	return fakeReduce(array, (max, cur) => max > cur ? max : cur);
 }
 
 function fakeIndexOf(array, element){
@@ -132,3 +142,7 @@ function fakeIndexOf(array, element){
      }
   return "-1"
 }
+
+function fakeArrayMin(array) {
+	return fakeReduce(array, (min, cur) => min < cur ? min : cur);
+} 

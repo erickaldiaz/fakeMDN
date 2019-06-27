@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>fakeArrayMax</title>
+    <link rel="stylesheet" href="../styles.css" />
+    <script
+      defer
+      src="https://use.fontawesome.com/releases/v5.7.2/js/all.js"
+      integrity="sha384-0pzryjIRos8mFBWMzSSZApWtPl/5++eIfzYmTgBBmXYdhvxPc+XcFEk+zJwDgWbP"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"
+    ></script>
+    <script>
+      hljs.initHighlightingOnLoad();
+    </script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/styles/atom-one-light.min.css"
+    />
+  </head>
+
+  <body>
+    <!-- header -->
+    <header id="header-main" class="main-header">
+      <div class="logo-box">
+        <a href="../index.html" class="logo" rel="noopener noreferrer">
+          <img src="../img/logo_v2_negro.png" alt="logo de mdn fake" title="logo" />
+        </a>
+      </div>
+      <nav class="nav-container">
+        <ul class="list-menu">
+          <li class="list-nav">
+            <a href="" rel="noopener noreferrer">Tecnologías <i class="fas fa-caret-down"></i></a>
+          </li>
+          <li class="list-nav">
+            <a href="" rel="noopener noreferrer">Referencias & Guias <i class="fas fa-caret-down"></i></a>
+          </li>
+          <li class="list-nav">
+            <a href="" rel="noopener noreferrer">Feedback <i class="fas fa-caret-down"></i></a>
+          </li>
+        </ul>
+      </nav>
+      <div class="nav-login">
+        <ul class="list-login">
+          <li class="login-box">
+            <div class="login">
+              <a href="" rel="noopener noreferrer" style="font-size: 18px">Sign in <i class="fab fa-github"></i></a>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="search">
+        <a href="" rel="noopener noreferrer" class="search-a"><i class="fas fa-search fa-2x"></i></a>
+        <!-- <img src="img/search.png"> -->
+      </div>
+    </header>
+    <!-- header -->
+    <h1>fakeFindIndex</h1>
+    <div class="container-aside-article">
+      <aside class="column-aside">
+        <p class="aside-title">Otros métodos</p>
+        <ul class="aside-list">
+          <li><a href="fakeForEach.html" target="_blank" rel="noopener noreferrer">fakeForEach</a></li>
+          <li><a href="fakeMap.html" target="_blank" rel="noopener noreferrer">fakeMap</a></li>
+          <li><a href="fakeSome.html" target="_blank" rel="noopener noreferrer">fakeSome</a></li>
+          <li><a href="fakeEvery.html" target="_blank" rel="noopener noreferrer">fakeEvery</a></li>
+          <li><a href="fakeFind.html" target="_blank" rel="noopener noreferrer">fakeFind</a></li>
+          <li><a href="fakeIncludes.html" target="_blank" rel="noopener noreferrer">fakeIncludes</a></li>
+          <li><a href="fakeFilter.html" target="_blank" rel="noopener noreferrer">fakeFilter</a></li>
+          <li><a href="fakeReduce.html" target="_blank" rel="noopener noreferrer">fakeReduce</a></li>
+          <li><a href="fakeIndexOf.html" target="_blank" rel="noopener noreferrer">fakeIndexOf</a></li>
+          <li>
+            <a href="fakeIndexOfRecursive.html" target="_blank" rel="noopener noreferrer">fakeIndexOfRecursive</a>
+          </li>
+          <li><a href="fakeIntersection.html" target="_blank" rel="noopener noreferrer">fakeIntersection</a></li>
+          <li><a href="fakeSum.html" target="_blank" rel="noopener noreferrer">fakeSum</a></li>
+          <li><a href="fakeUnion.html" target="_blank" rel="noopener noreferrer">fakeUnion</a></li>
+          <li><a href="fakeArrayMin.html" target="_blank" rel="noopener noreferrer">fakeArrayMin</a></li>
+          <li><a href="fakeArrayMax.html" target="_blank" rel="noopener noreferrer">fakeArrayMax</a></li>
+        </ul>
+      </aside>
+      <article>
+        <section class="description">
+          El método <code>fakeFindIndex()</code> devuelve el índice del primer elemento de un array que cumpla con la
+          función de prueba proporcionada. En caso contrario devuelve -1.
+        </section>
+        <section>
+          <h2>Sintaxis</h2>
+          <p class="syntaxbox">fakeFindIndex(<em>array</em>, <em>callback</em>)</p>
+          <h3>Parámetros</h3>
+          <dl>
+            <dt>
+              <code class="code-params">array</code>
+            </dt>
+            <dd class="param-description">
+              El array cuyos elementos serán pasados como parámetros a la función provista.
+            </dd>
+            <dt>
+              <code class="code-params">callback</code>
+            </dt>
+            <dd class="param-description">
+              Función a ejecutar para cada uno de los elementos del array.
+            </dd>
+          </dl>
+          <h3>Valor de retorno</h3>
+          <p class="param-description">
+            Devuelve el índice del primer elemento que cumpla con la función, o -1 en caso de que ningún elemento la
+            cumpla.
+          </p>
+        </section>
+        <div>
+          <h2>Ejemplo</h2>
+          <h3>Encontrar el índice del primer elemento igual a otro</h3>
+          <pre>
+            <code class="javascript">
+    const mascotas = ['perro', 'gato', 'canario', 'pez', 'tortuga', 'hurón'];
+
+    const esGato = mascota => mascota === 'gato';
+
+    fakeFindIndex(mascotas, esGato);
+              
+    >> 1
+            </code>
+          </pre>
+        </div>
+      </article>
+    </div>
+  </body>
+</html>

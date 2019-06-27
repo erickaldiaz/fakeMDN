@@ -69,7 +69,7 @@
       </section>
       <section>
         <h2>Sintaxis</h2>
-        <p class="syntaxbox">fakeReduce(<em>array</em>, <em>callback</em>)</p>
+        <p class="syntaxbox">fakeReduce(<em>array</em>, <em>callback</em> [,<em>initialValue</em>])</p>
         <h3>Parámetros</h3>
         <dl>
           <dt>
@@ -82,10 +82,14 @@
             <code class="code-params">callback</code>
           </dt>
           <dd class="param-description">Función que se va a aplicar a los elementos del array.</dd>
+          <dt>
+            <code class="code-params">initialValue</code>
+          </dt>
+          <dd class="param-description">Objeto a usar como primer argumento en la primera llamada de la función callback.</dd>
         </dl>
         <h3>Valor de retorno</h3>
         <p class="param-description">
-          Depende del tipo de dato que contenga el array, puede ser un Number, un String o un array.
+          Depende del tipo de dato que contenga el array y del tipo de dato del valor inicial que se pase como argumento.
         </p>
       </section>
       <div>
@@ -100,6 +104,20 @@
   fakeReduce(listOfNumbers, multiply);
             
   >> 180
+          </code>
+        </pre>
+        <h3>Generar un array con los valores de una propiedad de varios objetos</h3>
+        <pre>
+            <code class="javascript">
+  objetos = [
+			{a: 5, b: 10, c: 15},
+			{a: 1, b: 2, c: 3},
+			{a: 4, b: 8, c: 12}
+			];
+
+  objetos.reduce((acc, cur) => {acc.push(cur.b); return acc}, []);
+            
+  >> [10, 2, 8]
           </code>
         </pre>
       </div>

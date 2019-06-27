@@ -130,7 +130,7 @@ h1 {
 
 .container-aside-article {
   display: flex;
-  justify-content: space-between;
+  /*justify-content: space-between;*/
 }
 
 .column-aside {

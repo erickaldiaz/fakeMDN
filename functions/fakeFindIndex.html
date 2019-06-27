@@ -59,7 +59,7 @@
       </div>
     </header>
     <!-- header -->
-    <h1>fakeArrayMax</h1>
+    <h1>fakeFindIndex</h1>
     <div class="container-aside-article">
       <aside class="column-aside">
         <p class="aside-title">Otros métodos</p>
@@ -80,51 +80,50 @@
           <li><a href="fakeSum.html" target="_blank" rel="noopener noreferrer">fakeSum</a></li>
           <li><a href="fakeUnion.html" target="_blank" rel="noopener noreferrer">fakeUnion</a></li>
           <li><a href="fakeArrayMin.html" target="_blank" rel="noopener noreferrer">fakeArrayMin</a></li>
+          <li><a href="fakeArrayMax.html" target="_blank" rel="noopener noreferrer">fakeArrayMax</a></li>
         </ul>
       </aside>
       <article>
         <section class="description">
-          El método <code>fakeArrayMax()</code> devuelve el valor máximo de un array. Los elementos del array pueden ser
-          <code>number</code> o <code>string</code>.
+          El método <code>fakeFindIndex()</code> devuelve el índice del primer elemento de un array que cumpla con la
+          función de prueba proporcionada. En caso contrario devuelve -1.
         </section>
         <section>
           <h2>Sintaxis</h2>
-          <p class="syntaxbox">fakeArrayMax(<em>array</em>)</p>
+          <p class="syntaxbox">fakeFindIndex(<em>array</em>, <em>callback</em>)</p>
           <h3>Parámetros</h3>
           <dl>
             <dt>
               <code class="code-params">array</code>
             </dt>
             <dd class="param-description">
-              El array de cuyos elementos se devolverá el máximo.
+              El array cuyos elementos serán pasados como parámetros a la función provista.
+            </dd>
+            <dt>
+              <code class="code-params">callback</code>
+            </dt>
+            <dd class="param-description">
+              Función a ejecutar para cada uno de los elementos del array.
             </dd>
           </dl>
           <h3>Valor de retorno</h3>
           <p class="param-description">
-            Devuelve un <code>number</code> o un <code>string</code>, o <code>undefined</code> en caso de que el array
-            esté vacío.
+            Devuelve el índice del primer elemento que cumpla con la función, o -1 en caso de que ningún elemento la
+            cumpla.
           </p>
         </section>
         <div>
           <h2>Ejemplo</h2>
-          <h3>Averiguar el valor más alto de un array de números</h3>
+          <h3>Encontrar el índice del primer elemento igual a otro</h3>
           <pre>
             <code class="javascript">
-    const numeros= [1, 4, 9, 88, -44, 109, 8];
+    const mascotas = ['perro', 'gato', 'canario', 'pez', 'tortuga', 'hurón'];
 
-    fakeArrayMax(numeros);
+    const esGato = mascota => mascota === 'gato';
+
+    fakeFindIndex(mascotas, esGato);
               
-    >> 109
-            </code>
-          </pre>
-          <h3>Averiguar el valor más alto de un array de números y strings</h3>
-          <pre>
-            <code class="javascript">
-    const lista = ['a', '1', 'j'];
-
-    fakeArrayMax(lista);
-
-    >>> j
+    >> 1
             </code>
           </pre>
         </div>

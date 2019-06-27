@@ -14,9 +14,12 @@ function fakeSome(array, callback) {
 }
 
 function fakeEvery(array, callback) {
-  let check = true;
-  fakeForEach(array, element => (!callback(element) ? (check = false) : element));
-  return check;
+  for (let element of array) {
+    if (!callback(element)) {
+      return false;
+    }
+  }
+  return true;
 }
 
 function fakeFind(array, callback) {
@@ -85,24 +88,25 @@ function fakeSum(array) {
   return fakeReduce(array, sum);
 }
 
-function fakeIndexOfRecursive(array, element) {
-  function isEqual(array, index, element) {
-    if (index === array.length) {
-      return -1;
+function isEqual(array, index, element) {
+  if (index === array.length) {
+    return -1;
+  } else {
+    if (array[index] === element) {
+      return index;
     } else {
-      if (array[index] === element) {
-        return index;
-      } else {
-        return isEqual(array, index + 1, element);
-      }
+      return isEqual(array, index + 1, element);
     }
   }
+}
+
+function fakeIndexOfRecursive(array, element) {
   return isEqual(array, 0, element);
 }
 
 function fakeIndexOf(array, element) {
-  for (i = 0; i < array.length; i++) {
-    if (array[i] == element) {
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] === element) {
       return i;
     }
   }
@@ -119,19 +123,9 @@ function fakeFindIndex(array, callback) {
 }
 
 function fakeArrayMax(array) {
-  //se copia el array para no mutarlo
-  const arrayCopy = [...array];
-  if (array.length == 0) {
-    return undefined;
-  } else if (arrayCopy.length == 1) {
-    return arrayCopy[0];
-  } else {
-    if (arrayCopy[0] > arrayCopy[1]) {
-      arrayCopy.splice(1, 1);
-    } else {
-      arrayCopy.splice(0, 1);
-    }
-    return fakeArrayMax(arrayCopy);
-  }
+	return fakeReduce(array, (max, cur) => max > cur ? max : cur);
 }
 
+function fakeArrayMin(array) {
+	return fakeReduce(array, (min, cur) => min < cur ? min : cur);
+} 

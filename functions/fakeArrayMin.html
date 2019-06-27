@@ -2,7 +2,7 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <title>fakeArrayMax</title>
+    <title>fakeArrayMin</title>
     <link rel="stylesheet" href="../styles.css" />
     <script
       defer
@@ -59,7 +59,7 @@
       </div>
     </header>
     <!-- header -->
-    <h1>fakeArrayMax</h1>
+    <h1>fakeMap</h1>
     <div class="container-aside-article">
       <aside class="column-aside">
         <p class="aside-title">Otros métodos</p>
@@ -79,24 +79,23 @@
           <li><a href="fakeIntersection.html" target="_blank" rel="noopener noreferrer">fakeIntersection</a></li>
           <li><a href="fakeSum.html" target="_blank" rel="noopener noreferrer">fakeSum</a></li>
           <li><a href="fakeUnion.html" target="_blank" rel="noopener noreferrer">fakeUnion</a></li>
-          <li><a href="fakeArrayMin.html" target="_blank" rel="noopener noreferrer">fakeArrayMin</a></li>
         </ul>
       </aside>
       <article>
         <section class="description">
-          El método <code>fakeArrayMax()</code> devuelve el valor máximo de un array. Los elementos del array pueden ser
+          El método <code>fakeArrayMin()</code> devuelve el valor mínimo de un array. Los elementos del array pueden ser
           <code>number</code> o <code>string</code>.
         </section>
         <section>
           <h2>Sintaxis</h2>
-          <p class="syntaxbox">fakeArrayMax(<em>array</em>)</p>
+          <p class="syntaxbox">fakeArrayMin(<em>array</em>)</p>
           <h3>Parámetros</h3>
           <dl>
             <dt>
               <code class="code-params">array</code>
             </dt>
             <dd class="param-description">
-              El array de cuyos elementos se devolverá el máximo.
+              El array de cuyos elementos se devolverá el mínimo.
             </dd>
           </dl>
           <h3>Valor de retorno</h3>
@@ -107,24 +106,24 @@
         </section>
         <div>
           <h2>Ejemplo</h2>
-          <h3>Averiguar el valor más alto de un array de números</h3>
+          <h3>Averiguar el valor más bajo de un array de números</h3>
           <pre>
             <code class="javascript">
     const numeros= [1, 4, 9, 88, -44, 109, 8];
 
-    fakeArrayMax(numeros);
+    fakeArrayMin(numeros);
               
-    >> 109
+    >> -44
             </code>
           </pre>
-          <h3>Averiguar el valor más alto de un array de números y strings</h3>
+          <h3>Averiguar el valor más bajo de un array de números y strings</h3>
           <pre>
             <code class="javascript">
     const lista = ['a', '1', 'j'];
 
-    fakeArrayMax(lista);
+    fakeArrayMin(lista);
 
-    >>> j
+    >>> 1
             </code>
           </pre>
         </div>

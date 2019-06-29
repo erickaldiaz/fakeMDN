@@ -140,7 +140,7 @@ function fakeIndexOf(array, element){
         return i;
       }
      }
-  return "-1"
+  return -1
 }
 
 function fakeArrayMin(array) {
@@ -153,4 +153,13 @@ function areEqual(arrayOne, arrayTwo) {
 			return cur !== arrayTwo[index] ? !equal : equal;
 		}, true) :
 		false;
+}
+
+function fakeLastIndexOf(array, element){
+  for( let i = array.length -1; i >= 0; i--){
+    if (array[i] === element){
+      return i; 
+    }
+  }
+  return -1;
 }

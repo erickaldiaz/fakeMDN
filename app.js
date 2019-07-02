@@ -40,11 +40,11 @@ function fakeMap(array, callback) {
 
 function fakeFilter(array, callback) {
   const newArray = [];
-  for (let element of array) {
+    fakeForEach(array, element => {
     if (callback(element)) {
       newArray.push(element);
     }
-  }
+  });
   return newArray;
 }
 

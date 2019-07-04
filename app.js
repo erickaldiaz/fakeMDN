@@ -147,6 +147,11 @@ function fakeArrayMin(array) {
 	return fakeReduce(array, (min, cur) => min < cur ? min : cur);
 } 
 
-function fakeConcat(arrayOne, arrayTwo) {
-  return [...arrayOne, ...arrayTwo];
+function fakeConcat(...arrays) { 
+  return fakeReduce(arrays, (concatenatedArray, currentArray) => {
+    for(element of currentArray) {
+      concatenatedArray.push(element);
+    }
+    return concatenatedArray;
+  }, []);
 }

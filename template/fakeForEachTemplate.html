@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>fakeMDN</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="templateStyle.css"/>
+    <link rel="stylesheet" type="text/css" media="screen" href="functionStyle.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/styles/atom-one-light.min.css"> 
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"> </script>
+
+  </head>
+  <body>
+    <header>
+      <a class="logo" href="#">
+        <img src="img/logo_v2_negro.png" alt="Logo fakeMdn" title="Logo"/>
+      </a>
+      <nav class="navbar">
+        <ul>
+            <li class="navbar-item">
+                <a href="#">Javascript</a>
+            </li>
+            <li class="navbar-item">
+                <a href="#">Funcional</a>
+            </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+        <section class="head">
+            <h1>_fakeForEach()</h1>
+            <nav class="fn-navbar">
+                <ul>
+                    <li class="fn-navbar-item">
+                        <a href="#syntax">Sintaxis</a>
+                    </li>
+                    <li class="fn-navbar-item">
+                        <a href="#examples">Ejemplos</a>
+                    </li>
+                    <li class="fn-navbar-item">
+                        <a href="#others">Ver más</a>
+                    </li>
+                </ul>
+            </nav>
+        </section>
+        <aside class="sidebar" id="others">
+            <h3>Métodos</h3>
+            <ul>
+                <li class="sidebar-item"><a href="#">fakeForEach</a></li>
+                <li class="sidebar-item"><a href="#">fakeSome</a></li>
+                <li class="sidebar-item"><a href="#">fakeEvery</a></li>
+                <li class="sidebar-item"><a href="#">fakeFind</a></li>
+                <li class="sidebar-item"><a href="#">fakeEvery</a></li>
+                <li class="sidebar-item"><a href="#">fakeFind</a></li>
+                <li class="sidebar-item"><a href="#">fakeIncludes</a></li>
+                <li class="sidebar-item"><a href="#">fakeMap</a></li>
+                <li class="sidebar-item"><a href="#">fakeFilter</a></li>
+                <li class="sidebar-item"><a href="#">fakeReduce</a></li>
+                <li class="sidebar-item"><a href="#">fakeIndexOf</a></li>
+                <li class="sidebar-item"><a href="#">fakeIndexOfRecursive</a></li>
+                <li class="sidebar-item"><a href="#">fakeIntersection</a></li>
+                <li class="sidebar-item"><a href="#">fakeUnion</a></li>
+                <li class="sidebar-item"><a href="#">fakeSum</a></li>
+            </ul>
+        </aside>
+        <section class="content">
+            <article id="#syntax">
+                <p class="description">
+                    El método <code>fakeForEach()</code>ejecuta la función indicada una vez por cada elemento del array.
+                </p>
+                    <h3>Sintaxis</h3>
+                    <p class="syntaxbox">fakeForEach(<em>array</em>, <em>callback</em>)</p>
+                    <h3>Parámetros</h3>
+                    <dl>
+                        <dt>
+                        <code class="code-params">array</code>
+                        </dt>
+                        <dd class="param-description">
+                        El array sobre cuyos elementos se comprueba si cumplen con la condición provista por la función.
+                        </dd>
+                        <dt>
+                        <code class="code-params">callback</code>
+                        </dt>
+                        <dd class="param-description">
+                        Función que se va a aplicar a los elementos hasta encontrar alguno que la cumpla.
+                        </dd>
+                    </dl>
+                    <h3>Valor de retorno</h3>
+                    <p class="param-description">
+                        Devuelve un elemento del array o <code>undefined</code> en caso de que ninguno cumpla con la condición.
+                    </p>
+            </article>
+            <article id="#examples">
+                <h3>Ejemplo</h3>
+                <h4>Mostrar cada elemento del array</h4>
+                <pre>
+                    <code class="javascript">
+let array = ['a', 'b', 'c']; 
+fakeForEach(array, function(element){         
+fakeForEach(array, function(element){          
+console.log(element);       
+})          
+// output: "a"
+// output: "b" 
+// output: "c" 
+                    </code>
+                </pre>
+            </article>
+        </section>
+    </main>
+    <footer>
+        <section>
+            <a class="logo" href="#">
+                <img src="img/logo_v2_blanco.png" alt="Logo fakeMdn" title="Logo"/>
+            </a>
+        </section>
+        <section>
+            adsad
+        </section>
+    </footer>
+
+    <script>hljs.initHighlightingOnLoad();</script>
+</body>
+</html>

@@ -18,6 +18,9 @@ body {
   background-color: var(--white);
   font-family: Arial, sans-serif;
   font-size: 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
 }
 
 /* predefinidos*/
@@ -146,7 +149,6 @@ footer > * {
   main {
     width: 70%;
     margin: auto;
-    padding: 1em 0;
   }
 }
 

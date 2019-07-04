@@ -153,9 +153,8 @@ footer {
   margin-top: auto; 
   color: var(--white);
   background-color: var(--black);
-  grid-area: footer;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  justify-content: center;
 }
 
 footer > * {

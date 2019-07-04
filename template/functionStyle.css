@@ -2,14 +2,6 @@
     display: none;
 }
 
-.content > article > h3, h4 {
-    margin: 0 0.3em;
-}
-
-dt, dd {
-    font-size: 0.8em;
-}
-
 .syntaxbox {
     padding: 5px;
     font-family: consolas, monaco, 'Andale Mono', monospace;
@@ -38,7 +30,7 @@ dt, dd {
     text-align: justify;
     letter-spacing: 0.02em;
 }
-  
+
 code {
     font-size: 1em;
     padding: 3px;

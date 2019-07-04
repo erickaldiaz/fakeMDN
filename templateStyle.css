@@ -101,7 +101,11 @@ main {
 }
 
 .head {
-  width: 95%;
+  width: 100%;
+  border-bottom: 5px solid;
+  border-image-source: linear-gradient(5deg, var(--secondary-color), var(--white));
+  border-image-slice: 1;
+  margin-bottom: 1em;	
 }
 
 .sidebar {

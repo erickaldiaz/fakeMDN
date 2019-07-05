@@ -31,6 +31,15 @@ function fakeFind(array, callback) {
   return undefined;
 }
 
+function fakeIncludes(array, include) {
+  for (let element of array) {
+    if (element == include) {
+      return true;
+    }
+  }
+  return false;
+}
+
 function fakeMap(array, callback) {
   const mappedArray = [];
   const pushToMappedArray = element => mappedArray.push(callback(element));
@@ -96,34 +105,21 @@ function fakeSum(array) {
   return fakeReduce(array, sum);
 }
 
-function isEqual(array, index, element) {
+function fakeIndexOfRecursive(array, element, index = 0) {
   if (index === array.length) {
     return -1;
   } else {
     if (array[index] === element) {
       return index;
     } else {
-      return isEqual(array, index + 1, element);
+      return fakeIndexOfRecursive(array, element, index + 1);
     }
   }
-}
-
-function fakeIndexOfRecursive(array, element) {
-  return isEqual(array, 0, element);
 }
 
 function fakeIndexOf(array, element) {
-  for (let i = 0; i < array.length; i++) {
-    if (array[i] === element) {
-      return i;
-    }
-  }
-  return -1;
-}
-
-function fakeFindIndex(array, callback) {
   for (let index = 0; index < array.length; index++) {
-    if (callback(array[index])) {
+    if (array[index] == element) {
       return index;
     }
   }
@@ -132,15 +128,6 @@ function fakeFindIndex(array, callback) {
 
 function fakeArrayMax(array) {
 	return fakeReduce(array, (max, cur) => max > cur ? max : cur);
-}
-
-function fakeIndexOf(array, element){
-  for(i=0; i < array.length; i++){
-      if(array[i] == element){
-        return i;
-      }
-     }
-  return -1
 }
 
 function fakeArrayMin(array) {

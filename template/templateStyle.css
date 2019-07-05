@@ -64,7 +64,7 @@ dt, dd {
 header {
   /*width: 100%;*/
   height: 3em;
-  padding: 0 0.5em;
+  /*padding: 0 0.5em;*/
   border-top: 5px solid var(--secondary-color);
   display: flex;
   justify-content: space-between;

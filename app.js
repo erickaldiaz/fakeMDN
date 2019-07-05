@@ -14,11 +14,12 @@ function fakeSome(array, callback) {
 }
 
 function fakeEvery(array, callback) {
-  let check = true;
-  fakeForEach(array, element =>
-    !callback(element) ? (check = false) : element
-  );
-  return check;
+  for (let element of array) {
+    if (!callback(element)) {
+      return false;
+    }
+  }
+  return true;
 }
 
 function fakeFind(array, callback) {
@@ -48,42 +49,49 @@ function fakeMap(array, callback) {
 
 function fakeFilter(array, callback) {
   const newArray = [];
-  for (element of array) {
+    fakeForEach(array, element => {
     if (callback(element)) {
       newArray.push(element);
     }
-  }
+  });
   return newArray;
 }
 
-function fakeReduce(array, callback) {
-  if (array.lenght != 0) {
-    let accumulator = array[0];
-    for (let i = 0; i < array.length - 1; i++) {
-      accumulator = callback(accumulator, array[i + 1]);
-    }
-    return accumulator;
-  }
-  return undefined;
+function fakeReduce(array, callback, initialValue) {
+	if (array.length !== 0) {
+		let index;
+		let accumulator;
+		if (initialValue === undefined) {
+			index = 1;
+			accumulator = array[0];
+		} else {
+			index = 0;
+			accumulator = initialValue;
+		}
+		for (index; index < array.length; index++) {
+			accumulator = callback(accumulator, array[index], index);
+		}
+		return accumulator;
+	}
+	return undefined;
 }
 
 function fakeUnion(arrayOne, arrayTwo) {
   const unionArray = [...arrayOne];
-  const filteredArray = fakeFilter(
-    arrayTwo,
-    element => !fakeIncludes(arrayOne, element)
-  );
+  const filteredArray = fakeFilter(arrayTwo, element => !fakeIncludes(arrayOne, element));
   fakeForEach(filteredArray, element => unionArray.push(element));
   return unionArray;
 }
 
 function fakeIntersection(arrayOne, arrayTwo) {
-  const filteredArrayOne = new Set(arrayOne);
-  return fakeFilter(
-    [...filteredArrayOne],
-    element => arrayTwo.indexOf(element) >= 0
-  );
-}
+  return fakeReduce(arrayOne, (intersection, element) => {
+    if (fakeIncludes(arrayTwo, element) && !(fakeIncludes(intersection, element))) {
+      intersection.push(element);
+    }
+    
+    return intersection;
+  }, []);
+};
 
 function fakeIncludes(array, element) {
   if (fakeIndexOf(array, element) > -1) {
@@ -115,5 +123,39 @@ function fakeIndexOf(array, element) {
       return index;
     }
   }
-  return "-1";
+  return -1;
+}
+
+function fakeArrayMax(array) {
+	return fakeReduce(array, (max, cur) => max > cur ? max : cur);
+}
+
+function fakeArrayMin(array) {
+	return fakeReduce(array, (min, cur) => min < cur ? min : cur);
+} 
+
+function areEqual(arrayOne, arrayTwo) {
+	return arrayOne.length === arrayTwo.length ?
+		fakeReduce(arrayOne, (equal, cur, index) => {
+			return cur !== arrayTwo[index] ? !equal : equal;
+		}, true) :
+		false;
+}
+
+function fakeLastIndexOf(array, element){
+  for( let i = array.length -1; i >= 0; i--){
+    if (array[i] === element){
+      return i; 
+    }
+  }
+  return -1;
+}
+
+function fakeConcat(...arrays) { 
+  return fakeReduce(arrays, (concatenatedArray, currentArray) => {
+    for(element of currentArray) {
+      concatenatedArray.push(element);
+    }
+    return concatenatedArray;
+  }, []);
 }

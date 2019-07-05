@@ -40,11 +40,11 @@ function fakeMap(array, callback) {
 
 function fakeFilter(array, callback) {
   const newArray = [];
-  for (let element of array) {
+    fakeForEach(array, element => {
     if (callback(element)) {
       newArray.push(element);
     }
-  }
+  });
   return newArray;
 }
 
@@ -140,12 +140,29 @@ function fakeIndexOf(array, element){
         return i;
       }
      }
-  return "-1"
+  return -1
 }
 
 function fakeArrayMin(array) {
 	return fakeReduce(array, (min, cur) => min < cur ? min : cur);
 } 
+
+function areEqual(arrayOne, arrayTwo) {
+	return arrayOne.length === arrayTwo.length ?
+		fakeReduce(arrayOne, (equal, cur, index) => {
+			return cur !== arrayTwo[index] ? !equal : equal;
+		}, true) :
+		false;
+}
+
+function fakeLastIndexOf(array, element){
+  for( let i = array.length -1; i >= 0; i--){
+    if (array[i] === element){
+      return i; 
+    }
+  }
+  return -1;
+}
 
 function fakeConcat(...arrays) { 
   return fakeReduce(arrays, (concatenatedArray, currentArray) => {

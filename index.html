@@ -1,138 +1,121 @@
 <!DOCTYPE html>
 <html lang="es">
-
-<head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Fake Mdn</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel='stylesheet' type='text/css' media='screen' href='styles.css'>
-    <script async src='app.js'></script>
-    <script defer src="https://use.fontawesome.com/releases/v5.7.2/js/all.js" integrity="sha384-0pzryjIRos8mFBWMzSSZApWtPl/5++eIfzYmTgBBmXYdhvxPc+XcFEk+zJwDgWbP" crossorigin="anonymous"></script>
-</head>
-
-<body>
-    <header id="header-main" class="main-header">
-        <div class="logo-box">
-            <a href="index.html" class="logo" rel="noopener noreferrer">
-                <img src="img/logo_v2_negro.png" alt="logo de mdn fake" title="logo" />
-            </a>
-        </div>
-        <nav class="nav-container">
-            <ul class="list-menu">
-                <li class="list-nav"><a href="" rel="noopener noreferrer">Tecnologías <i class="fas fa-caret-down"></i></a></li>
-                <li class="list-nav"><a href="" rel="noopener noreferrer">Referencias & Guias <i class="fas fa-caret-down"></i></a></li>
-                <li class="list-nav"><a href="" rel="noopener noreferrer">Feedback <i class="fas fa-caret-down"></i></a></li>
-            </ul>
-
-        </nav>
-        <div class="nav-login">
-            <ul class="list-login">
-                <li class="login-box">
-                    <div class="login">
-                        <a href="" rel="noopener noreferrer" style="font-size: 18px">Sign in
-                        <i class="fab fa-github"></i></a>
-                    </div>
-                </li>
-            </ul>
-        </div>
-        <div class="search">
-                <a href="" rel="noopener noreferrer" class="search-a"><i class="fas fa-search fa-2x"></i></a> 
-            <!-- <img src="img/search.png"> -->
-        </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>MDN Clone</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="css/templateStyle.css"
+    />
+  </head>
+  <body>
+    <header>
+      <a class="logo" href="#">
+        <img src="../img/logo_v2_negro.png" alt="Logo fakeMdn" title="Logo" />
+      </a>
+      <nav class="navbar">
+        <ul>
+          <li class="navbar-item">
+            <a href="#">Javascript</a>
+          </li>
+          <li class="navbar-item">
+            <a href="#">Funcional</a>
+          </li>
+        </ul>
+      </nav>
     </header>
+    <section class="head">
+      <h1>Javascript</h1>
+    </section>
     <main>
-        <section class="document-info">
-            <header class="center-info">
-                <h1>Javascript</h1>
-            </header>
-        </section>
-        <section class="container">
-            <div class="container-aside-article">
-                <aside class="column-aside">
-                    <h2>Related topics</h2>
-                    <p><strong>JavaScript</strong></p>
-                    <ul class="aside-list">
-                        <li><a href="functions/fakeForEach.html" target="_blank" rel="noopener noreferrer">fakeForEach</a></li>
-                        <li><a href="functions/fakeSome.html" target="_blank" rel="noopener noreferrer">fakeSome</a></li>
-                        <li><a href="functions/fakeEvery.html" target="_blank" rel="noopener noreferrer">fakeEvery</a></li>
-                        <li><a href="functions/fakeFind.html" target="_blank" rel="noopener noreferrer">fakeFind</a></li>
-                        <li><a href="functions/fakeIncludes.html" target="_blank" rel="noopener noreferrer">fakeIncludes</a></li>
-                        <li><a href="functions/fakeMap.html" target="_blank" rel="noopener noreferrer">fakeMap</a></li>
-                        <li><a href="functions/fakeFilter.html" target="_blank" rel="noopener noreferrer">fakeFilter</a></li>
-                        <li><a href="functions/fakeReduce.html" target="_blank" rel="noopener noreferrer">fakeReduce</a></li>
-                        <li><a href="functions/fakeIndexOf.html" target="_blank" rel="noopener noreferrer">fakeIndexOf</a></li>
-                        <li><a href="functions/fakeIndexOfRecursive.html" target="_blank" rel="noopener noreferrer">fakeIndexOfRecursive</a></li>
-                        <li><a href="functions/fakeIntersection.html" target="_blank" rel="noopener noreferrer">fakeIntersection</a></li>
-                        <li><a href="functions/fakeUnion.html" target="_blank" rel="noopener noreferrer">fakeUnion</a></li>
-                        <li><a href="functions/fakeSum.html" target="_blank" rel="noopener noreferrer">fakeSum</a></li>
-                    </ul>
-                </aside>
-                <article class="info-text">
-                    <p>JavaScript (JS) is a lightweight interpreted or just-in-time compiled programming language with
-                        first-class functions. While it is most well-known as the scripting language for Web pages, many
-                        non-browser environments also use it, such as Node.js, Apache CouchDB and Adobe Acrobat.
-                        JavaScript
-                        is a prototype-based, multi-paradigm, dynamic language, supporting object-oriented, imperative,
-                        and
-                        declarative (e.g. functional programming) styles. Read more about JavaScript.</p>
-                    <p>This section is dedicated to the JavaScript language itself, and not the parts that are specific
-                        to
-                        Web pages or other host environments. For information about APIs specific to Web pages, please
-                        see
-                        Web APIs and DOM.</p>
-                    <p>The standard for JavaScript is ECMAScript. As of 2012, all modern browsers fully support
-                        ECMAScript
-                        5.1. Older browsers support at least ECMAScript 3. On June 17, 2015, ECMA International
-                        published
-                        the sixth major version of ECMAScript, which is officially called ECMAScript 2015, and was
-                        initially
-                        referred to as ECMAScript 6 or ES6. Since then, ECMAScript standards are on yearly release
-                        cycles.
-                        This documentation refers to the latest draft version, which is currently ECMAScript 2020.</p>
-                    <p>Do not confuse JavaScript with the Java programming language. Both "Java" and "JavaScript" are
-                        trademarks or registered trademarks of Oracle in the U.S. and other countries. However, the two
-                        programming languages have very different syntax, semantics, and uses.</p>
-                </article>
-            </div>
-        </section>
+      <aside class="sidebar">
+        <h3>Métodos</h3>
+        <ul>
+          <li class="sidebar-item">
+            <a href="functions/_forEach.html">_forEach</a>
+          </li>
+          <li class="sidebar-item"><a href="functions/_some.html">_some</a></li>
+          <li class="sidebar-item">
+            <a href="functions/_every.html">_every</a>
+          </li>
+          <li class="sidebar-item"><a href="functions/_find.html">_find</a></li>
+          <li class="sidebar-item">
+            <a href="functions/_every.html">_every</a>
+          </li>
+          <li class="sidebar-item"><a href="functions/_find.html">_find</a></li>
+          <li class="sidebar-item">
+            <a href="functions/_includes">_includes</a>
+          </li>
+          <li class="sidebar-item"><a href="functions/_map">_map</a></li>
+          <li class="sidebar-item"><a href="functions/_filter">_filter</a></li>
+          <li class="sidebar-item"><a href="functions/_reduce">_reduce</a></li>
+          <li class="sidebar-item">
+            <a href="functions/_indexOf">_indexOf</a>
+          </li>
+          <li class="sidebar-item">
+            <a href="functions/_indexOfRecursive">_indexOfRecursive</a>
+          </li>
+          <li class="sidebar-item">
+            <a href="functions/_intersection">_intersection</a>
+          </li>
+          <li class="sidebar-item"><a href="functions/_union">_union</a></li>
+          <li class="sidebar-item"><a href="functions/_sum">_sum</a></li>
+          <li class="sidebar-item"><a href="functions/_min">_min</a></li>
+          <li class="sidebar-item"><a href="functions/_max">_max</a></li>
+          <li class="sidebar-item">
+            <a href="functions/_findIndex">_findIndex</a>
+          </li>
+          <li class="sidebar-item">
+            <a href="functions/_lastIndexOf">_lastIndexOf</a>
+          </li>
+          <li class="sidebar-item"><a href="functions/_concat">_concat</a></li>
+          <li class="sidebar-item">
+            <a href="functions/_isEqual">_isEqual</a>
+          </li>
+        </ul>
+      </aside>
+      <section class="content">
+        <p>
+          JavaScript (JS) is a lightweight interpreted or just-in-time compiled
+          programming language with first-class functions. While it is most
+          well-known as the scripting language for Web pages, many non-browser
+          environments also use it, such as Node.js, Apache CouchDB and Adobe
+          Acrobat. JavaScript is a prototype-based, multi-paradigm, dynamic
+          language, supporting object-oriented, imperative, and declarative
+          (e.g. functional programming) styles. Read more about JavaScript.
+        </p>
+        <p>
+          This section is dedicated to the JavaScript language itself, and not
+          the parts that are specific to Web pages or other host environments.
+          For information about APIs specific to Web pages, please see Web APIs
+          and DOM.
+        </p>
+        <p>
+          The standard for JavaScript is ECMAScript. As of 2012, all modern
+          browsers fully support ECMAScript 5.1. Older browsers support at least
+          ECMAScript 3. On June 17, 2015, ECMA International published the sixth
+          major version of ECMAScript, which is officially called ECMAScript
+          2015, and was initially referred to as ECMAScript 6 or ES6. Since
+          then, ECMAScript standards are on yearly release cycles. This
+          documentation refers to the latest draft version, which is currently
+          ECMAScript 2020.
+        </p>
+      </section>
     </main>
-    <footer class="nav-footer">
-        <article class="box-footer-center">
-            <div class="logo-footer">
-                <a href="index.html" class="logo" rel="noopener noreferrer"></a>
-                <img src="img/logo_v2_blanco.png" alt="logo de mdn fake" title="logo" />
-            </div>
-            <div class="info-content-footer">
-                <p>© 2005-2019 Mozilla and individual contributors</p>
-                <p> Content is available under <a href="" target="_blank" rel="noopener noreferrer">these
-                        licenses.</a>
-                </p>
-            </div>
-        </article>
-        <section class="footer-mdn">
-            <h2 class="footer-title">MDN</h2>
-            <ul class="list-footer">
-                <li><a href="" target="_blank" rel="noopener noreferrer">Tecnologías Web</a></li>
-                <li><a href="" target="_blank" rel="noopener noreferrer">Aprender Desarrollo Web</a></li>
-                <li><a href="" target="_blank" rel="noopener noreferrer">Sobre MDN</a></li>
-                <li><a href="" target="_blank" rel="noopener noreferrer">Feedback</a></li>
-                <li class="footer-social"><a href="" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a></li>
-                <li class="footer-social"><a href="" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a></li>
-            </ul>
-        </section>
-        <section class="footer-mozilla">
-            <h2 class="footer-title">Mozilla</h2>
-            <ul class="list-footer">
-                <li><a href="" target="_blank" rel="noopener noreferrer">Sobre nosotros</a></li>
-                <li><a href="" target="_blank" rel="noopener noreferrer">Contactanos</a></li>
-                <li><a href="" target="_blank" rel="noopener noreferrer">Firefox</a></li>
-                <li class="footer-social"><a href="" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a></li>
-                <li class="footer-social"><a href="" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a></li>
-            </ul>
-        </section>
+    <footer>
+      <section>
+        <a class="logo" href="#">
+          <img
+            src="../img/logo_v2_blanco.png"
+            alt="Logo fakeMdn"
+            title="Logo"
+          />
+        </a>
+      </section>
     </footer>
-</body>
-
+  </body>
 </html>

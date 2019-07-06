@@ -4,13 +4,27 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>MDN Clone</title>
+    <title>_forEach() | MDN Clone</title>
     <link
       rel="stylesheet"
       type="text/css"
       media="screen"
-      href="templateStyle.css"
+      href="../css/templateStyle.css"
     />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="../css/functionStyle.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/styles/atom-one-light.min.css"
+    />
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"
+    ></script>
   </head>
   <body>
     <header>
@@ -29,10 +43,23 @@
       </nav>
     </header>
     <section class="head">
-      <h1>Javascript</h1>
+      <h1>_fakeForEach()</h1>
+      <nav class="fn-navbar">
+        <ul>
+          <li class="fn-navbar-item">
+            <a href="#syntax">Sintaxis</a>
+          </li>
+          <li class="fn-navbar-item">
+            <a href="#examples">Ejemplos</a>
+          </li>
+          <li class="fn-navbar-item">
+            <a href="#others">Ver más</a>
+          </li>
+        </ul>
+      </nav>
     </section>
     <main>
-      <aside class="sidebar">
+      <aside class="sidebar" id="others">
         <h3>Métodos</h3>
         <ul>
           <li class="sidebar-item"><a href="_forEach.html">_forEach</a></li>
@@ -63,31 +90,54 @@
         </ul>
       </aside>
       <section class="content">
-        <p>
-          JavaScript (JS) is a lightweight interpreted or just-in-time compiled
-          programming language with first-class functions. While it is most
-          well-known as the scripting language for Web pages, many non-browser
-          environments also use it, such as Node.js, Apache CouchDB and Adobe
-          Acrobat. JavaScript is a prototype-based, multi-paradigm, dynamic
-          language, supporting object-oriented, imperative, and declarative
-          (e.g. functional programming) styles. Read more about JavaScript.
-        </p>
-        <p>
-          This section is dedicated to the JavaScript language itself, and not
-          the parts that are specific to Web pages or other host environments.
-          For information about APIs specific to Web pages, please see Web APIs
-          and DOM.
-        </p>
-        <p>
-          The standard for JavaScript is ECMAScript. As of 2012, all modern
-          browsers fully support ECMAScript 5.1. Older browsers support at least
-          ECMAScript 3. On June 17, 2015, ECMA International published the sixth
-          major version of ECMAScript, which is officially called ECMAScript
-          2015, and was initially referred to as ECMAScript 6 or ES6. Since
-          then, ECMAScript standards are on yearly release cycles. This
-          documentation refers to the latest draft version, which is currently
-          ECMAScript 2020.
-        </p>
+        <article id="syntax">
+          <p>
+            El método <code>fakeForEach()</code>ejecuta la función indicada una
+            vez por cada elemento del array.
+          </p>
+          <h3>Sintaxis</h3>
+          <p class="syntaxbox">
+            fakeForEach(<em>array</em>, <em>callback</em>)
+          </p>
+          <h3>Parámetros</h3>
+          <dl>
+            <dt>
+              <code class="code-params">array</code>
+            </dt>
+            <dd class="description">
+              El array sobre cuyos elementos se comprueba si cumplen con la
+              condición provista por la función.
+            </dd>
+            <dt>
+              <code class="code-params">callback</code>
+            </dt>
+            <dd class="description">
+              Función que se va a aplicar a los elementos hasta encontrar alguno
+              que la cumpla.
+            </dd>
+          </dl>
+          <h3>Valor de retorno</h3>
+          <p class="description">
+            Devuelve un elemento del array o <code>undefined</code> en caso de
+            que ninguno cumpla con la condición.
+          </p>
+        </article>
+        <article id="examples">
+          <h3>Ejemplo</h3>
+          <h4>Mostrar cada elemento del array</h4>
+          <pre>
+                    <code class="javascript">
+let array = ['a', 'b', 'c']; 
+fakeForEach(array, function(element){         
+fakeForEach(array, function(element){          
+console.log(element);       
+})          
+// output: "a"
+// output: "b" 
+// output: "c" 
+                    </code>
+                </pre>
+        </article>
       </section>
     </main>
     <footer>
@@ -101,5 +151,9 @@
         </a>
       </section>
     </footer>
+
+    <script>
+      hljs.initHighlightingOnLoad();
+    </script>
   </body>
 </html>

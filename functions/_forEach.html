@@ -5,26 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>_forEach() | MDN Clone</title>
-    <link
-      rel="stylesheet"
-      type="text/css"
-      media="screen"
-      href="../css/templateStyle.css"
-    />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      media="screen"
-      href="../css/functionStyle.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/styles/atom-one-light.min.css"
-    />
-    <script
-      type="text/javascript"
-      src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"
-    ></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="../css/templateStyle.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="../css/functionStyle.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/styles/atom-one-light.min.css" />
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
   </head>
   <body>
     <header>
@@ -73,12 +57,8 @@
           <li class="sidebar-item"><a href="_filter">_filter</a></li>
           <li class="sidebar-item"><a href="_reduce">_reduce</a></li>
           <li class="sidebar-item"><a href="_indexOf">_indexOf</a></li>
-          <li class="sidebar-item">
-            <a href="_indexOfRecursive">_indexOfRecursive</a>
-          </li>
-          <li class="sidebar-item">
-            <a href="_intersection">_intersection</a>
-          </li>
+          <li class="sidebar-item"><a href="_indexOfRecursive">_indexOfRecursive</a></li>
+          <li class="sidebar-item"><a href="_intersection">_intersection</a></li>
           <li class="sidebar-item"><a href="_union">_union</a></li>
           <li class="sidebar-item"><a href="_sum">_sum</a></li>
           <li class="sidebar-item"><a href="_min">_min</a></li>
@@ -91,42 +71,34 @@
       </aside>
       <section class="content">
         <article id="syntax">
-          <p>
-            El método <code>fakeForEach()</code>ejecuta la función indicada una
-            vez por cada elemento del array.
-          </p>
+          <p>El método <code>fakeForEach()</code>ejecuta la función indicada una vez por cada elemento del array.</p>
           <h3>Sintaxis</h3>
-          <p class="syntaxbox">
-            fakeForEach(<em>array</em>, <em>callback</em>)
-          </p>
+          <p class="syntaxbox">fakeForEach(<em>array</em>, <em>callback</em>)</p>
           <h3>Parámetros</h3>
           <dl>
             <dt>
               <code class="code-params">array</code>
             </dt>
             <dd class="description">
-              El array sobre cuyos elementos se comprueba si cumplen con la
-              condición provista por la función.
+              El array sobre cuyos elementos se comprueba si cumplen con la condición provista por la función.
             </dd>
             <dt>
               <code class="code-params">callback</code>
             </dt>
             <dd class="description">
-              Función que se va a aplicar a los elementos hasta encontrar alguno
-              que la cumpla.
+              Función que se va a aplicar a los elementos hasta encontrar alguno que la cumpla.
             </dd>
           </dl>
           <h3>Valor de retorno</h3>
           <p class="description">
-            Devuelve un elemento del array o <code>undefined</code> en caso de
-            que ninguno cumpla con la condición.
+            Devuelve un elemento del array o <code>undefined</code> en caso de que ninguno cumpla con la condición.
           </p>
         </article>
         <article id="examples">
           <h3>Ejemplo</h3>
           <h4>Mostrar cada elemento del array</h4>
           <pre>
-                    <code class="javascript">
+            <code class="javascript">
 let array = ['a', 'b', 'c']; 
 fakeForEach(array, function(element){         
 fakeForEach(array, function(element){          
@@ -135,19 +107,15 @@ console.log(element);
 // output: "a"
 // output: "b" 
 // output: "c" 
-                    </code>
-                </pre>
+            </code>
+          </pre>
         </article>
       </section>
     </main>
     <footer>
       <section>
         <a class="logo" href="#">
-          <img
-            src="../img/logo_v2_blanco.png"
-            alt="Logo fakeMdn"
-            title="Logo"
-          />
+          <img src="../img/logo_v2_blanco.png" alt="Logo fakeMdn" title="Logo" />
         </a>
       </section>
     </footer>

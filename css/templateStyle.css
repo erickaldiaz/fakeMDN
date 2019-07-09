@@ -98,11 +98,7 @@ header {
 }
 
 .navbar-item > a:hover {
-  background: linear-gradient(
-    to bottom,
-    var(--secondary-color) 0%,
-    var(--white) 60%
-  );
+  background: linear-gradient(to bottom, var(--secondary-color) 0%, var(--white) 60%);
 }
 
 main {
@@ -117,11 +113,7 @@ main {
 .head {
   width: 70%;
   border-bottom: 5px solid;
-  border-image-source: linear-gradient(
-    5deg,
-    var(--secondary-color),
-    var(--white)
-  );
+  border-image-source: linear-gradient(5deg, var(--secondary-color), var(--white));
   border-image-slice: 1;
   margin: auto;
   padding: 1em 1em;
@@ -138,12 +130,7 @@ main {
 }
 
 .sidebar-item > a:hover {
-  background: linear-gradient(
-    to right,
-    var(--secondary-color) 0%,
-    var(--primary-color) 50%,
-    var(--white) 100%
-  );
+  background: linear-gradient(to right, var(--secondary-color) 0%, var(--primary-color) 50%, var(--white) 100%);
 }
 
 .content {
@@ -181,7 +168,6 @@ footer > * {
 
   .head {
     width: 100%;
-    margin: 0;
   }
 
   .content {
@@ -189,7 +175,7 @@ footer > * {
   }
 
   .sidebar {
-    width: 66%;
+    width: 100%;
     margin-bottom: 1em;
     order: 3;
   }
@@ -202,7 +188,11 @@ footer > * {
   }
 
   .sidebar-item {
-    width: 50%;
+    width: 33%;
+  }
+
+  .sidebar > h3 {
+    margin: 1em 0;
   }
 }
 

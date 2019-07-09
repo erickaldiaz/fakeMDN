@@ -1,10 +1,10 @@
-function fakeForEach(array, callback) {
+function _forEach(array, callback) {
   for (let element of array) {
     callback(element);
   }
 }
 
-function fakeSome(array, callback) {
+function _some(array, callback) {
   for (let element of array) {
     if (callback(element)) {
       return true;
@@ -13,7 +13,7 @@ function fakeSome(array, callback) {
   return false;
 }
 
-function fakeEvery(array, callback) {
+function _every(array, callback) {
   for (let element of array) {
     if (!callback(element)) {
       return false;
@@ -22,7 +22,7 @@ function fakeEvery(array, callback) {
   return true;
 }
 
-function fakeFind(array, callback) {
+function _find(array, callback) {
   for (let element of array) {
     if (callback(element)) {
       return element;
@@ -31,7 +31,7 @@ function fakeFind(array, callback) {
   return undefined;
 }
 
-function fakeIncludes(array, include) {
+function _includes(array, include) {
   for (let element of array) {
     if (element == include) {
       return true;
@@ -40,16 +40,16 @@ function fakeIncludes(array, include) {
   return false;
 }
 
-function fakeMap(array, callback) {
+function _map(array, callback) {
   const mappedArray = [];
   const pushToMappedArray = element => mappedArray.push(callback(element));
-  fakeForEach(array, pushToMappedArray);
+  _forEach(array, pushToMappedArray);
   return mappedArray;
 }
 
-function fakeFilter(array, callback) {
+function _filter(array, callback) {
   const newArray = [];
-    fakeForEach(array, element => {
+  _forEach(array, element => {
     if (callback(element)) {
       newArray.push(element);
     }
@@ -57,67 +57,73 @@ function fakeFilter(array, callback) {
   return newArray;
 }
 
-function fakeReduce(array, callback, initialValue) {
-	if (array.length !== 0) {
-		let index;
-		let accumulator;
-		if (initialValue === undefined) {
-			index = 1;
-			accumulator = array[0];
-		} else {
-			index = 0;
-			accumulator = initialValue;
-		}
-		for (index; index < array.length; index++) {
-			accumulator = callback(accumulator, array[index], index);
-		}
-		return accumulator;
-	}
-	return undefined;
+function _reduce(array, callback, initialValue) {
+  if (array.length !== 0) {
+    let index;
+    let accumulator;
+    if (initialValue === undefined) {
+      index = 1;
+      accumulator = array[0];
+    } else {
+      index = 0;
+      accumulator = initialValue;
+    }
+    for (index; index < array.length; index++) {
+      accumulator = callback(accumulator, array[index], index);
+    }
+    return accumulator;
+  }
+  return undefined;
 }
 
-function fakeUnion(arrayOne, arrayTwo) {
+function _union(arrayOne, arrayTwo) {
   const unionArray = [...arrayOne];
-  const filteredArray = fakeFilter(arrayTwo, element => !fakeIncludes(arrayOne, element));
-  fakeForEach(filteredArray, element => unionArray.push(element));
+  const filteredArray = _filter(
+    arrayTwo,
+    element => !_includes(arrayOne, element)
+  );
+  _forEach(filteredArray, element => unionArray.push(element));
   return unionArray;
 }
 
-function fakeIntersection(arrayOne, arrayTwo) {
-  return fakeReduce(arrayOne, (intersection, element) => {
-    if (fakeIncludes(arrayTwo, element) && !(fakeIncludes(intersection, element))) {
-      intersection.push(element);
-    }
-    
-    return intersection;
-  }, []);
-};
+function _intersection(arrayOne, arrayTwo) {
+  return _reduce(
+    arrayOne,
+    (intersection, element) => {
+      if (_includes(arrayTwo, element) && !_includes(intersection, element)) {
+        intersection.push(element);
+      }
+      return intersection;
+    },
+    []
+  );
+}
 
-function fakeIncludes(array, element) {
-  if (fakeIndexOf(array, element) > -1) {
+function _includes(array, element) {
+  if (_indexOf(array, element) > -1) {
     return true;
   }
   return false;
 }
 
-function fakeSum(array) {
+function _sum(array) {
   const sum = (x, y) => x + y;
-  return fakeReduce(array, sum);
+  return _reduce(array, sum);
 }
 
-function fakeIndexOfRecursive(array, element, index = 0) {
+function _indexOfRecursive(array, element, index = 0) {
   if (index === array.length) {
     return -1;
   } else {
     if (array[index] === element) {
       return index;
     } else {
-      return fakeIndexOfRecursive(array, element, index + 1);
+      return _indexOfRecursive(array, element, index + 1);
     }
   }
 }
 
-function fakeIndexOf(array, element) {
+function _indexOf(array, element) {
   for (let index = 0; index < array.length; index++) {
     if (array[index] == element) {
       return index;
@@ -126,36 +132,44 @@ function fakeIndexOf(array, element) {
   return -1;
 }
 
-function fakeArrayMax(array) {
-	return fakeReduce(array, (max, cur) => max > cur ? max : cur);
+function _max(array) {
+  return _reduce(array, (max, cur) => (max > cur ? max : cur));
 }
 
-function fakeArrayMin(array) {
-	return fakeReduce(array, (min, cur) => min < cur ? min : cur);
-} 
-
-function areEqual(arrayOne, arrayTwo) {
-	return arrayOne.length === arrayTwo.length ?
-		fakeReduce(arrayOne, (equal, cur, index) => {
-			return cur !== arrayTwo[index] ? !equal : equal;
-		}, true) :
-		false;
+function _min(array) {
+  return _reduce(array, (min, cur) => (min < cur ? min : cur));
 }
 
-function fakeLastIndexOf(array, element){
-  for( let i = array.length -1; i >= 0; i--){
-    if (array[i] === element){
-      return i; 
+function _isEqual(arrayOne, arrayTwo) {
+  return arrayOne.length === arrayTwo.length
+    ? _reduce(
+        arrayOne,
+        (equal, cur, index) => {
+          return cur !== arrayTwo[index] ? !equal : equal;
+        },
+        true
+      )
+    : false;
+}
+
+function _lastIndexOf(array, element) {
+  for (let i = array.length - 1; i >= 0; i--) {
+    if (array[i] === element) {
+      return i;
     }
   }
   return -1;
 }
 
-function fakeConcat(...arrays) { 
-  return fakeReduce(arrays, (concatenatedArray, currentArray) => {
-    for(element of currentArray) {
-      concatenatedArray.push(element);
-    }
-    return concatenatedArray;
-  }, []);
+function _concat(...arrays) {
+  return _reduce(
+    arrays,
+    (concatenatedArray, currentArray) => {
+      for (element of currentArray) {
+        concatenatedArray.push(element);
+      }
+      return concatenatedArray;
+    },
+    []
+  );
 }

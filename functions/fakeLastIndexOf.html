@@ -2,16 +2,14 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <title>fakeSum</title>
+    <title>fakeLastIndexOf</title>
     <link rel="stylesheet" href="../styles.css" />
     <script defer src="https://use.fontawesome.com/releases/v5.7.2/js/all.js" integrity="sha384-0pzryjIRos8mFBWMzSSZApWtPl/5++eIfzYmTgBBmXYdhvxPc+XcFEk+zJwDgWbP" crossorigin="anonymous"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"> </script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/styles/atom-one-light.min.css">  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/styles/atom-one-light.min.css"> 
   </head>
-
   <body>
-    <!-- header -->
     <header id="header-main" class="main-header">
       <div class="logo-box">
           <a href="../index.html" class="logo" rel="noopener noreferrer">
@@ -41,57 +39,64 @@
           <!-- <img src="img/search.png"> -->
       </div>
   </header>
-    <!-- header -->
-    <h1>fakeSum</h1>
+
+    <h1>fakeLastIndexOf</h1>
     <div class="container-aside-article">
       <aside class="column-aside">
         <p class="aside-title">Otros métodos</p>
         <ul class="aside-list">
-            <li><a href="fakeForEach.html" target="_blank" rel="noopener noreferrer">fakeForEach</a></li>
             <li><a href="fakeSome.html" target="_blank" rel="noopener noreferrer">fakeSome</a></li>
             <li><a href="fakeEvery.html" target="_blank" rel="noopener noreferrer">fakeEvery</a></li>
             <li><a href="fakeFind.html" target="_blank" rel="noopener noreferrer">fakeFind</a></li>
             <li><a href="fakeIncludes.html" target="_blank" rel="noopener noreferrer">fakeIncludes</a></li>
+            <li><a href="fakeMap.html" target="_blank" rel="noopener noreferrer">fakeMap</a></li>
             <li><a href="fakeFilter.html" target="_blank" rel="noopener noreferrer">fakeFilter</a></li>
             <li><a href="fakeReduce.html" target="_blank" rel="noopener noreferrer">fakeReduce</a></li>
             <li><a href="fakeIndexOf.html" target="_blank" rel="noopener noreferrer">fakeIndexOf</a></li>
             <li><a href="fakeIndexOfRecursive.html" target="_blank" rel="noopener noreferrer">fakeIndexOfRecursive</a></li>
             <li><a href="fakeIntersection.html" target="_blank" rel="noopener noreferrer">fakeIntersection</a></li>
-            <li><a href="fakeMap.html" target="_blank" rel="noopener noreferrer">fakeMap</a></li>
+            <li><a href="fakeUnion.html" target="_blank" rel="noopener noreferrer">fakeUnion</a></li>
+            <li><a href="fakeSum.html" target="_blank" rel="noopener noreferrer">fakeSum</a></li>
+            <li><a href="fakeArrayMin.html" target="_blank" rel="noopener noreferrer">fakeArrayMin</a></li>
+            <li><a href="fakeArrayMax.html" target="_blank" rel="noopener noreferrer">fakeArrayMax</a></li>
+            <li><a href="areEqual.html" target="_blank" rel="noopener noreferrer">areEqual</a></li>
         </ul>
       </aside>
       <article>
         <section class="description">
-          El método <code>fakeSum()</code> calcula la suma de los valores de un array. 
+          El método <code>fakeLastIndexOf()</code> devuelve el último índice en el que un elemento puede encontrarse o devuelve -1 si el elemento no se encontrara
         </section>
         <section>
           <h2>Sintaxis</h2>
-          <p class="syntaxbox">fakeSum(<em>array</em>)</p>
+          <p class="syntaxbox">fakeLastIndexOf(<em>element</em>)</p>
           <h3>Parámetros</h3>
           <dl>
             <dt>
-              <code class="code-params">array</code>
+              <code class="code-params">Element</code>
             </dt>
             <dd class="param-description">
-              El array sobre cuyos valores serán sumados. 
+              Elemento del cuál indicará el indice.
             </dd>
           </dl>
           <h3>Valor de retorno</h3>
           <p class="param-description">
-            Devuelve un número.
+            Devuelve el indice del elemento o <code>-1</code> en caso de no encontrar el elemento solicitado.
           </p>
         </section>
         <div>
           <h2>Ejemplo</h2>
-          <h3>Sumar los valores de un array</h3>
-          <pre>
-             <code class="javascript">
-    const numeros= [2, 5, 9, 15];
+          <h3>Buscando elementos en un array</h3>
+            <pre>
+              <code class="javascript">
 
-    fakeSum(numeros);
-              
-    >> 31
-            </code>
+  let animales = ['perro', 'tigre', 'pinguino', 'perro'];
+
+  console.log(animales.fakeLastIndexOf('perro'));
+  // expected output: 3
+
+  console.log(animals.lastIndexOf('tigre'));
+  // expected output: 1
+              </code>
           </pre>
         </div>
       </article>

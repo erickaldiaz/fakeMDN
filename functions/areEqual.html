@@ -2,7 +2,7 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <title>fakeSum</title>
+    <title>areEqual</title>
     <link rel="stylesheet" href="../styles.css" />
     <script defer src="https://use.fontawesome.com/releases/v5.7.2/js/all.js" integrity="sha384-0pzryjIRos8mFBWMzSSZApWtPl/5++eIfzYmTgBBmXYdhvxPc+XcFEk+zJwDgWbP" crossorigin="anonymous"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"> </script>
@@ -42,7 +42,7 @@
       </div>
   </header>
     <!-- header -->
-    <h1>fakeSum</h1>
+    <h1>areEqual</h1>
     <div class="container-aside-article">
       <aside class="column-aside">
         <p class="aside-title">Otros métodos</p>
@@ -56,41 +56,48 @@
             <li><a href="fakeReduce.html" target="_blank" rel="noopener noreferrer">fakeReduce</a></li>
             <li><a href="fakeIndexOf.html" target="_blank" rel="noopener noreferrer">fakeIndexOf</a></li>
             <li><a href="fakeIndexOfRecursive.html" target="_blank" rel="noopener noreferrer">fakeIndexOfRecursive</a></li>
+            <li><a href="fakeFindIndex.html" target="_blank" rel="noopener noreferrer">fakeFindIndex</a></li>
             <li><a href="fakeIntersection.html" target="_blank" rel="noopener noreferrer">fakeIntersection</a></li>
+            <li><a href="fakeUnion.html" target="_blank" rel="noopener noreferrer">fakeUnion</a></li>
+            <li><a href="fakeSum.html" target="_blank" rel="noopener noreferrer">fakeSum</a></li>
             <li><a href="fakeMap.html" target="_blank" rel="noopener noreferrer">fakeMap</a></li>
+            <li><a href="fakeArrayMax.html" target="_blank" rel="noopener noreferrer">fakeArrayMax</a></li>
+            <li><a href="fakeArrayMin.html" target="_blank" rel="noopener noreferrer">fakeArrayMin</a></li>
         </ul>
       </aside>
       <article>
         <section class="description">
-          El método <code>fakeSum()</code> calcula la suma de los valores de un array. 
+          El método <code>areEqual()</code> recibe dos arrays como parámetro y retorna <code>true</code> si son iguales, es decir, si tienen los mismos elementos y en el mismo orden, o <code>false</code> en caso contrario. 
         </section>
         <section>
           <h2>Sintaxis</h2>
-          <p class="syntaxbox">fakeSum(<em>array</em>)</p>
+          <p class="syntaxbox">areEqual(<em>array1</em>, <em>array2</em>)</p>
           <h3>Parámetros</h3>
           <dl>
             <dt>
               <code class="code-params">array</code>
             </dt>
             <dd class="param-description">
-              El array sobre cuyos valores serán sumados. 
+              Son los arrays que van a ser comparados.
             </dd>
           </dl>
           <h3>Valor de retorno</h3>
           <p class="param-description">
-            Devuelve un número.
+            Devuelve <code>true</code> si los arrays son iguales o <code>false</code> si no lo son.
           </p>
         </section>
         <div>
           <h2>Ejemplo</h2>
-          <h3>Sumar los valores de un array</h3>
+          <h3>Comparación de dos arrays</h3>
           <pre>
-             <code class="javascript">
-    const numeros= [2, 5, 9, 15];
+              <code class="javascript">
+    const animales = ['perro', 'gato', 'canario'];
+    
+    const mascotas = ['perro', 'gato', 'canario'];
 
-    fakeSum(numeros);
+    areEqual(animales, mascotas);
               
-    >> 31
+    >> true
             </code>
           </pre>
         </div>

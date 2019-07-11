@@ -116,7 +116,7 @@ h1 {
   border-image-source: linear-gradient(5deg, var(--secondary-color), var(--white));
   border-image-slice: 1;
   margin: auto;
-  padding: 1em 1em;
+  padding: 0.5em 0.5em;
 }
 
 .sidebar > h3 {

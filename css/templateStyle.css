@@ -101,7 +101,7 @@ header {
   background: linear-gradient(to bottom, var(--secondary-color) 0%, var(--white) 60%);
 }
 
-main {
+.container {
   width: 70%;
   margin: 2em 0;
   display: flex;
@@ -110,7 +110,7 @@ main {
   flex-wrap: wrap;
 }
 
-.head {
+h1 {
   width: 70%;
   border-bottom: 5px solid;
   border-image-source: linear-gradient(5deg, var(--secondary-color), var(--white));
@@ -151,14 +151,14 @@ footer > * {
 }
 
 @media only screen and (min-width: 750px) {
-  main {
+  .container {
     margin: auto;
     padding: 1em 0;
   }
 }
 
 @media (max-width: 750px) {
-  main {
+  .container {
     width: 90%;
     margin: 0 auto;
     padding: 0;

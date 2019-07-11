@@ -166,7 +166,7 @@ footer > * {
     flex-flow: column;
   }
 
-  .head {
+  h1 {
     width: 100%;
   }
 

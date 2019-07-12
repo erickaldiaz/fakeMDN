@@ -145,7 +145,7 @@ function _isEqual(arrayOne, arrayTwo) {
     ? _reduce(
         arrayOne,
         (equal, cur, index) => {
-          return cur !== arrayTwo[index] ? !equal : equal;
+          return cur !== arrayTwo[index] ? false : equal;
         },
         true
       )

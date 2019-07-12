@@ -68,6 +68,13 @@ code {
   pre {
     margin: 0;
   }
+
+  h1 {
+    width: 90%;
+    border: none;
+    margin: auto;
+    padding: 0.5em 0.5em;
+  }
 }
 
 @media (max-width: 450px) {

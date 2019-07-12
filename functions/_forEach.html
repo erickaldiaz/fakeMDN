@@ -26,8 +26,8 @@
         </ul>
       </nav>
     </header>
-    <section class="head">
-      <h1>_fakeForEach()</h1>
+    <main>
+      <h1>_forEach()</h1>
       <nav class="fn-navbar">
         <ul>
           <li class="fn-navbar-item">
@@ -41,78 +41,76 @@
           </li>
         </ul>
       </nav>
-    </section>
-    <main>
-      <aside class="sidebar" id="others">
-        <h3>Métodos</h3>
-        <ul>
-          <li class="sidebar-item"><a href="_forEach.html" target="_blank" rel="noopener noreferrer">_forEach</a></li>
-          <li class="sidebar-item"><a href="_some.html" target="_blank" rel="noopener noreferrer">_some</a></li>
-          <li class="sidebar-item"><a href="_every.html" target="_blank" rel="noopener noreferrer">_every</a></li>
-          <li class="sidebar-item"><a href="_find.html" target="_blank" rel="noopener noreferrer">_find</a></li>
-          <li class="sidebar-item"><a href="_every.html" target="_blank" rel="noopener noreferrer">_every</a></li>
-          <li class="sidebar-item"><a href="_find.html" target="_blank" rel="noopener noreferrer">_find</a></li>
-          <li class="sidebar-item"><a href="_includes.html" target="_blank" rel="noopener noreferrer">_includes</a></li>
-          <li class="sidebar-item"><a href="_map.html" target="_blank" rel="noopener noreferrer">_map</a></li>
-          <li class="sidebar-item"><a href="_filter.hmtl" target="_blank" rel="noopener noreferrer">_filter</a></li>
-          <li class="sidebar-item"><a href="_reduce.hmtl" target="_blank" rel="noopener noreferrer">_reduce</a></li>
-          <li class="sidebar-item"><a href="_indexOf.hmtl" target="_blank" rel="noopener noreferrer">_indexOf</a></li>
-          <li class="sidebar-item">
-            <a href="_indexOfRecursive.hmtl" target="_blank" rel="noopener noreferrer">_indexOfRecursive</a>
-          </li>
-          <li class="sidebar-item"><a href="_intersection.hmtl" target="_blank" rel="noopener noreferrer">_intersection</a></li>
-          <li class="sidebar-item"><a href="_union.hmtl" target="_blank" rel="noopener noreferrer">_union</a></li>
-          <li class="sidebar-item"><a href="_sum.hmtl" target="_blank" rel="noopener noreferrer">_sum</a></li>
-          <li class="sidebar-item"><a href="_min.hmtl" target="_blank" rel="noopener noreferrer">_min</a></li>
-          <li class="sidebar-item"><a href="_max.hmtl" target="_blank" rel="noopener noreferrer">_max</a></li>
-          <li class="sidebar-item"><a href="_findIndex.hmtl" target="_blank" rel="noopener noreferrer">_findIndex</a></li>
-          <li class="sidebar-item"><a href="_lastIndexOf.hmtl" target="_blank" rel="noopener noreferrer">_lastIndexOf</a></li>
-          <li class="sidebar-item"><a href="_concat.hmtl" target="_blank" rel="noopener noreferrer">_concat</a></li>
-          <li class="sidebar-item"><a href="_isEqual.html" target="_blank" rel="noopener noreferrer">_isEqual</a></li>
-        </ul>
-      </aside>
-      <section class="content">
-        <article id="syntax">
-          <p>El método <code>fakeForEach()</code>ejecuta la función indicada una vez por cada elemento del array.</p>
-          <h3>Sintaxis</h3>
-          <p class="syntaxbox">fakeForEach(<em>array</em>, <em>callback</em>)</p>
-          <h3>Parámetros</h3>
-          <dl>
-            <dt>
-              <code class="code-params">array</code>
-            </dt>
-            <dd class="description">
-              El array sobre cuyos elementos se comprueba si cumplen con la condición provista por la función.
-            </dd>
-            <dt>
-              <code class="code-params">callback</code>
-            </dt>
-            <dd class="description">
-              Función que se va a aplicar a los elementos hasta encontrar alguno que la cumpla.
-            </dd>
-          </dl>
-          <h3>Valor de retorno</h3>
-          <p class="description">
-            Devuelve un elemento del array o <code>undefined</code> en caso de que ninguno cumpla con la condición.
-          </p>
-        </article>
-        <article id="examples">
-          <h3>Ejemplo</h3>
-          <h4>Mostrar cada elemento del array</h4>
-          <pre>
+      <div class="container">
+        <aside class="sidebar" id="others">
+          <h3>Métodos</h3>
+          <ul>
+            <li class="sidebar-item"><a href="_some.html">_some</a></li>
+            <li class="sidebar-item"><a href="_every.html">_every</a></li>
+            <li class="sidebar-item"><a href="_find.html">_find</a></li>
+            <li class="sidebar-item"><a href="_every.html">_every</a></li>
+            <li class="sidebar-item"><a href="_find.html">_find</a></li>
+            <li class="sidebar-item"><a href="_includes">_includes</a></li>
+            <li class="sidebar-item"><a href="_map">_map</a></li>
+            <li class="sidebar-item"><a href="_filter">_filter</a></li>
+            <li class="sidebar-item"><a href="_reduce">_reduce</a></li>
+            <li class="sidebar-item"><a href="_indexOf">_indexOf</a></li>
+            <li class="sidebar-item"><a href="_indexOfRecursive">_indexOfRecursive</a></li>
+            <li class="sidebar-item"><a href="_intersection">_intersection</a></li>
+            <li class="sidebar-item"><a href="_union">_union</a></li>
+            <li class="sidebar-item"><a href="_sum">_sum</a></li>
+            <li class="sidebar-item"><a href="_min">_min</a></li>
+            <li class="sidebar-item"><a href="_max">_max</a></li>
+            <li class="sidebar-item"><a href="_findIndex">_findIndex</a></li>
+            <li class="sidebar-item"><a href="_lastIndexOf">_lastIndexOf</a></li>
+            <li class="sidebar-item"><a href="_concat">_concat</a></li>
+            <li class="sidebar-item"><a href="_isEqual.html">_isEqual</a></li>
+          </ul>
+        </aside>
+        <section class="content">
+          <article id="syntax">
+            <p>El método <code>_forEach()</code>ejecuta la función indicada una vez por cada elemento del array.</p>
+            <h3>Sintaxis</h3>
+            <p class="syntaxbox">_forEach(<em>array</em>, <em>callback</em>)</p>
+            <h3>Parámetros</h3>
+            <dl>
+              <dt>
+                <code class="code-params">array</code>
+              </dt>
+              <dd class="description">
+                El array sobre cuyos elementos se va a ejecutar la función.
+              </dd>
+              <dt>
+                <code class="code-params">callback</code>
+              </dt>
+              <dd class="description">
+                Función que se va a aplicar a los elementos del array.
+              </dd>
+            </dl>
+            <h3>Valor de retorno</h3>
+            <p class="description">
+              Devuelve <code>undefined</code>.
+            </p>
+          </article>
+          <article id="examples">
+            <h3>Ejemplo</h3>
+            <h4>Mostrar cada elemento del array</h4>
+            <pre>
             <code class="javascript">
 let array = ['a', 'b', 'c']; 
-fakeForEach(array, function(element){         
-fakeForEach(array, function(element){          
-console.log(element);       
+
+_forEach(array, function(element){          
+  console.log(element);       
 })          
+
 // output: "a"
 // output: "b" 
 // output: "c" 
             </code>
           </pre>
-        </article>
-      </section>
+          </article>
+        </section>
+      </div>
     </main>
     <footer>
       <section>

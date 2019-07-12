@@ -111,7 +111,7 @@ header {
 }
 
 h1 {
-  width: 70%;
+  width: 80%;
   border-bottom: 5px solid;
   border-image-source: linear-gradient(5deg, var(--secondary-color), var(--white));
   border-image-slice: 1;

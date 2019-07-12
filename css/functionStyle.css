@@ -46,14 +46,9 @@ code {
 
   .fn-navbar {
     display: block;
-    width: 100%;
-    margin: 0.5em 0;
-    background: linear-gradient(
-      to right,
-      var(--secondary-color) 0%,
-      var(--primary-color) 50%,
-      var(--white) 100%
-    );
+    width: 90%;
+    margin: 0.5em auto;
+    background: linear-gradient(to right, var(--secondary-color) 0%, var(--primary-color) 50%, var(--white) 100%);
   }
 
   .fn-navbar > ul {
@@ -73,15 +68,18 @@ code {
   pre {
     margin: 0;
   }
+
+  h1 {
+    width: 90%;
+    border: none;
+    margin: auto;
+    padding: 0.3em 0;
+  }
 }
 
 @media (max-width: 450px) {
   .fn-navbar {
-    background: linear-gradient(
-      5deg,
-      var(--secondary-color),
-      var(--primary-color)
-    );
+    background: linear-gradient(5deg, var(--secondary-color), var(--primary-color));
   }
 
   .fn-navbar > ul {

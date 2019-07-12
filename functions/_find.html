@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>_find() | MDN Clone</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="../css/templateStyle.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="../css/functionStyle.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/styles/atom-one-light.min.css" />
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
+  </head>
+  <body>
+    <header>
+      <a class="logo" href="#">
+        <img src="../img/logo_v2_negro.png" alt="Logo fakeMdn" title="Logo" />
+      </a>
+      <nav class="navbar">
+        <ul>
+          <li class="navbar-item">
+            <a href="#">Javascript</a>
+          </li>
+          <li class="navbar-item">
+            <a href="#">Funcional</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <h1>_find()</h1>
+      <nav class="fn-navbar">
+        <ul>
+          <li class="fn-navbar-item">
+            <a href="#syntax">Sintaxis</a>
+          </li>
+          <li class="fn-navbar-item">
+            <a href="#examples">Ejemplos</a>
+          </li>
+          <li class="fn-navbar-item">
+            <a href="#others">Ver más</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="container">
+        <aside class="sidebar" id="others">
+          <h3>Métodos</h3>
+          <ul>
+            <li class="sidebar-item"><a href="_forEach.html" target="_blank" rel="noopener noreferrer">_forEach</a></li>
+            <li class="sidebar-item"><a href="_some.html" target="_blank" rel="noopener noreferrer">_some</a></li>
+            <li class="sidebar-item"><a href="_every.html" target="_blank" rel="noopener noreferrer">_every</a></li>
+            <li class="sidebar-item"><a href="_includes.html" target="_blank" rel="noopener noreferrer">_includes</a></li>
+            <li class="sidebar-item"><a href="_map.html" target="_blank" rel="noopener noreferrer">_map</a></li>
+            <li class="sidebar-item"><a href="_filter.html" target="_blank" rel="noopener noreferrer">_filter</a></li>
+            <li class="sidebar-item"><a href="_reduce.html" target="_blank" rel="noopener noreferrer">_reduce</a></li>
+            <li class="sidebar-item"><a href="_indexOf.html" target="_blank" rel="noopener noreferrer">_indexOf</a></li>
+            <li class="sidebar-item"><a href="_indexOfRecursive.html" target="_blank" rel="noopener noreferrer">_indexOfRecursive</a></li>
+            <li class="sidebar-item"><a href="_intersection.html" target="_blank" rel="noopener noreferrer">_intersection</a></li>
+            <li class="sidebar-item"><a href="_union.html" target="_blank" rel="noopener noreferrer">_union</a></li>
+            <li class="sidebar-item"><a href="_sum.html" target="_blank" rel="noopener noreferrer">_sum</a></li>
+            <li class="sidebar-item"><a href="_min.html" target="_blank" rel="noopener noreferrer">_min</a></li>
+            <li class="sidebar-item"><a href="_max.html" target="_blank" rel="noopener noreferrer">_max</a></li>
+            <li class="sidebar-item"><a href="_findIndex.html" target="_blank" rel="noopener noreferrer">_findIndex</a></li>
+            <li class="sidebar-item"><a href="_lastIndexOf.html" target="_blank" rel="noopener noreferrer">_lastIndexOf</a></li>
+            <li class="sidebar-item"><a href="_concat.html" target="_blank" rel="noopener noreferrer">_concat</a></li>
+            <li class="sidebar-item"><a href="_isEqual.html" target="_blank" rel="noopener noreferrer">_isEqual</a></li>
+          </ul>
+        </aside>
+        <section class="content">
+          <article id="syntax">
+            <p>
+              El método <code>_find()</code> devuelve el primer elemento del array que cumple con la condición implementada por una función
+              que se pasa como argumento.
+            </p>
+            <h3>Sintaxis</h3>
+            <p class="syntaxbox">_find(<em>array</em>, <em>callback</em>)</p>
+            <h3>Parámetros</h3>
+            <dl>
+              <dt>
+                <code class="code-params">array</code>
+              </dt>
+              <dd class="description">
+                El array sobre cuyos elementos se comprueba si cumplen con la condición provista por la función.
+              </dd>
+              <dt>
+                <code class="code-params">callback</code>
+              </dt>
+              <dd class="description">
+                Función que se va a aplicar a los elementos hasta encontrar alguno que la cumpla.
+              </dd>
+            </dl>
+            <h3>Valor de retorno</h3>
+            <p class="description">
+              Devuelve un elemento del array o <code>undefined</code> en caso de que ninguno cumpla con la condición.
+            </p>
+          </article>
+          <article id="examples">
+            <h3>Ejemplo</h3>
+            <h4>Encontrar un elemento en el array mayor a 15</h4>
+            <pre>
+              <code class="javascript">
+let listOfNumbers = [5, 8, 30, 84];
+const isOver15 = (x) => x > 15 ? true : false;
+
+fakeFind(listOfNumbers, isOver15);  
+
+>> 30   
+              </code>
+            </pre>
+          </article>
+        </section>
+      </div>
+    </main>
+    <footer>
+      <section>
+        <a class="logo" href="#">
+          <img src="../img/logo_v2_blanco.png" alt="Logo fakeMdn" title="Logo" />
+        </a>
+      </section>
+    </footer>
+
+    <script>
+      hljs.initHighlightingOnLoad();
+    </script>
+  </body>
+</html>

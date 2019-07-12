@@ -46,8 +46,8 @@ code {
 
   .fn-navbar {
     display: block;
-    width: 100%;
-    margin: 0.5em 0;
+    width: 90%;
+    margin: 0.5em auto;
     background: linear-gradient(to right, var(--secondary-color) 0%, var(--primary-color) 50%, var(--white) 100%);
   }
 

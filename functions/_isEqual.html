@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>_isEqual() | MDN Clone</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="../css/templateStyle.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="../css/functionStyle.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/styles/atom-one-light.min.css" />
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
+  </head>
+  <body>
+    <header>
+      <a class="logo" href="#">
+        <img src="../img/logo_v2_negro.png" alt="Logo fakeMdn" title="Logo" />
+      </a>
+      <nav class="navbar">
+        <ul>
+          <li class="navbar-item">
+            <a href="#">Javascript</a>
+          </li>
+          <li class="navbar-item">
+            <a href="#">Funcional</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <section class="head">
+      <h1>_isEqual()</h1>
+      <nav class="fn-navbar">
+        <ul>
+          <li class="fn-navbar-item">
+            <a href="#syntax">Sintaxis</a>
+          </li>
+          <li class="fn-navbar-item">
+            <a href="#examples">Ejemplos</a>
+          </li>
+          <li class="fn-navbar-item">
+            <a href="#others">Ver más</a>
+          </li>
+        </ul>
+      </nav>
+    </section>
+    <main>
+      <aside class="sidebar" id="others">
+        <h3>Métodos</h3>
+        <ul>
+          <li class="sidebar-item"><a href="_forEach.html" target="_blank" rel="noopener noreferrer">_forEach</a></li>
+          <li class="sidebar-item"><a href="_some.html" target="_blank" rel="noopener noreferrer">_some</a></li>
+          <li class="sidebar-item"><a href="_every.html" target="_blank" rel="noopener noreferrer">_every</a></li>
+          <li class="sidebar-item"><a href="_find.html" target="_blank" rel="noopener noreferrer">_find</a></li>
+          <li class="sidebar-item"><a href="_every.html" target="_blank" rel="noopener noreferrer">_every</a></li>
+          <li class="sidebar-item"><a href="_find.html" target="_blank" rel="noopener noreferrer">_find</a></li>
+          <li class="sidebar-item"><a href="_includes" target="_blank" rel="noopener noreferrer">_includes</a></li>
+          <li class="sidebar-item"><a href="_map" target="_blank" rel="noopener noreferrer">_map</a></li>
+          <li class="sidebar-item"><a href="_filter" target="_blank" rel="noopener noreferrer">_filter</a></li>
+          <li class="sidebar-item"><a href="_reduce" target="_blank" rel="noopener noreferrer">_reduce</a></li>
+          <li class="sidebar-item"><a href="_indexOf" target="_blank" rel="noopener noreferrer">_indexOf</a></li>
+          <li class="sidebar-item">
+            <a href="_indexOfRecursive" target="_blank" rel="noopener noreferrer">_indexOfRecursive</a>
+          </li>
+          <li class="sidebar-item"><a href="_intersection" target="_blank" rel="noopener noreferrer">_intersection</a></li>
+          <li class="sidebar-item"><a href="_union" target="_blank" rel="noopener noreferrer">_union</a></li>
+          <li class="sidebar-item"><a href="_sum" target="_blank" rel="noopener noreferrer">_sum</a></li>
+          <li class="sidebar-item"><a href="_min" target="_blank" rel="noopener noreferrer">_min</a></li>
+          <li class="sidebar-item"><a href="_max" target="_blank" rel="noopener noreferrer">_max</a></li>
+          <li class="sidebar-item"><a href="_findIndex" target="_blank" rel="noopener noreferrer">_findIndex</a></li>
+          <li class="sidebar-item"><a href="_lastIndexOf" target="_blank" rel="noopener noreferrer">_lastIndexOf</a></li>
+          <li class="sidebar-item"><a href="_concat" target="_blank" rel="noopener noreferrer">_concat</a></li>
+        </ul>
+      </aside>
+      <section class="content">
+        <article id="syntax">
+          <p>
+            El método <code>_isEqual()</code> recibe dos arrays como parámetro y retorna <code>true</code> si son iguales, es
+            decir, si tienen los mismos elementos y en el mismo orden, o <code>false</code> en caso contrario.
+          </p>
+          <h3>Sintaxis</h3>
+          <p class="syntaxbox">_isEqual(<em>array1</em>, <em>array2</em>)</p>
+          <h3>Parámetros</h3>
+          <dl>
+            <dt>
+              <code class="code-params">array</code>
+            </dt>
+            <dd class="description">
+              Son los arrays que van a ser comparados.
+            </dd>
+          </dl>
+          <h3>Valor de retorno</h3>
+          <p class="description">Devuelve <code>true</code> si los arrays son iguales o <code>false</code> si no lo son.</p>
+        </article>
+        <article id="examples">
+          <h3>Ejemplo</h3>
+          <h4>Comparación de dos arrays</h4>
+          <pre>
+            <code class="javascript">
+const animales = ['perro', 'gato', 'canario'];
+
+const mascotas = ['perro', 'gato', 'canario'];
+
+areEqual(animales, mascotas);
+          
+>> true
+            </code>
+          </pre>
+        </article>
+      </section>
+    </main>
+    <footer>
+      <section>
+        <a class="logo" href="#">
+          <img src="../img/logo_v2_blanco.png" alt="Logo fakeMdn" title="Logo" />
+        </a>
+      </section>
+    </footer>
+
+    <script>
+      hljs.initHighlightingOnLoad();
+    </script>
+  </body>
+</html>

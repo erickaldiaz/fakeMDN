@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>_reduce() | MDN Clone</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="../css/templateStyle.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="../css/functionStyle.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/styles/atom-one-light.min.css" />
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
+  </head>
+  <body>
+    <header>
+      <a class="logo" href="#">
+        <img src="../img/logo_v2_negro.png" alt="Logo fakeMdn" title="Logo" />
+      </a>
+      <nav class="navbar">
+        <ul>
+          <li class="navbar-item">
+            <a href="#">Javascript</a>
+          </li>
+          <li class="navbar-item">
+            <a href="#">Funcional</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <h1>_reduce()</h1>
+      <nav class="fn-navbar">
+        <ul>
+          <li class="fn-navbar-item">
+            <a href="#syntax">Sintaxis</a>
+          </li>
+          <li class="fn-navbar-item">
+            <a href="#examples">Ejemplos</a>
+          </li>
+          <li class="fn-navbar-item">
+            <a href="#others">Ver más</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="container">
+        <aside class="sidebar" id="others">
+          <h3>Métodos</h3>
+          <ul>
+            <li class="sidebar-item"><a href="_forEach.html">_forEach</a></li>
+            <li class="sidebar-item"><a href="_every">_every</a></li>
+            <li class="sidebar-item"><a href="_some">_some/a></li>
+            <li class="sidebar-item"><a href="_find.html">_find</a></li>
+            <li class="sidebar-item"><a href="_includes">_includes</a></li>
+            <li class="sidebar-item"><a href="_map">_map</a></li>
+            <li class="sidebar-item"><a href="_filter">_filter</a></li>
+            <li class="sidebar-item"><a href="_indexOf">_indexOf</a></li>
+            <li class="sidebar-item"><a href="_indexOfRecursive">_indexOfRecursive</a></li>
+            <li class="sidebar-item"><a href="_isEqual">_isEqual</a></li>
+            <li class="sidebar-item"><a href="_max">_max</a></li>
+            <li class="sidebar-item"><a href="_min.html">_min</a></li>
+            <li class="sidebar-item"><a href="_sum.html">_sum</a></li>
+            <li class="sidebar-item"><a href="_union">_union</a></li>
+            <li class="sidebar-item"><a href="_intersection">_intersection</a></li>
+            <li class="sidebar-item"><a href="_findIndex">_findIndex</a></li>
+            <li class="sidebar-item"><a href="_lastIndexOf">_lastIndexOf</a></li>
+            <li class="sidebar-item"><a href="_concat">_concat</a></li>
+          </ul>
+        </aside>
+        <section class="content">
+          <article id="syntax">
+            <p>El método <code>_reduce()</code> aplica una función a un acumulador y a cada valor de un array (de
+        izquierda a derecha) para reducirlo a un único valor.</p>
+            <h3>Sintaxis</h3>
+            <p class="syntaxbox">_reduce(<em>array</em>, <em>callback</em> [,<em>initialValue</em>])</p>
+            <h3>Parámetros</h3>
+            <dl>
+              <dt>
+                <code class="code-params">array</code>
+              </dt>
+              <dd class="description">
+                El array que quiere reducirse a un valor aplicándole una función a sus elementos.
+              </dd>
+              <dt>
+                <code class="code-params">callback</code>
+              </dt>
+              <dd class="param-description">
+                Función que se va a aplicar a los elementos del array.
+              </dd>
+              <dt>
+                <code class="code-params">initialValue</code>
+              </dt>
+              <dd class="param-description">Objeto a usar como primer argumento en la primera llamada de la función callback.</dd>
+            </dl>
+            <h3>Valor de retorno</h3>
+            <p class="description">
+              Depende del tipo de dato que contenga el array y del tipo de dato del valor inicial que se pase como argumento.
+            </p>
+          </article>
+          <article id="examples">
+            <h3>Ejemplo</h3>
+            <h4>Multiplicación de los números de un array</h4>
+            <pre>
+              <code class="javascript">
+let listOfNumbers = [5, 6, 2, 3];
+
+const multiply = (x, y) => x * y;
+            
+_reduce(listOfNumbers, multiply);
+            
+>> 180      
+              </code>
+            </pre>
+            <h4>Generar un array con los valores de una propiedad de varios objetos</h4>
+            <pre>
+              <code class="javascript">
+objetos = [
+      {a: 5, b: 10, c: 15},
+      {a: 1, b: 2, c: 3},
+      {a: 4, b: 8, c: 12}
+      ];
+
+_reduce(objetos, (acc, cur) => {acc.push(cur.b); return acc}, []);
+            
+>> [10, 2, 8]      
+              </code>
+            </pre>
+          </article>
+        </section>
+      </div>
+    </main>
+    <footer>
+      <section>
+        <a class="logo" href="#">
+          <img src="../img/logo_v2_blanco.png" alt="Logo fakeMdn" title="Logo" />
+        </a>
+      </section>
+    </footer>
+
+    <script>
+      hljs.initHighlightingOnLoad();
+    </script>
+  </body>
+</html>

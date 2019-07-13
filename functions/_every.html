@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>_forEach() | MDN Clone</title>
+    <title>_every() | MDN Clone</title>
     <link rel="stylesheet" type="text/css" media="screen" href="../css/templateStyle.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="../css/functionStyle.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/styles/atom-one-light.min.css" />
@@ -27,7 +27,7 @@
       </nav>
     </header>
     <main>
-      <h1>_forEach()</h1>
+      <h1>_every()</h1>
       <nav class="fn-navbar">
         <ul>
           <li class="fn-navbar-item">
@@ -45,8 +45,8 @@
         <aside class="sidebar" id="others">
           <h3>Métodos</h3>
           <ul>
+            <li class="sidebar-item"><a href="_forEach.html" target="_blank" rel="noopener noreferrer">_forEach</a></li>
             <li class="sidebar-item"><a href="_some.html" target="_blank" rel="noopener noreferrer">_some</a></li>
-            <li class="sidebar-item"><a href="_every.html" target="_blank" rel="noopener noreferrer">_every</a></li>
             <li class="sidebar-item"><a href="_find.html" target="_blank" rel="noopener noreferrer">_find</a></li>
             <li class="sidebar-item"><a href="_includes.html" target="_blank" rel="noopener noreferrer">_includes</a></li>
             <li class="sidebar-item"><a href="_map.html" target="_blank" rel="noopener noreferrer">_map</a></li>
@@ -67,43 +67,45 @@
         </aside>
         <section class="content">
           <article id="syntax">
-            <p>El método <code>_forEach()</code>ejecuta la función indicada una vez por cada elemento del array.</p>
+            <p>El método <code>_every()</code> devuelve un booleano, <code>true</code> si todos los elementos en el array pasan la
+          condición implementada por la función dada y <code>false</code> si alguno no la cumple.</p>
             <h3>Sintaxis</h3>
-            <p class="syntaxbox">_forEach(<em>array</em>, <em>callback</em>)</p>
+            <p class="syntaxbox">_every(<em>array</em>, <em>callback</em>)</p>
             <h3>Parámetros</h3>
             <dl>
               <dt>
                 <code class="code-params">array</code>
               </dt>
               <dd class="description">
-                El array sobre cuyos elementos se va a ejecutar la función.
+              El array sobre cuyos elementos se comprobará la función provista.
               </dd>
               <dt>
                 <code class="code-params">callback</code>
               </dt>
-              <dd class="description">
-                Función que se va a aplicar a los elementos del array.
-              </dd>
+              <dd class="param-description">Función para probar cada elemento.</dd>
             </dl>
             <h3>Valor de retorno</h3>
             <p class="description">
-              Devuelve <code>undefined</code>.
+              Devuelve <code>true</code> si la función de devolución de llamada devuelve un valor de truthy para cada elemento, de lo
+              contrario devuelve <code>false</code>.
             </p>
           </article>
           <article id="examples">
             <h3>Ejemplo</h3>
-            <h4>Mostrar cada elemento del array</h4>
+            <h4>Probando el tamaño de todos los elementos de un arreglo</h4>
             <pre>
             <code class="javascript">
-let array = ['a', 'b', 'c']; 
+function esSuficientementeGrande(elemento) { 
+    return elemento >= 10; 
+  }
 
-_forEach(array, function(element){          
-  console.log(element);       
-})          
+_every([12, 5, 8, 130, 44], esSuficientementeGrande); 
 
-// output: "a"
-// output: "b" 
-// output: "c" 
+>> false  
+
+_every([12, 54, 18, 130, 44], esSuficientementeGrande); 
+
+>> true                    
             </code>
           </pre>
           </article>

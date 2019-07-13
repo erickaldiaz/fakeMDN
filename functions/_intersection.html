@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>_forEach() | MDN Clone</title>
+    <title>_intersection() | MDN Clone</title>
     <link rel="stylesheet" type="text/css" media="screen" href="../css/templateStyle.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="../css/functionStyle.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/styles/atom-one-light.min.css" />
@@ -27,7 +27,7 @@
       </nav>
     </header>
     <main>
-      <h1>_forEach()</h1>
+      <h1>_intersection()</h1>
       <nav class="fn-navbar">
         <ul>
           <li class="fn-navbar-item">
@@ -45,6 +45,7 @@
         <aside class="sidebar" id="others">
           <h3>Métodos</h3>
           <ul>
+            <li class="sidebar-item"><a href="_forEach.html" target="_blank" rel="noopener noreferrer">_forEach</a></li>
             <li class="sidebar-item"><a href="_some.html" target="_blank" rel="noopener noreferrer">_some</a></li>
             <li class="sidebar-item"><a href="_every.html" target="_blank" rel="noopener noreferrer">_every</a></li>
             <li class="sidebar-item"><a href="_find.html" target="_blank" rel="noopener noreferrer">_find</a></li>
@@ -54,7 +55,6 @@
             <li class="sidebar-item"><a href="_reduce.html" target="_blank" rel="noopener noreferrer">_reduce</a></li>
             <li class="sidebar-item"><a href="_indexOf.html" target="_blank" rel="noopener noreferrer">_indexOf</a></li>
             <li class="sidebar-item"><a href="_indexOfRecursive.html" target="_blank" rel="noopener noreferrer">_indexOfRecursive</a></li>
-            <li class="sidebar-item"><a href="_intersection.html" target="_blank" rel="noopener noreferrer">_intersection</a></li>
             <li class="sidebar-item"><a href="_union.html" target="_blank" rel="noopener noreferrer">_union</a></li>
             <li class="sidebar-item"><a href="_sum.html" target="_blank" rel="noopener noreferrer">_sum</a></li>
             <li class="sidebar-item"><a href="_min.html" target="_blank" rel="noopener noreferrer">_min</a></li>
@@ -67,43 +67,37 @@
         </aside>
         <section class="content">
           <article id="syntax">
-            <p>El método <code>_forEach()</code>ejecuta la función indicada una vez por cada elemento del array.</p>
+            <p>A patir de dos arrays, el método <code>_intersection()</code> retorna un nuevo array con la intersección de los valores de
+            ambos, sin repeticiones y preservando el orden de los elementos, comenzando desde el primer elemento del primer array
+            pasado por parámetro.</p>
             <h3>Sintaxis</h3>
-            <p class="syntaxbox">_forEach(<em>array</em>, <em>callback</em>)</p>
+            <p class="syntaxbox">_intersection(<em>arrayOne</em>, <em>arrayTwo</em>)</p>
             <h3>Parámetros</h3>
             <dl>
               <dt>
                 <code class="code-params">array</code>
               </dt>
               <dd class="description">
-                El array sobre cuyos elementos se va a ejecutar la función.
-              </dd>
-              <dt>
-                <code class="code-params">callback</code>
-              </dt>
-              <dd class="description">
-                Función que se va a aplicar a los elementos del array.
+              Los arrays que serán comparados.
               </dd>
             </dl>
             <h3>Valor de retorno</h3>
             <p class="description">
-              Devuelve <code>undefined</code>.
+              Devuelve un nuevo array con la intersección.
             </p>
           </article>
           <article id="examples">
             <h3>Ejemplo</h3>
-            <h4>Mostrar cada elemento del array</h4>
+            <h4>Intersectar dos arrays de números sin repeticiones</h4>
             <pre>
             <code class="javascript">
-let array = ['a', 'b', 'c']; 
+const firstArray = [1, 2, 3, 5];
 
-_forEach(array, function(element){          
-  console.log(element);       
-})          
+const secondArray = [2, 4, 5, 7];
 
-// output: "a"
-// output: "b" 
-// output: "c" 
+_intersection(firstArray, secondArray);
+
+>> [2, 5]
             </code>
           </pre>
           </article>

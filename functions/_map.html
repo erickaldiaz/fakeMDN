@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>_forEach() | MDN Clone</title>
+    <title>_map() | MDN Clone</title>
     <link rel="stylesheet" type="text/css" media="screen" href="../css/templateStyle.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="../css/functionStyle.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/styles/atom-one-light.min.css" />
@@ -27,7 +27,7 @@
       </nav>
     </header>
     <main>
-      <h1>_forEach()</h1>
+      <h1>_map()</h1>
       <nav class="fn-navbar">
         <ul>
           <li class="fn-navbar-item">
@@ -45,11 +45,11 @@
         <aside class="sidebar" id="others">
           <h3>Métodos</h3>
           <ul>
+            <li class="sidebar-item"><a href="_forEach.html" target="_blank" rel="noopener noreferrer">_forEach</a></li>
             <li class="sidebar-item"><a href="_some.html" target="_blank" rel="noopener noreferrer">_some</a></li>
             <li class="sidebar-item"><a href="_every.html" target="_blank" rel="noopener noreferrer">_every</a></li>
             <li class="sidebar-item"><a href="_find.html" target="_blank" rel="noopener noreferrer">_find</a></li>
             <li class="sidebar-item"><a href="_includes.html" target="_blank" rel="noopener noreferrer">_includes</a></li>
-            <li class="sidebar-item"><a href="_map.html" target="_blank" rel="noopener noreferrer">_map</a></li>
             <li class="sidebar-item"><a href="_filter.html" target="_blank" rel="noopener noreferrer">_filter</a></li>
             <li class="sidebar-item"><a href="_reduce.html" target="_blank" rel="noopener noreferrer">_reduce</a></li>
             <li class="sidebar-item"><a href="_indexOf.html" target="_blank" rel="noopener noreferrer">_indexOf</a></li>
@@ -67,45 +67,42 @@
         </aside>
         <section class="content">
           <article id="syntax">
-            <p>El método <code>_forEach()</code>ejecuta la función indicada una vez por cada elemento del array.</p>
+            <p>El método <code>_map()</code> crea un nuevo array con los resultados de la llamada a la función indicada
+          aplicados a cada uno de sus elementos.</p>
             <h3>Sintaxis</h3>
-            <p class="syntaxbox">_forEach(<em>array</em>, <em>callback</em>)</p>
+            <p class="syntaxbox">_map(<em>array</em>, <em>callback</em>)</p>
             <h3>Parámetros</h3>
             <dl>
               <dt>
                 <code class="code-params">array</code>
               </dt>
               <dd class="description">
-                El array sobre cuyos elementos se va a ejecutar la función.
+                El array sobre cuyos elementos se aplica la función.
               </dd>
               <dt>
                 <code class="code-params">callback</code>
               </dt>
-              <dd class="description">
-                Función que se va a aplicar a los elementos del array.
+              <dd class="param-description">
+                Función que se va a aplicar a cada uno de los elementos del array.
               </dd>
             </dl>
             <h3>Valor de retorno</h3>
             <p class="description">
-              Devuelve <code>undefined</code>.
+              Devuelve un nuevo array donde cada elemento es el resultado de aplicarle la función callback a los elementos del array original.
             </p>
           </article>
           <article id="examples">
             <h3>Ejemplo</h3>
-            <h4>Mostrar cada elemento del array</h4>
+            <h4>Procesar un array de números aplicándoles la raíz cuadrada</h4>
             <pre>
-            <code class="javascript">
-let array = ['a', 'b', 'c']; 
+              <code class="javascript">
+const numeros= [1, 4, 9];
 
-_forEach(array, function(element){          
-  console.log(element);       
-})          
-
-// output: "a"
-// output: "b" 
-// output: "c" 
-            </code>
-          </pre>
+_map(numeros, Math.sqrt);
+              
+>> [1, 2, 3]     
+              </code>
+            </pre>
           </article>
         </section>
       </div>

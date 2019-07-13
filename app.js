@@ -31,15 +31,6 @@ function _find(array, callback) {
   return undefined;
 }
 
-function _includes(array, include) {
-  for (let element of array) {
-    if (element == include) {
-      return true;
-    }
-  }
-  return false;
-}
-
 function _map(array, callback) {
   const mappedArray = [];
   const pushToMappedArray = element => mappedArray.push(callback(element));

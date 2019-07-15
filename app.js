@@ -129,7 +129,7 @@ Array.prototype._isEqual = function(arrayTwo) {
     return cur !== arrayTwo[index] ? false : equal;
   }
   , true) : false;
-}
+};
 
 Array.prototype._lastIndexOf = function(element) {
   for (let i = this.length - 1; i >= 0; i--) {

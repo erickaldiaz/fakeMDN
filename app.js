@@ -2,7 +2,7 @@ Array.prototype._forEach = function(callback) {
   for (let element of this) {
     callback(element);
   }
-}
+};
 
 Array.prototype._some = function(callback) {
   for (let element of this) {
@@ -11,7 +11,7 @@ Array.prototype._some = function(callback) {
     }
   }
   return false;
-}
+};
 
 Array.prototype._every = function(callback) {
   for (let element of this) {
@@ -20,7 +20,7 @@ Array.prototype._every = function(callback) {
     }
   }
   return true;
-}
+};
 
 Array.prototype._find = function(callback) {
   for (let element of this) {
@@ -29,14 +29,14 @@ Array.prototype._find = function(callback) {
     }
   }
   return undefined;
-}
+};
 
 Array.prototype._map = function(callback) {
   const mappedArray = [];
   const pushToMappedArray = element => mappedArray.push(callback(element));
   this._forEach(pushToMappedArray);
   return mappedArray;
-}
+};
 
 Array.prototype._filter = function(callback) {
   const newArray = [];
@@ -46,7 +46,7 @@ Array.prototype._filter = function(callback) {
     }
   });
   return newArray;
-}
+};
 
 Array.prototype._reduce = function(callback, initialValue) {
   if (this.length !== 0) {
@@ -65,42 +65,35 @@ Array.prototype._reduce = function(callback, initialValue) {
     return accumulator;
   }
   return undefined;
-}
+};
 
 Array.prototype._union = function(array) {
   const unionArray = [...this];
-  const filteredArray = _filter(
-    array,
-    element => !this._includes(element)
-  );
+  const filteredArray = _filter(array, element => !this._includes(element));
   filteredArray._forEach(element => unionArray.push(element));
   return unionArray;
-}
+};
 
 Array.prototype._intersection = function(array) {
-  return _reduce(
-    this,
-    (intersection, element) => {
-      if (array._includes(element) && !intersection._includes(element)) {
-        intersection.push(element);
-      }
-      return intersection;
-    },
-    []
-  );
-}
+  return this._reduce((intersection, element) => {
+    if (array._includes(element) && !intersection._includes(element)) {
+      intersection.push(element);
+    }
+    return intersection;
+  }, []);
+};
 
 Array.prototype._includes = function(element) {
   if (this._indexOf(element) > -1) {
     return true;
   }
   return false;
-}
+};
 
 Array.prototype._sum = function() {
   const sum = (x, y) => x + y;
   return this._reduce(sum);
-}
+};
 
 Array.prototype._indexOfRecursive = function(element, index = 0) {
   if (index === this.length) {
@@ -112,7 +105,7 @@ Array.prototype._indexOfRecursive = function(element, index = 0) {
       return this._indexOfRecursive(element, index + 1);
     }
   }
-}
+};
 
 Array.prototype._indexOf = function(element) {
   for (let index = 0; index < this.length; index++) {
@@ -121,15 +114,15 @@ Array.prototype._indexOf = function(element) {
     }
   }
   return -1;
-}
+};
 
 Array.prototype._max = function() {
   return this._reduce((max, cur) => (max > cur ? max : cur));
-}
+};
 
-Array.prototype._min() = function() {
+Array.prototype._min = function() {
   return this._reduce((min, cur) => (min < cur ? min : cur));
-}
+};
 
 function _isEqual(arrayOne, arrayTwo) {
   return arrayOne.length === arrayTwo.length
@@ -150,17 +143,13 @@ Array.prototype._lastIndexOf = function(element) {
     }
   }
   return -1;
-}
+};
 
 Array.prototype._concat = function(...arrays) {
-  return this._reduce(
-    arrays,
-    (concatenatedArray, currentArray) => {
-      for (element of currentArray) {
-        concatenatedArray.push(element);
-      }
-      return concatenatedArray;
-    },
-    []
-  );
-}
+  return arrays._reduce((concatenatedArray, currentArray) => {
+    for (element of currentArray) {
+      concatenatedArray.push(element);
+    }
+    return concatenatedArray;
+  }, this);
+};

@@ -124,16 +124,11 @@ Array.prototype._min = function() {
   return this._reduce((min, cur) => (min < cur ? min : cur));
 };
 
-function _isEqual(arrayOne, arrayTwo) {
-  return arrayOne.length === arrayTwo.length
-    ? _reduce(
-        arrayOne,
-        (equal, cur, index) => {
-          return cur !== arrayTwo[index] ? false : equal;
-        },
-        true
-      )
-    : false;
+Array.prototype._isEqual = function(arrayTwo) {
+  return this.length === arrayTwo.length ? this._reduce((equal,cur,index) => {
+    return cur !== arrayTwo[index] ? false : equal;
+  }
+  , true) : false;
 }
 
 Array.prototype._lastIndexOf = function(element) {

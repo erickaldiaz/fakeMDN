@@ -69,7 +69,7 @@ Array.prototype._reduce = function(callback, initialValue) {
 
 Array.prototype._union = function(array) {
   const unionArray = [...this];
-  const filteredArray = _filter(array, element => !this._includes(element));
+  const filteredArray = array._filter(element => !this._includes(element));
   filteredArray._forEach(element => unionArray.push(element));
   return unionArray;
 };

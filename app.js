@@ -1,166 +1,151 @@
-function _forEach(array, callback) {
-  for (let element of array) {
+Array.prototype._forEach = function(callback) {
+  for (let element of this) {
     callback(element);
   }
-}
+};
 
-function _some(array, callback) {
-  for (let element of array) {
+Array.prototype._some = function(callback) {
+  for (let element of this) {
     if (callback(element)) {
       return true;
     }
   }
   return false;
-}
+};
 
-function _every(array, callback) {
-  for (let element of array) {
+Array.prototype._every = function(callback) {
+  for (let element of this) {
     if (!callback(element)) {
       return false;
     }
   }
   return true;
-}
+};
 
-function _find(array, callback) {
-  for (let element of array) {
+Array.prototype._find = function(callback) {
+  for (let element of this) {
     if (callback(element)) {
       return element;
     }
   }
   return undefined;
-}
+};
 
-function _map(array, callback) {
+Array.prototype._map = function(callback) {
   const mappedArray = [];
   const pushToMappedArray = element => mappedArray.push(callback(element));
-  _forEach(array, pushToMappedArray);
+  this._forEach(pushToMappedArray);
   return mappedArray;
-}
+};
 
-function _filter(array, callback) {
+Array.prototype._filter = function(callback) {
   const newArray = [];
-  _forEach(array, element => {
+  this._forEach(element => {
     if (callback(element)) {
       newArray.push(element);
     }
   });
   return newArray;
-}
+};
 
-function _reduce(array, callback, initialValue) {
-  if (array.length !== 0) {
+Array.prototype._reduce = function(callback, initialValue) {
+  if (this.length !== 0) {
     let index;
     let accumulator;
     if (initialValue === undefined) {
       index = 1;
-      accumulator = array[0];
+      accumulator = this[0];
     } else {
       index = 0;
       accumulator = initialValue;
     }
-    for (index; index < array.length; index++) {
-      accumulator = callback(accumulator, array[index], index);
+    for (index; index < this.length; index++) {
+      accumulator = callback(accumulator, this[index], index);
     }
     return accumulator;
   }
   return undefined;
-}
+};
 
-function _union(arrayOne, arrayTwo) {
-  const unionArray = [...arrayOne];
-  const filteredArray = _filter(
-    arrayTwo,
-    element => !_includes(arrayOne, element)
-  );
-  _forEach(filteredArray, element => unionArray.push(element));
+Array.prototype._union = function(array) {
+  const unionArray = [...this];
+  const filteredArray = array._filter(element => !this._includes(element));
+  filteredArray._forEach(element => unionArray.push(element));
   return unionArray;
-}
+};
 
-function _intersection(arrayOne, arrayTwo) {
-  return _reduce(
-    arrayOne,
-    (intersection, element) => {
-      if (_includes(arrayTwo, element) && !_includes(intersection, element)) {
-        intersection.push(element);
-      }
-      return intersection;
-    },
-    []
-  );
-}
+Array.prototype._intersection = function(array) {
+  return this._reduce((intersection, element) => {
+    if (array._includes(element) && !intersection._includes(element)) {
+      intersection.push(element);
+    }
+    return intersection;
+  }, []);
+};
 
-function _includes(array, element) {
-  if (_indexOf(array, element) > -1) {
+Array.prototype._includes = function(element) {
+  if (this._indexOf(element) > -1) {
     return true;
   }
   return false;
-}
+};
 
-function _sum(array) {
+Array.prototype._sum = function() {
   const sum = (x, y) => x + y;
-  return _reduce(array, sum);
-}
+  return this._reduce(sum);
+};
 
-function _indexOfRecursive(array, element, index = 0) {
-  if (index === array.length) {
+Array.prototype._indexOfRecursive = function(element, index = 0) {
+  if (index === this.length) {
     return -1;
   } else {
-    if (array[index] === element) {
+    if (this[index] === element) {
       return index;
     } else {
-      return _indexOfRecursive(array, element, index + 1);
+      return this._indexOfRecursive(element, index + 1);
     }
   }
-}
+};
 
-function _indexOf(array, element) {
-  for (let index = 0; index < array.length; index++) {
-    if (array[index] == element) {
+Array.prototype._indexOf = function(element) {
+  for (let index = 0; index < this.length; index++) {
+    if (this[index] == element) {
       return index;
     }
   }
   return -1;
-}
+};
 
-function _max(array) {
-  return _reduce(array, (max, cur) => (max > cur ? max : cur));
-}
+Array.prototype._max = function() {
+  return this._reduce((max, cur) => (max > cur ? max : cur));
+};
 
-function _min(array) {
-  return _reduce(array, (min, cur) => (min < cur ? min : cur));
-}
+Array.prototype._min = function() {
+  return this._reduce((min, cur) => (min < cur ? min : cur));
+};
 
-function _isEqual(arrayOne, arrayTwo) {
-  return arrayOne.length === arrayTwo.length
-    ? _reduce(
-        arrayOne,
-        (equal, cur, index) => {
-          return cur !== arrayTwo[index] ? false : equal;
-        },
-        true
-      )
+Array.prototype._isEqual = function(arrayTwo) {
+  return this.length === arrayTwo.length
+    ? this._reduce((equal, cur, index) => {
+        return cur !== arrayTwo[index] ? false : equal;
+      }, true)
     : false;
-}
+};
 
-function _lastIndexOf(array, element) {
-  for (let i = array.length - 1; i >= 0; i--) {
-    if (array[i] === element) {
+Array.prototype._lastIndexOf = function(element) {
+  for (let i = this.length - 1; i >= 0; i--) {
+    if (this[i] === element) {
       return i;
     }
   }
   return -1;
-}
+};
 
-function _concat(...arrays) {
-  return _reduce(
-    arrays,
-    (concatenatedArray, currentArray) => {
-      for (element of currentArray) {
-        concatenatedArray.push(element);
-      }
-      return concatenatedArray;
-    },
-    []
-  );
-}
+Array.prototype._concat = function(...arrays) {
+  return arrays._reduce((concatenatedArray, currentArray) => {
+    for (let element of currentArray) {
+      concatenatedArray.push(element);
+    }
+    return concatenatedArray;
+  }, this);
+};

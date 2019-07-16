@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>_indexOf() | MDN Clone</title>
+    <title>_includes() | MDN Clone</title>
     <link rel="stylesheet" type="text/css" media="screen" href="../css/templateStyle.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="../css/functionStyle.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/styles/atom-one-light.min.css" />
@@ -27,7 +27,7 @@
       </nav>
     </header>
     <main>
-      <h1>_indexOf()</h1>
+      <h1>_includes()</h1>
       <nav class="fn-navbar">
         <ul>
           <li class="fn-navbar-item">
@@ -45,32 +45,32 @@
         <aside class="sidebar" id="others">
           <h3>Métodos</h3>
           <ul>
-            <li class="sidebar-item"><a href="_forEach.html" target="_blank" rel="noopener noreferrer">_forEach</a></li>
-            <li class="sidebar-item"><a href="_some.html" target="_blank" rel="noopener noreferrer">_some</a></li>
-            <li class="sidebar-item"><a href="_every.html" target="_blank" rel="noopener noreferrer">_every</a></li>
-            <li class="sidebar-item"><a href="_find.html" target="_blank" rel="noopener noreferrer">_find</a></li>
-            <li class="sidebar-item"><a href="_includes.html" target="_blank" rel="noopener noreferrer">_includes</a></li>
-            <li class="sidebar-item"><a href="_map.html" target="_blank" rel="noopener noreferrer">_map</a></li>
-            <li class="sidebar-item"><a href="_filter.html" target="_blank" rel="noopener noreferrer">_filter</a></li>
-            <li class="sidebar-item"><a href="_reduce.html" target="_blank" rel="noopener noreferrer">_reduce</a></li>
-            <li class="sidebar-item"><a href="_indexOfRecursive.html" target="_blank" rel="noopener noreferrer">_indexOfRecursive</a></li>
-            <li class="sidebar-item"><a href="_intersection.html" target="_blank" rel="noopener noreferrer">_intersection</a></li>
-            <li class="sidebar-item"><a href="_union.html" target="_blank" rel="noopener noreferrer">_union</a></li>
-            <li class="sidebar-item"><a href="_sum.html" target="_blank" rel="noopener noreferrer">_sum</a></li>
-            <li class="sidebar-item"><a href="_min.html" target="_blank" rel="noopener noreferrer">_min</a></li>
-            <li class="sidebar-item"><a href="_max.html" target="_blank" rel="noopener noreferrer">_max</a></li>
-            <li class="sidebar-item"><a href="_findIndex.html" target="_blank" rel="noopener noreferrer">_findIndex</a></li>
-            <li class="sidebar-item"><a href="_lastIndexOf.html" target="_blank" rel="noopener noreferrer">_lastIndexOf</a></li>
-            <li class="sidebar-item"><a href="_concat.html" target="_blank" rel="noopener noreferrer">_concat</a></li>
-            <li class="sidebar-item"><a href="_isEqual.html" target="_blank" rel="noopener noreferrer">_isEqual</a></li>
+            <li class="sidebar-item"><a href="functions/forEach.html" rel="noopener noreferrer">_forEach</a></li>
+            <li class="sidebar-item"><a href="functions/some.html" rel="noopener noreferrer">_some</a></li>
+            <li class="sidebar-item"><a href="functions/every.html" rel="noopener noreferrer">_every</a></li>
+            <li class="sidebar-item"><a href="functions/find.html" rel="noopener noreferrer">_find</a></li>
+            <li class="sidebar-item"><a href="functions/map.html" rel="noopener noreferrer">_map</a></li>
+            <li class="sidebar-item"><a href="functions/filter.html" rel="noopener noreferrer">_filter</a></li>
+            <li class="sidebar-item"><a href="functions/reduce.html" rel="noopener noreferrer">_reduce</a></li>
+            <li class="sidebar-item"><a href="functions/indexOf.html" rel="noopener noreferrer">_indexOf</a></li>
+            <li class="sidebar-item"><a href="functions/indexOfRecursive.html" rel="noopener noreferrer">_indexOfRecursive</a></li>
+            <li class="sidebar-item"><a href="functions/intersection.html" rel="noopener noreferrer">_intersection</a></li>
+            <li class="sidebar-item"><a href="functions/union.html" rel="noopener noreferrer">_union</a></li>
+            <li class="sidebar-item"><a href="functions/sum.html" rel="noopener noreferrer">_sum</a></li>
+            <li class="sidebar-item"><a href="functions/min.html" rel="noopener noreferrer">_min</a></li>
+            <li class="sidebar-item"><a href="functions/max.html" rel="noopener noreferrer">_max</a></li>
+            <li class="sidebar-item"><a href="functions/findIndex.html" rel="noopener noreferrer">_findIndex</a></li>
+            <li class="sidebar-item"><a href="functions/lastIndexOf.html" rel="noopener noreferrer">_lastIndexOf</a></li>
+            <li class="sidebar-item"><a href="functions/concat.html" rel="noopener noreferrer">_concat</a></li>
+            <li class="sidebar-item"><a href="functions/isEqual.html" rel="noopener noreferrer">_isEqual</a></li>
           </ul>
         </aside>
         <section class="content">
           <article id="syntax">
-            <p>El método <code>_indexOf()</code> devuelve el primer índice en el que se puede encontrar un elemento dado en el array, o devuelve <code>-1</code> si el elemento no está presente.
+            <p>El método <code>_includes()</code> determina si un array tiene un determinado elemento.
             </p>
             <h3>Sintaxis</h3>
-            <p class="syntaxbox">_indexOfRecursive(<em>array</em>, <em>element</em>)</p>
+            <p class="syntaxbox">_includes(<em>array</em>, <em>element</em>)</p>
             <h3>Parámetros</h3>
             <dl>
               <dt>
@@ -88,19 +88,19 @@
             </dl>
             <h3>Valor de retorno</h3>
             <p class="description">
-              Se devuelve un número, correspondiente al primer índice del array en el que se encuentra el elemento, o -1 si el elemento no está presente.
+              Devuelve <code>true</code> si encuentra el elemento que buscaba y <code>false</code> si no lo encuentra en.
             </p>
           </article>
           <article id="examples">
             <h3>Ejemplo</h3>
-            <h4>Encontrar valores en un array</h4>
+            <h4>Buscando un elemento en un array</h4>
             <pre>
               <code class="javascript">
-let array = [2, 9, 9];
+let array = [1, 2, 3];
 
-_indexOf(array, 2));
+_includes(array, 2));
 
->> 0
+>> true
               </code>
             </pre>
           </article>

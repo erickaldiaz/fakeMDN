@@ -125,10 +125,11 @@ Array.prototype._min = function() {
 };
 
 Array.prototype._isEqual = function(arrayTwo) {
-  return this.length === arrayTwo.length ? this._reduce((equal,cur,index) => {
-    return cur !== arrayTwo[index] ? false : equal;
-  }
-  , true) : false;
+  return this.length === arrayTwo.length
+    ? this._reduce((equal, cur, index) => {
+        return cur !== arrayTwo[index] ? false : equal;
+      }, true)
+    : false;
 };
 
 Array.prototype._lastIndexOf = function(element) {
@@ -142,7 +143,7 @@ Array.prototype._lastIndexOf = function(element) {
 
 Array.prototype._concat = function(...arrays) {
   return arrays._reduce((concatenatedArray, currentArray) => {
-    for (element of currentArray) {
+    for (let element of currentArray) {
       concatenatedArray.push(element);
     }
     return concatenatedArray;

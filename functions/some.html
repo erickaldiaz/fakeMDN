@@ -72,16 +72,10 @@
               función que se pasa como argumento.
             </p>
             <h3>Sintaxis</h3>
-            <p class="syntaxbox">_some(<em>array</em>, <em>callback</em>)</p>
+            <p class="syntaxbox"><em>array</em>._some(<em>callback</em>)</p>
             <h3>Parámetros</h3>
             <dl>
-              <dt>
-                <code class="code-params">array</code>
-              </dt>
-              <dd class="description">
-                El array sobre cuyos elementos se comprueba si cumplen con la condición provista por la función.
-              </dd>
-              <dt>
+             <dt>
                 <code class="code-params">callback</code>
               </dt>
               <dd class="param-description">
@@ -103,7 +97,7 @@ let listOfNumbers = [10, 21, 30, 40];
 
 const isOdd = (x) => x % 2 != 0;
               
-_some(listOfNumbers, isOdd);
+listOfNumbers._some(isOdd);
               
 >> true          
             </code>

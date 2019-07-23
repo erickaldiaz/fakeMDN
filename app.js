@@ -75,12 +75,8 @@ Array.prototype._union = function(array) {
 };
 
 Array.prototype._intersection = function(array) {
-  return this._reduce((intersection, element) => {
-    if (array._includes(element) && !intersection._includes(element)) {
-      intersection.push(element);
-    }
-    return intersection;
-  }, []);
+  const filteredArray = new Set(this);
+  return [...filteredArray]._filter(element => array._indexOf(element) >= 0);
 };
 
 Array.prototype._includes = function(element) {

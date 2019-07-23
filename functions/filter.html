@@ -72,15 +72,9 @@
               función dada.
             </p>
             <h3>Sintaxis</h3>
-            <p class="syntaxbox">_filter(<em>array</em>, <em>callback(currentValue)</em>)</p>
+            <p class="syntaxbox"><em>array</em>._filter(<em>callback(currentValue)</em>)</p>
             <h3>Parámetros</h3>
             <dl>
-              <dt>
-                <code class="code-params">array</code>
-              </dt>
-              <dd class="description">
-                El array sobre el que se ha llamado filter.
-              </dd>
               <dt>
                 <code class="code-params">callback</code>
               </dt>
@@ -111,9 +105,9 @@ function esSuficientementeGrande(elemento) {
 }
 const filtrados = [12, 5, 8, 130, 44];
 
-_filter(filtrados, esSuficientementeGrande);
+filtrados._filter(esSuficientementeGrande);
                 
->> filtrados es [12, 130, 44] 
+>> [12, 130, 44] 
             </code>
           </pre>
           </article>

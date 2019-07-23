@@ -72,20 +72,14 @@
               el elemento no se encontrara.
             </p>
             <h3>Sintaxis</h3>
-            <p class="syntaxbox">_lastIndexOf(<em>array</em>, <em>element</em>)</p>
+            <p class="syntaxbox"><em>array</em>._lastIndexOf(<em>element</em>)</p>
             <h3>Parámetros</h3>
             <dl>
-              <dt>
-                <code class="code-params">array</code>
-              </dt>
-              <dd class="description">
-                El array en el que se buscará el elemento.
-              </dd>
               <dt>
                 <code class="code-params">element</code>
               </dt>
               <dd class="param-description">
-                Elemento del cuál se indicará el último índice en el que puede encontrarse, si está presente.
+                Elemento del cual se indicará el último índice en el que puede encontrarse, si está presente.
               </dd>
             </dl>
             <h3>Valor de retorno</h3>
@@ -100,11 +94,11 @@
               <code class="javascript">
 let animales = ['perro', 'tigre', 'pinguino', 'perro'];
 
-_lastIndexOf(animales, 'perro');
+animales._lastIndexOf('perro');
 
 >> 3
 
-_lastIndexOf(animales, 'tigre'));
+animales._lastIndexOf('tigre'));
 
 >> 1     
               </code>

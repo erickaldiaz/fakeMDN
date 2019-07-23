@@ -73,14 +73,14 @@
               parámetro.
             </p>
             <h3>Sintaxis</h3>
-            <p class="syntaxbox">_union(<em>arrayOne</em>, <em>arrayTwo</em>)</p>
+            <p class="syntaxbox"><em>arrayOne</em>._union(<em>arrayTwo</em>)</p>
             <h3>Parámetros</h3>
             <dl>
               <dt>
-                <code class="code-params">arrays</code>
+                <code class="code-params">arrayTwo</code>
               </dt>
               <dd class="description">
-                Los arrays que se unirán para conformar el nuevo array a devolver.
+                El array que se unirá al array original para conformar uno nuevo.
               </dd>
             </dl>
             <h3>Valor de retorno</h3>
@@ -97,7 +97,7 @@ const firstArray = [1, 2, 3];
 
 const secondArray = [3, 4, 5];
               
-_union(firstArray, secondArray);
+firstArray._union(secondArray);
               
 >> [1, 2, 3, 4, 5]               
             </code>

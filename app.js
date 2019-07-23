@@ -117,11 +117,11 @@ Array.prototype._indexOf = function(element) {
 };
 
 Array.prototype._max = function() {
-  return this._reduce((max, cur) => (max > cur ? max : cur));
+  return Math.max(...this);
 };
 
 Array.prototype._min = function() {
-  return this._reduce((min, cur) => (min < cur ? min : cur));
+  return Math.min(...this);
 };
 
 Array.prototype._isEqual = function(arrayTwo) {

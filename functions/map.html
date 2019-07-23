@@ -72,15 +72,9 @@
               uno de sus elementos.
             </p>
             <h3>Sintaxis</h3>
-            <p class="syntaxbox">_map(<em>array</em>, <em>callback</em>)</p>
+            <p class="syntaxbox"><em>array</em>._map(<em>callback</em>)</p>
             <h3>Parámetros</h3>
             <dl>
-              <dt>
-                <code class="code-params">array</code>
-              </dt>
-              <dd class="description">
-                El array sobre cuyos elementos se aplica la función.
-              </dd>
               <dt>
                 <code class="code-params">callback</code>
               </dt>
@@ -101,7 +95,7 @@
               <code class="javascript">
 const numeros= [1, 4, 9];
 
-_map(numeros, Math.sqrt);
+numeros._map(Math.sqrt);
               
 >> [1, 2, 3]     
               </code>

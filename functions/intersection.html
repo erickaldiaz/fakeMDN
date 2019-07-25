@@ -73,14 +73,14 @@
               pasado por parámetro.
             </p>
             <h3>Sintaxis</h3>
-            <p class="syntaxbox">_intersection(<em>arrayOne</em>, <em>arrayTwo</em>)</p>
+            <p class="syntaxbox"><em>arrayOne</em>._intersection(<em>arrayTwo</em>)</p>
             <h3>Parámetros</h3>
             <dl>
               <dt>
-                <code class="code-params">array</code>
+                <code class="code-params">arrayTwo</code>
               </dt>
               <dd class="description">
-                Los arrays que serán comparados.
+                El array con el que será comparado el array original.
               </dd>
             </dl>
             <h3>Valor de retorno</h3>
@@ -97,7 +97,7 @@ const firstArray = [1, 2, 3, 5];
 
 const secondArray = [2, 4, 5, 7];
 
-_intersection(firstArray, secondArray);
+firstArray._intersection(secondArray);
 
 >> [2, 5]
             </code>

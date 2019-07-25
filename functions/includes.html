@@ -69,15 +69,9 @@
           <article id="syntax">
             <p>El método <code>_includes()</code> determina si un array tiene un determinado elemento.</p>
             <h3>Sintaxis</h3>
-            <p class="syntaxbox">_includes(<em>array</em>, <em>element</em>)</p>
+            <p class="syntaxbox"><em>array</em>._includes(<em>element</em>)</p>
             <h3>Parámetros</h3>
             <dl>
-              <dt>
-                <code class="code-params">array</code>
-              </dt>
-              <dd class="description">
-                El array en el que se buscará el elemento.
-              </dd>
               <dt>
                 <code class="code-params">element</code>
               </dt>
@@ -97,7 +91,7 @@
               <code class="javascript">
 let array = [1, 2, 3];
 
-_includes(array, 2));
+array._includes(2);
 
 >> true
               </code>

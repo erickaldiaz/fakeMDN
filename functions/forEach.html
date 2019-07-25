@@ -69,15 +69,9 @@
           <article id="syntax">
             <p>El método <code>_forEach()</code>ejecuta la función indicada una vez por cada elemento del array.</p>
             <h3>Sintaxis</h3>
-            <p class="syntaxbox">_forEach(<em>array</em>, <em>callback</em>)</p>
+            <p class="syntaxbox"><em>array</em>._forEach(<em>callback</em>)</p>
             <h3>Parámetros</h3>
             <dl>
-              <dt>
-                <code class="code-params">array</code>
-              </dt>
-              <dd class="description">
-                El array sobre cuyos elementos se va a ejecutar la función.
-              </dd>
               <dt>
                 <code class="code-params">callback</code>
               </dt>
@@ -95,7 +89,7 @@
             <code class="javascript">
 let array = ['a', 'b', 'c']; 
 
-_forEach(array, function(element){          
+array._forEach(function(element){          
   console.log(element);       
 })          
 

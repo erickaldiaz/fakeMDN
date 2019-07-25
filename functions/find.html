@@ -72,15 +72,9 @@
               función que se pasa como argumento.
             </p>
             <h3>Sintaxis</h3>
-            <p class="syntaxbox">_find(<em>array</em>, <em>callback</em>)</p>
+            <p class="syntaxbox"><em>array</em>._find(<em>callback</em>)</p>
             <h3>Parámetros</h3>
             <dl>
-              <dt>
-                <code class="code-params">array</code>
-              </dt>
-              <dd class="description">
-                El array sobre cuyos elementos se comprueba si cumplen con la condición provista por la función.
-              </dd>
               <dt>
                 <code class="code-params">callback</code>
               </dt>
@@ -101,7 +95,7 @@
 let listOfNumbers = [5, 8, 30, 84];
 const isOver15 = (x) => x > 15 ? true : false;
 
-fakeFind(listOfNumbers, isOver15);  
+listOfNumbers._find(isOver15);  
 
 >> 30   
               </code>

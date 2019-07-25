@@ -72,15 +72,9 @@
               array, o devuelve <code>-1</code> si el elemento no está presente. Además, es implementado utilizando recursividad.
             </p>
             <h3>Sintaxis</h3>
-            <p class="syntaxbox">_indexOfRecursive(<em>array</em>, <em>element</em>)</p>
+            <p class="syntaxbox"><em>array</em>._indexOfRecursive(<em>element</em>)</p>
             <h3>Parámetros</h3>
             <dl>
-              <dt>
-                <code class="code-params">array</code>
-              </dt>
-              <dd class="description">
-                El array en el que se buscará el elemento.
-              </dd>
               <dt>
                 <code class="code-params">element</code>
               </dt>
@@ -101,7 +95,7 @@
               <code class="javascript">
 const numbers = [2, 3, 9, 8, 67, 7];
 
-_indexOfRecursive(numbers, 67);
+numbers._indexOfRecursive(67);
 
 >> 4  
               </code>

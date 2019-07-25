@@ -72,15 +72,9 @@
               de prueba proporcionada. En caso contrario devuelve <code>-1</code>.
             </p>
             <h3>Sintaxis</h3>
-            <p class="syntaxbox">_findIndex(<em>array</em>, <em>callback</em>)</p>
+            <p class="syntaxbox"><em>array</em>._findIndex(<em>callback</em>)</p>
             <h3>Parámetros</h3>
             <dl>
-              <dt>
-                <code class="code-params">array</code>
-              </dt>
-              <dd class="description">
-                El array cuyos elementos serán pasados como parámetros a la función provista.
-              </dd>
               <dt>
                 <code class="code-params">callback</code>
               </dt>
@@ -103,7 +97,7 @@ const mascotas = ['perro', 'gato', 'canario', 'pez', 'tortuga', 'hurón'];
 
 const esGato = mascota => mascota === 'gato';
 
-_findIndex(mascotas, esGato);
+mascotas._findIndex(esGato);
               
 >> 1
               </code>

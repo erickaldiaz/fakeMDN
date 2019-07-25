@@ -72,14 +72,14 @@
               si tienen los mismos elementos y en el mismo orden, o <code>false</code> en caso contrario.
             </p>
             <h3>Sintaxis</h3>
-            <p class="syntaxbox">_isEqual(<em>array1</em>, <em>array2</em>)</p>
+            <p class="syntaxbox"><em>array1</em>._isEqual(<em>array2</em>)</p>
             <h3>Parámetros</h3>
             <dl>
               <dt>
-                <code class="code-params">array</code>
+                <code class="code-params">array2</code>
               </dt>
               <dd class="description">
-                Son los arrays que van a ser comparados.
+                El array que será comparado con el array original.
               </dd>
             </dl>
             <h3>Valor de retorno</h3>
@@ -94,7 +94,7 @@ const animales = ['perro', 'gato', 'canario'];
 
 const mascotas = ['perro', 'gato', 'canario'];
 
-_isEqual(animales, mascotas);
+animales._isEqual(mascotas);
               
 >> true
             </code>

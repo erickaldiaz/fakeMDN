@@ -72,14 +72,14 @@
               devuelve un nuevo array.
             </p>
             <h3>Sintaxis</h3>
-            <p class="syntaxbox">_concat(<em>arrays1</em>, <em>array2</em>, <em>...arrayN</em>)</p>
+            <p class="syntaxbox"><em>array1</em>._concat(<em>arrays2</em>, <em>array3</em>, <em>...arrayN</em>)</p>
             <h3>Parámetros</h3>
             <dl>
               <dt>
                 <code class="code-params">array</code>
               </dt>
               <dd class="description">
-                Los arrays que se unirán para conformar el nuevo array a devolver.
+                Los arrays que se unirán al array original para conformar uno nuevo.
               </dd>
             </dl>
             <h3>Valor de retorno</h3>
@@ -96,7 +96,7 @@ const alpha = ['a', 'b', 'c'];
 
 const numeric = [1, 2, 3];
 
-_concat(alpha, numeric);
+alpha._concat(numeric);
         
 >>  ['a', 'b', 'c', 1, 2, 3]
             </code>

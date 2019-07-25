@@ -72,15 +72,9 @@
               condición implementada por la función dada y <code>false</code> si alguno no la cumple.
             </p>
             <h3>Sintaxis</h3>
-            <p class="syntaxbox">_every(<em>array</em>, <em>callback</em>)</p>
+            <p class="syntaxbox"><em>array</em>._every(<em>callback</em>)</p>
             <h3>Parámetros</h3>
             <dl>
-              <dt>
-                <code class="code-params">array</code>
-              </dt>
-              <dd class="description">
-                El array sobre cuyos elementos se comprobará la función provista.
-              </dd>
               <dt>
                 <code class="code-params">callback</code>
               </dt>
@@ -101,11 +95,11 @@ function esSuficientementeGrande(elemento) {
     return elemento >= 10; 
   }
 
-_every([12, 5, 8, 130, 44], esSuficientementeGrande); 
+[12, 5, 8, 130, 44]._every(esSuficientementeGrande); 
 
 >> false  
 
-_every([12, 54, 18, 130, 44], esSuficientementeGrande); 
+[12, 54, 18, 130, 44]._every(esSuficientementeGrande); 
 
 >> true                    
             </code>

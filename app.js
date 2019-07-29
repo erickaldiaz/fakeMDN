@@ -1,11 +1,11 @@
 Array.prototype._forEach = function(callback) {
-  for (let element of this) {
+  for (const element of this) {
     callback(element);
   }
 };
 
 Array.prototype._some = function(callback) {
-  for (let element of this) {
+  for (const element of this) {
     if (callback(element)) {
       return true;
     }
@@ -14,7 +14,7 @@ Array.prototype._some = function(callback) {
 };
 
 Array.prototype._every = function(callback) {
-  for (let element of this) {
+  for (const element of this) {
     if (!callback(element)) {
       return false;
     }
@@ -23,7 +23,7 @@ Array.prototype._every = function(callback) {
 };
 
 Array.prototype._find = function(callback) {
-  for (let element of this) {
+  for (const element of this) {
     if (callback(element)) {
       return element;
     }
@@ -139,7 +139,7 @@ Array.prototype._lastIndexOf = function(element) {
 
 Array.prototype._concat = function(...arrays) {
   return arrays._reduce((concatenatedArray, currentArray) => {
-    for (let element of currentArray) {
+    for (const element of currentArray) {
       concatenatedArray.push(element);
     }
     return concatenatedArray;

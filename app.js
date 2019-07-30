@@ -137,11 +137,6 @@ Array.prototype._lastIndexOf = function(element) {
   return -1;
 };
 
-Array.prototype._concat = function(...arrays) {
-  return arrays._reduce((concatenatedArray, currentArray) => {
-    for (const element of currentArray) {
-      concatenatedArray.push(element);
-    }
-    return concatenatedArray;
-  }, this);
+Array.prototype._concat = function(array) {
+  return [...this, ...array];
 };

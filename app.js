@@ -68,10 +68,7 @@ Array.prototype._reduce = function(callback, initialValue) {
 };
 
 Array.prototype._union = function(array) {
-  const unionArray = [...this];
-  const filteredArray = array._filter(element => !this._includes(element));
-  filteredArray._forEach(element => unionArray.push(element));
-  return unionArray;
+  return [...new Set([...this, ...array])];
 };
 
 Array.prototype._intersection = function(array) {
